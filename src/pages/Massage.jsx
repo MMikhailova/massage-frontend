@@ -18,12 +18,12 @@ const Massage = () => {
   const [gallery, setGallery]=useState([])
       useEffect(() => {
         getTreatments(
-          "https://strapi-production-7702.up.railway.app/https://strapi-production-7702.up.railway.app/api/treatments?filters[type][$eq]=massage&populate=*"
+          "https://strapi-production-7702.up.railway.app/api/treatments?filters[type][$eq]=massage&populate=*"
         ).then((vm) => {
           setTreatments(vm);
         });
         getGallery(
-          "https://strapi-production-7702.up.railway.app/https://strapi-production-7702.up.railway.app/api/galleries?filters[treatment][$eq]=massage&populate=*"
+          "https://strapi-production-7702.up.railway.app/api/galleries?filters[treatment][$eq]=massage&populate=*"
         ).then((vm) => setGallery(vm));
       }, []);
       console.log(treatments, gallery);
