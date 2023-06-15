@@ -3,6 +3,9 @@ import ResponsiveAppBar from '../components/NavBar';
 import { Box, Typography } from '@mui/material';
 import StyledButton from '../components/Button';
 import { getTreatments } from '../api/viewModels/getTreatments';
+import BasicGrid from '../components/Treatments';
+import { getGallery } from '../api/viewModels/getGallery';
+import WovenImageList from '../components/Gallery';
 
 const positionBtn = {
   top: "45%",
@@ -11,17 +14,23 @@ const positionBtn = {
   position: "absolute",
 };
 const Massage = () => {
-      const [treatments, setTreatments] = useState([]);
+  const [treatments, setTreatments] = useState([]);
+  const [gallery, setGallery]=useState([])
       useEffect(() => {
-        getTreatments('https://strapi-production-7702.up.railway.app/api/blogs?populate=*').then((vm) => {
+        getTreatments(
+          "https://strapi-production-7702.up.railway.app/api/treatments?filters[type][$eq]=massage&populate=*"
+        ).then((vm) => {
           setTreatments(vm);
         });
+        getGallery(
+          "https://strapi-production-7702.up.railway.app/api/galleries?filters[treatment][$eq]=massage&populate=*"
+        ).then((vm)=>setGallery(vm))
       }, []);
-      console.log(treatments);
+      console.log(treatments, gallery);
     return (
       <Box
         sx={{
-          height: "3000px",
+          height: "fitContent",
           backgroundColor: "#FCF8E8",
         }}
       >
@@ -29,7 +38,7 @@ const Massage = () => {
         <Box
           sx={{
             width: "100%",
-            height: "80vh",
+            height: "65vh",
             justifyContent: "center",
             display: "flex",
             alignContent: "center",
@@ -40,7 +49,7 @@ const Massage = () => {
           // gap={1}
         >
           <img
-            style={{ objectFit: "cover", width: "100vw", opacity: "90%" }}
+            style={{ objectFit: "cover", width: "100vw", opacity: "85%" }}
             src="../assets/handback.jpg"
             alt="1"
             loading="lazy"
@@ -62,6 +71,10 @@ const Massage = () => {
             MASSAGE
           </Typography>
         </Box>
+
+        <BasicGrid data={treatments} />
+  
+        <WovenImageList data={gallery} />
       </Box>
     );
 }

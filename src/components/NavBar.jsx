@@ -8,10 +8,10 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 
-import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
 
 import MenuItem from "@mui/material/MenuItem";
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import BasicMenu from "./Menu";
 
 
@@ -35,7 +35,7 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container
         sx={{
-          height: "20vh",
+          height: "15vh",
           backgroundColor: "#8B9E95",
         }}
         maxWidth="xl"
@@ -44,7 +44,7 @@ function ResponsiveAppBar() {
           sx={{
             mx: "3em",
             justifyContent: { xs: "center", md: "center" },
-            maxHeight: "20vh",
+            maxHeight: "15vh",
           }}
           disableGutters
         >
@@ -94,7 +94,9 @@ function ResponsiveAppBar() {
                     justifyContent: "center",
                   }}
                   key={page}
-                  onClick={() => navigate(`/${page}`)}
+                  onClick={() =>
+                    page === "Home" ? navigate("/") : navigate(`/${page}`)
+                  }
                 >
                   <Typography variant="p">{page}</Typography>
                 </MenuItem>
@@ -104,13 +106,13 @@ function ResponsiveAppBar() {
 
           <Box
             sx={{
-              height: "20vh",
+              height: "15vh",
               display: "flex",
-              my: { xs: "auto", md: "1em" },
+              p:"4em"
             }}
           >
             <img
-              style={{ cursor: "pointer", objectFit: "contain" }}
+              style={{ cursor: "pointer", objectFit: "fill" }}
               src="../assets/logo.svg"
               alt="beVibrant logo"
               onClick={() => navigate("/")}
@@ -130,17 +132,22 @@ function ResponsiveAppBar() {
               page === "Treatments" ? (
                 <BasicMenu></BasicMenu>
               ) : (
-                <Button
-                  key={page}
-                  onClick={() => navigate(`/${page}`)}
+                  <Link
+                    variant="p"
+                  component="button"
                   sx={{
-                    mx: 2,
+                    mx: 5,
                     color: "white",
                     display: "block",
                   }}
+                  key={page}
+                  onClick={() =>
+                    page === "Home" ? navigate("/") : navigate(`/${page}`)
+                  }
+                  underline="hover"
                 >
                   {page}
-                </Button>
+                </Link>
               )
             )}
           </Box>

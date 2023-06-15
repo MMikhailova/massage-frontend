@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Button, Menu, MenuItem } from "@mui/material";
+import { Link, Menu, MenuItem, Stack } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -19,24 +19,38 @@ const list=["Massage", "Yoga", "Health coaching"]
 
   return (
     <div>
-      <Button
+      <Stack
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-       sx={{color:"white"}}
+        direction="row"
+        spacing={0}
       >
-       Treatments
-      </Button>
+        <Link
+          variant="p"
+          underline="hover"
+          component="button"
+          sx={{
+            ml: 2,
+            color: "white",
+            display: "block",
+          }}
+        >
+          Treatments
+        </Link>
+        <ExpandMoreIcon sx={{ paddingTop: "0.2em" }} />
+      </Stack>
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
         aria-labelledby="basic-demo-button"
-      >{list.map((name)=>
-        <MenuItem onClick={()=>handleClose(name)}>{name}</MenuItem>)}
-        
+      >
+        {list.map((name) => (
+          <MenuItem onClick={() => handleClose(name)}>{name}</MenuItem>
+        ))}
       </Menu>
     </div>
   );

@@ -4,7 +4,18 @@ import Cards from "./Cards";
 import "./carousel.css";
 import { CircularProgress } from "@mui/material";
 
-
+  // const [blogData, setBlogData] = useState([])
+  //  const [isLoading, setIsLoading] = useState(true);
+   
+  // useEffect(() => { blogArticlesVm("https://strapi-production-7702.up.railway.app/api/blogs?populate=*")
+  //   .then((vm) => setBlogData(vm))
+  //   .then((res) => {
+  //     setTimeout(() => {
+  //       setIsLoading(false);
+  //     }, 2000);
+  //   }); }, [])
+  // console.log(blogData)
+// document.body.style.overflow = "hidden";
 const Slider = ({ data,isLoading }) => {
 console.log(data)
   const responsive = {
