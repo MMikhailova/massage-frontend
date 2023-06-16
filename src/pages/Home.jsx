@@ -6,7 +6,7 @@ import Banner from '../components/Banner';
 
 const Home = () => {
   return (
-    <Box sx={{ backgroundColor: "#FCF8E8" }}>
+    <Box sx={{ backgroundColor: "#FCF8E8",width:"100%",height:"fit-content" }}>
       <ResponsiveAppBar />
  <Banner/>
       <Section title="beVibrant Philosophy" />
