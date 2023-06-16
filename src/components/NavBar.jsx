@@ -52,7 +52,7 @@ function ResponsiveAppBar() {
           <Box
             sx={{
               my: 0,
-              flexGrow: 1,
+              // flexGrow: 1,
               display: { xs: "flex", md: "none" },
             }}
           >
@@ -109,7 +109,8 @@ function ResponsiveAppBar() {
             sx={{
               height: "15vh",
               display: "flex",
-              p:"4em"
+              p: "4em",
+              justifyContent:{xs:"center",sm:"center",md:"flex-start"}
             }}
           >
             <img
@@ -124,7 +125,7 @@ function ResponsiveAppBar() {
             sx={{
               flexGrow: 1,
               justifyContent: "flex-end",
-              alignItems: "center",
+              margin:{xs:"auto"},
 
               display: { xs: "none", md: "flex" },
             }}
