@@ -35,6 +35,7 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container
         sx={{
+          width: "100%",
           height: "15vh",
           backgroundColor: "#8B9E95",
         }}
