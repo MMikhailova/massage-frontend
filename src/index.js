@@ -29,9 +29,10 @@ const theme = createTheme({
       styleOverrides: {
         // Name of the slot
         root: {
-          fontFamily: " 'Roboto Serif', serif;",
+          fontFamily: " 'Montserrat',sans serif",
           fontSize: "1.1em",
-          fontWeight: "300",
+          fontStyle: "normal",
+          fontWeight:"400"
         },
       },
     },

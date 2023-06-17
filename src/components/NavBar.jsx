@@ -167,14 +167,15 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 
 import Button from "@mui/material/Button";
-
 import MenuItem from "@mui/material/MenuItem";
+import { useNavigate } from "react-router-dom";
 
 
 const pages = ["Home", "About", "Treatments", "Blog"];
 const settings = ["Massage", "Yoga", "Health coaching"];
 
 function ResponsiveAppBar() {
+  const navigate=useNavigate()
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -199,9 +200,11 @@ function ResponsiveAppBar() {
       sx={{ backgroundColor: "#8B9E95", height: "15vh" }}
     >
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <img alt="" style={{ height: "15vh" }} src="../assets/logo.svg"></img>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+        <Toolbar
+          disableGutters
+          sx={{ mx: { md: 20 }, justifyContent: "center" ,height:"15vh"}}
+        >
+          <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -212,9 +215,10 @@ function ResponsiveAppBar() {
             >
               <MenuIcon />
             </IconButton>
-            <Menu
+             <Menu
               id="menu-appbar"
-              anchorEl={anchorElNav}
+              anchorReference="anchorPosition"
+              anchorPosition={{ top: "100px", right: 0 }}
               anchorOrigin={{
                 vertical: "bottom",
                 horizontal: "left",
@@ -222,36 +226,58 @@ function ResponsiveAppBar() {
               keepMounted
               transformOrigin={{
                 vertical: "top",
-                horizontal: "left",
+                horizontal: "right",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: "flex", md: "none" },
+                "& .MuiPopover-paper": {
+                  maxWidth: "100%",
+                  height:"85%"
+                },
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem
+                  sx={{
+                    width: "100vw",
+                    justifyContent: "center",
+                  }}
+                  key={page}
+                  onClick={() =>
+                    page === "Home" ? navigate("/") : navigate(`/${page}`)
+                  }
+                >
+                  <Typography >{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <img alt="" style={{ height: "15vh" }} src="../assets/logo.svg"></img>
+
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              justifyContent: "flex-end",
+            }}
+          >
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={page === "Treatments" && handleOpenUserMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ m: 2, color: "white", display: "block" }}
               >
                 {page}
               </Button>
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0}}>
             <Menu
+
               sx={{ mt: "45px" }}
               id="menu-appbar"
               anchorEl={anchorElUser}
