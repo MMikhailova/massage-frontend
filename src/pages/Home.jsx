@@ -1,5 +1,5 @@
 // import Section from '../components/Section';
-import { Box} from '@mui/material';
+import { Box, } from '@mui/material';
 import Banner from '../components/Banner';
 import DrawerAppBar from '../components/Navigation';
 
@@ -11,7 +11,8 @@ const Home = () => {
     >
       <DrawerAppBar/>
       <Banner />
-      {/* <Section title="beVibrant Philosophy" /> */}
+      
+      {/* <Section title="Well-being services" /> */}
     </Box>
   );
 }

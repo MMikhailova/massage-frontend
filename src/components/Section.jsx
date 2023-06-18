@@ -15,7 +15,7 @@ const Section = ({title}) => {
         }}
       >
         <img
-          src="../assets/wave.svg"
+          src="../assets/wave.png"
           alt="wave"
           style={{
             objectFit: "fill",

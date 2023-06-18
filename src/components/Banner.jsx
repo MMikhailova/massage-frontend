@@ -1,16 +1,13 @@
-import { Grid } from "@mui/material";
-
-
+import { Grid} from "@mui/material";
 import StyledButton from "./Button";
-
+import BeVibrant from "./BeVibrant";
 
 const positionBtn = {
-  top: "60vh",
+  top: "60%",
   left: "50%",
   transform: "translate(-50%, -50%)",
   position: "absolute",
 };
-
 
 export default function Banner() {
 const images = [
@@ -28,11 +25,16 @@ const images = [
     <Grid
       container
       justifyContent="center"
-    
-      spacing={2}
+      position="relative"
+      spacing={{ xs: 0,md:2 }}
       sx={{
-        height: "80vh", p: {
-          xs: 0,md:6
+        mt:2,
+        height: "80vh",
+        py: {
+          md: 8,
+        },
+        px: {
+          md:5
         }
       }}
     >
@@ -41,21 +43,25 @@ const images = [
           key={img}
           item
           md={4}
-          xs={12}
+          xs={10}
           sx={{
-            display: { xs: `${images.indexOf(img) !== 1 && "none"}`, md: "block" },
-            height: "100%",
-            position: `${images.indexOf(img) === 1 & "relative"}`
+        margin:"auto",
+            display: {
+              xs: `${images.indexOf(img) !== 1 && "none"}`,
+              md: "flex",
+            },
+            height: {xs:"90%",md:"100%"},
+            position: `${(images.indexOf(img) === 1) & "relative"}`,
           }}
         >
-          <StyledButton position={ positionBtn}
-           
-          url={"https://www.eleniavgenaki.com/category/6607051387109376"}
-        />
-          <img src={img} alt={img}style={mediaStyle} />
+          <StyledButton
+            position={positionBtn}
+            url={"https://www.eleniavgenaki.com/category/6607051387109376"}
+          />
+          <img src={img} alt={img} style={mediaStyle} />
         </Grid>
       ))}
-      
+   <BeVibrant/>
     </Grid>
   );
 }

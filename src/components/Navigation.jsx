@@ -31,12 +31,10 @@ const menuItems = ["Massage", "Yoga", "Health coaching"];
 function DrawerAppBar(props) {
       const navigate = useNavigate();
       const [anchorElUser, setAnchorElUser] = React.useState(null);
-    const handleCloseUserMenu = (item) => {
-          setAnchorElUser(null);
-     navigate(`/${item}`)
-        
-      
-      };
+  const handleCloseUserMenu = ( item) => {
+    setAnchorElUser(null);
+    menuItems.includes(item) && navigate(`/${item}`);
+  };
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const handleDrawerToggle = () => {
@@ -95,7 +93,7 @@ function DrawerAppBar(props) {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar component="nav" sx={{ backgroundColor: "#8B9E95" }}>
-        <Toolbar sx={{ mx: "5rem" }}>
+        <Toolbar sx={{ mx: "6rem" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -155,7 +153,7 @@ function DrawerAppBar(props) {
               onClose={handleCloseUserMenu}
             >
               {menuItems.map((item) => (
-                  <MenuItem key={item} onClick={()=>handleCloseUserMenu(item)}>
+                  <MenuItem key={item} onClick={(item)=>handleCloseUserMenu(item)}>
                       <Typography  textAlign="center">{item}</Typography>
                 </MenuItem>
               ))}
