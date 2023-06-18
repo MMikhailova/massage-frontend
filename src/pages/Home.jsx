@@ -1,4 +1,4 @@
-import Section from '../components/Section';
+// import Section from '../components/Section';
 import { Box} from '@mui/material';
 import Banner from '../components/Banner';
 import DrawerAppBar from '../components/Navigation';
