@@ -5,10 +5,10 @@ import StyledButton from "./Button";
 
 
 const positionBtn = {
-  top: "60%",
-  left:"50%",
+  top: "60vh",
+  left: "50%",
   transform: "translate(-50%, -50%)",
-  position:"absolute"
+  position: "absolute",
 };
 
 
@@ -48,8 +48,8 @@ const images = [
             position: `${images.indexOf(img) === 1 & "relative"}`
           }}
         >
-      <StyledButton
-          position={positionBtn}
+          <StyledButton position={ positionBtn}
+           
           url={"https://www.eleniavgenaki.com/category/6607051387109376"}
         />
           <img src={img} alt={img}style={mediaStyle} />
