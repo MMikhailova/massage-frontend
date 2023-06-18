@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import ResponsiveAppBar from '../components/NavBar';
+
 import { Box, Typography } from '@mui/material';
 import StyledButton from '../components/Button';
 import { getTreatments } from '../api/viewModels/getTreatments';
 import BasicGrid from '../components/Treatments';
 import { getGallery } from '../api/viewModels/getGallery';
 import WovenImageList from '../components/Gallery';
+import DrawerAppBar from '../components/Navigation';
 
 const positionBtn = {
   top: "45%",
@@ -34,7 +35,7 @@ const Massage = () => {
           backgroundColor: "#FCF8E8",
         }}
       >
-        <ResponsiveAppBar></ResponsiveAppBar>
+        <DrawerAppBar />
         <Box
           sx={{
             width: "100%",
@@ -73,7 +74,7 @@ const Massage = () => {
         </Box>
 
         <BasicGrid data={treatments} />
-  
+
         <WovenImageList data={gallery} />
       </Box>
     );

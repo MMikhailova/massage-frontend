@@ -5,7 +5,7 @@ import StyledButton from "./Button";
 
 
 const positionBtn = {
-  top: "65%",
+  top: "60%",
   left:"50%",
   transform: "translate(-50%, -50%)",
   position:"absolute"
@@ -24,11 +24,6 @@ const images = [
     objectFit: 'cover',
 
   };
-  // const gridStyle = {
-  //   backgroundColor: "red",
-  //   height: "70vh",
-  //   display: { xs: "none", md: "block" },
-  // };
   return (
     <Grid
       container
