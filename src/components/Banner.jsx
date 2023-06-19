@@ -1,6 +1,6 @@
-import { Grid} from "@mui/material";
+import { Grid,Typography,Box} from "@mui/material";
 import StyledButton from "./Button";
-import BeVibrant from "./BeVibrant";
+// import BeVibrant from "./BeVibrant";
 
 const positionBtn = {
   top: "60%",
@@ -26,16 +26,15 @@ const images = [
       container
       justifyContent="center"
       position="relative"
-      spacing={{ xs: 0,md:2 }}
+      spacing={{ xs: 0, md: 2 }}
       sx={{
-        mt:2,
-        height: "80vh",
+        height: "90vh",
         py: {
           md: 8,
         },
         px: {
-          md:5
-        }
+          md: 5,
+        },
       }}
     >
       {images.map((img) => (
@@ -43,14 +42,13 @@ const images = [
           key={img}
           item
           md={4}
-          xs={10}
+          xs={12}
           sx={{
-        margin:"auto",
             display: {
               xs: `${images.indexOf(img) !== 1 && "none"}`,
               md: "flex",
             },
-            height: {xs:"90%",md:"100%"},
+            height: { xs: "90%", md: "100%" },
             position: `${(images.indexOf(img) === 1) & "relative"}`,
           }}
         >
@@ -59,9 +57,38 @@ const images = [
             url={"https://www.eleniavgenaki.com/category/6607051387109376"}
           />
           <img src={img} alt={img} style={mediaStyle} />
+          <Typography
+            variant="h1"
+            sx={{
+              color: "#FCF8E8",
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              width: "100%",
+              textShadow: " 0px 4px 6px #94B49F",
+              transform: {
+                xs: "translate(0%,-8vh)",
+                md: "translate(0%, 14%)",
+              },
+            }}
+          >
+            beVibrant
+          </Typography>
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              transform: { xs: "translate(0%,-50%)", md: "translate(0, 0vh)" },
+              backgroundColor: "#FCF8E8",
+              width: "100%",
+              height: "8vh",
+            }}
+          ></Box>
         </Grid>
       ))}
-   <BeVibrant/>
+
+      {/* <BeVibrant/> */}
     </Grid>
   );
 }

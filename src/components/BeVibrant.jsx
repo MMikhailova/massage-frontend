@@ -19,9 +19,8 @@ const BeVibrant = () => {
           position: "absolute",
           bottom: 0,
           left: "50%",
-          textShadow: " 0px 4px 8px #94B49F",
+          textShadow: " 0px 4px 6px #94B49F",
           transform: { xs: "translate(-50%,5%)", md: "translate(-50%, 25%)" },
-          // fontSize: { xs: "40px", md: "200px" },
         }}
       >
         beVibrant

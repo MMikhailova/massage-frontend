@@ -11,13 +11,13 @@ let theme = createTheme({
   }
 });
 theme.typography.h1 = {
-  fontSize: "60px",
+  fontSize: "70px",
   "@media (min-width:600px)": {
     fontSize: "100px",
     fontWeight: 700,
   },
   [theme.breakpoints.up("md")]: {
-    fontSize: "200px",
+    fontSize: "250px",
     fontWeight: 700,
   },
 };
