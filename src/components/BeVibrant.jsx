@@ -1,12 +1,18 @@
-import {  Typography,Box} from "@mui/material";
+import { Typography, Box, } from "@mui/material";
+
 import React from 'react'
 
+
+
 const BeVibrant = () => {
+
   return (
     <>
       <Typography
-        variant="h1"
+        variant="poster"
         sx={{
+           margin: 0,
+           padding:0,
           color: "#FCF8E8",
           position: "absolute",
           bottom: 0,
@@ -14,8 +20,8 @@ const BeVibrant = () => {
           width: "100%",
           textShadow: " 0px 4px 4px #94B49F",
           transform: {
-            xs: "translate(0%,-8vh)",
-            md: "translate(0%, 0%)",
+            xs: "translate(0%,-12vh)",
+            md: "translate(0%, -18vh)",
           },
         }}
       >
@@ -26,7 +32,7 @@ const BeVibrant = () => {
           position: "absolute",
           bottom: 0,
           left: 0,
-          transform: { xs: "translate(0%,-50%)", md: "translate(0, -7vh)" },
+          transform: { xs: "translate(0%,-5vh)", md: "translate(0, -7vh)" },
           backgroundColor: "#FCF8E8",
           width: "100%",
           height: "4vh",

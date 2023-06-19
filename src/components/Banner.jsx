@@ -28,7 +28,8 @@ const images = [
       position="relative"
       spacing={{ xs: 0, md: 2 }}
       sx={{
-        height: "90vh",
+    
+        height: {xs:"80vh", md: "90vh" },
         pt: {
           md: 8,
         },

@@ -7,11 +7,11 @@ const Section = ({title}) => {
      
       <Box
         sx={{
-          // my: "5em",
-        maxHeight: "8vh",
-          mb:3,
+        maxHeight: "10vh",
+          width:{md:"30%",xs:"40%"},
           display: "flex",
-          justifyContent: "center",
+        margin: "auto",
+      
           position: "relative",
         }}
       >
@@ -20,7 +20,7 @@ const Section = ({title}) => {
           alt="wave"
           style={{
             objectFit: "cover",
-            width:"20%"
+      width:"100%"
             
           }}
       />

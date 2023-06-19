@@ -1,43 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+
 import App from './App';
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
 import Massage from './pages/Massage';
-import { ThemeProvider, createTheme } from "@mui/material";
+import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material";
 let theme = createTheme({
   typography: {
-    fontFamily: "'Montserrat',sans serif",
-    h2: { color: "#DF7861", fontWeight: "bold", fontStyle: "italic" },
-    subtitle2: {
-      fontStyle: "italic",
-      fontWeight: 400,
-      fontSize: "20px",
-      lineHeight: "30px",
-    },
-    subtitle1: {
-      color: "#DF7861",
-      fontStyle: "italic",
-      fontWeight: 500,
-      fontSize: "24px",
-      lineHeight: "30px",
-    },
-  },
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        // Name of the slot
-        root: {
-          fontFamily: " 'Montserrat',sans serif",
-          fontSize: "1.1em",
-          fontStyle: "normal",
-          fontWeight: "400",
-        },
-      },
-    },
-  },
+    fontFamily: "'Montserrat',sans serif"
+  }
+
 });
-theme.typography.h1 = {
+theme.typography.poster = {
+  lineHeight:0,
   fontSize: "70px",
   "@media (min-width:600px)": {
     fontSize: "100px",
@@ -50,28 +26,8 @@ theme.typography.h1 = {
 };
 
 
-// theme.typography= {
-//     fontFamily: "'Montserrat',sans serif",
-//     subtitle1: { fontStyle: "italic" },
-//     h5: { color: "#678180" },
-//     h2: { color: "#DF7861", fontWeight: "bold", fontStyle: "italic" },
-//   p: { fontSize: "1.3em" },
-//     h1:{fontWeight:700}
-//   }
-  // components: {
-  //   MuiButton: {
-  //     styleOverrides: {
-  //       // Name of the slot
-  //       root: {
-  //         fontFamily: " 'Montserrat',sans serif",
-  //         fontSize: "1.1em",
-  //         fontStyle: "normal",
-  //         fontWeight: "400",
-  //       },
-  //     },
-  //   },
-  // },
 
+theme = responsiveFontSizes(theme);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
