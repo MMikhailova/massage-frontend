@@ -7,8 +7,9 @@ const Section = ({title}) => {
      
       <Box
         sx={{
-          my: "5em",
-          height: "300px",
+          // my: "5em",
+        maxHeight: "8vh",
+          mb:3,
           display: "flex",
           justifyContent: "center",
           position: "relative",
@@ -18,12 +19,15 @@ const Section = ({title}) => {
           src="../assets/wave.png"
           alt="wave"
           style={{
-            objectFit: "fill",
+            objectFit: "cover",
+            width:"20%"
+            
           }}
-        />
+      />
+      {title &&
         <Typography sx={{ m: "0.8em", position: "absolute" }} variant="h2">
           {title}
-        </Typography>
+        </Typography>}
       </Box>
     
   );

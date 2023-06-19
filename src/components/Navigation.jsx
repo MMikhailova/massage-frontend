@@ -31,7 +31,7 @@ const menuItems = ["Massage", "Yoga", "Health coaching"];
 function DrawerAppBar(props) {
       const navigate = useNavigate();
       const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const handleCloseUserMenu = ( item) => {
+  const handleCloseUserMenu = (item) => {
     setAnchorElUser(null);
     menuItems.includes(item) && navigate(`/${item}`);
   };
@@ -67,7 +67,7 @@ function DrawerAppBar(props) {
           src="../assets/logo.svg"
         ></img>
       </Box>
-      <Divider s />
+      <Divider />
       <List>
         {navItemsSm.map((item) => (
           <ListItem
@@ -153,7 +153,7 @@ function DrawerAppBar(props) {
               onClose={handleCloseUserMenu}
             >
               {menuItems.map((item) => (
-                  <MenuItem key={item} onClick={(item)=>handleCloseUserMenu(item)}>
+                  <MenuItem key={item} onClick={()=>handleCloseUserMenu(item)}>
                       <Typography  textAlign="center">{item}</Typography>
                 </MenuItem>
               ))}

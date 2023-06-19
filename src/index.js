@@ -7,8 +7,35 @@ import Massage from './pages/Massage';
 import { ThemeProvider, createTheme } from "@mui/material";
 let theme = createTheme({
   typography: {
-    fontFamily: "'Montserrat',sans serif"
-  }
+    fontFamily: "'Montserrat',sans serif",
+    h2: { color: "#DF7861", fontWeight: "bold", fontStyle: "italic" },
+    subtitle2: {
+      fontStyle: "italic",
+      fontWeight: 400,
+      fontSize: "20px",
+      lineHeight: "30px",
+    },
+    subtitle1: {
+      color: "#DF7861",
+      fontStyle: "italic",
+      fontWeight: 500,
+      fontSize: "24px",
+      lineHeight: "30px",
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          fontFamily: " 'Montserrat',sans serif",
+          fontSize: "1.1em",
+          fontStyle: "normal",
+          fontWeight: "400",
+        },
+      },
+    },
+  },
 });
 theme.typography.h1 = {
   fontSize: "70px",
@@ -17,10 +44,11 @@ theme.typography.h1 = {
     fontWeight: 700,
   },
   [theme.breakpoints.up("md")]: {
-    fontSize: "250px",
+    fontSize: "200px",
     fontWeight: 700,
   },
 };
+
 
 // theme.typography= {
 //     fontFamily: "'Montserrat',sans serif",

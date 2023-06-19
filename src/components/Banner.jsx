@@ -1,6 +1,6 @@
-import { Grid,Typography,Box} from "@mui/material";
+import { Grid} from "@mui/material";
 import StyledButton from "./Button";
-// import BeVibrant from "./BeVibrant";
+import BeVibrant from "./BeVibrant";
 
 const positionBtn = {
   top: "60%",
@@ -29,11 +29,8 @@ const images = [
       spacing={{ xs: 0, md: 2 }}
       sx={{
         height: "90vh",
-        py: {
+        pt: {
           md: 8,
-        },
-        px: {
-          md: 5,
         },
       }}
     >
@@ -48,7 +45,7 @@ const images = [
               xs: `${images.indexOf(img) !== 1 && "none"}`,
               md: "flex",
             },
-            height: { xs: "90%", md: "100%" },
+            height: { xs: "90%", md: "90%" },
             position: `${(images.indexOf(img) === 1) & "relative"}`,
           }}
         >
@@ -57,38 +54,9 @@ const images = [
             url={"https://www.eleniavgenaki.com/category/6607051387109376"}
           />
           <img src={img} alt={img} style={mediaStyle} />
-          <Typography
-            variant="h1"
-            sx={{
-              color: "#FCF8E8",
-              position: "absolute",
-              bottom: 0,
-              left: 0,
-              width: "100%",
-              textShadow: " 0px 4px 6px #94B49F",
-              transform: {
-                xs: "translate(0%,-8vh)",
-                md: "translate(0%, 14%)",
-              },
-            }}
-          >
-            beVibrant
-          </Typography>
-          <Box
-            sx={{
-              position: "absolute",
-              bottom: 0,
-              left: 0,
-              transform: { xs: "translate(0%,-50%)", md: "translate(0, 0vh)" },
-              backgroundColor: "#FCF8E8",
-              width: "100%",
-              height: "8vh",
-            }}
-          ></Box>
+          <BeVibrant/>
         </Grid>
       ))}
-
-      {/* <BeVibrant/> */}
     </Grid>
   );
 }
