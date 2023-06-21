@@ -1,23 +1,26 @@
 import Section from '../components/Section';
-import { Box, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import Banner from '../components/Banner';
 import DrawerAppBar from '../components/Navigation';
 import TreatmentItem from "../components/Servises";
 
+import TestimonialCarousel from '../components/Testimonials';
+
+
     
 const Home = () => {
   return (
-    <Box
+    <Container
+      maxWidth="xlg"
       sx={{
-
         display: "flex",
-        flexDirection:"column",
+        flexDirection: "column",
         backgroundColor: "#FCF8E8",
-        width: "99vw",
-    // my:2,
+        // width: "99vw",
+        // my:2,
         height: "fit-content",
-        px: { md: 5 },
-        py: { md: 8 },
+        px: { xs: 0, md: 5 },
+        py: { xs: 0, md: 8 },
       }}
     >
       <DrawerAppBar />
@@ -55,8 +58,13 @@ const Home = () => {
         </Typography>
       </Box>
       <Section title={"Well-being services"} />
-      <TreatmentItem/>
-    </Box>
+      <TreatmentItem />
+      <Section title={"Clients testimonials"} />
+      <TestimonialCarousel
+        ref={(el) => (this.Carousel = el)}
+        additionalTransfrom={-20 * 5}
+      />
+    </Container>
   );
 }
 
