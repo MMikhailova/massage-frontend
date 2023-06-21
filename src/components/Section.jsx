@@ -3,33 +3,40 @@ import React from 'react'
 
 const Section = ({title}) => {
   return (
-
-     
-      <Box
-        sx={{
-        maxHeight: "10vh",
-          width:{md:"30%",xs:"40%"},
-          display: "flex",
-        margin: "auto",
-      
-          position: "relative",
-        }}
-      >
-        <img
-          src="../assets/wave.png"
-          alt="wave"
-          style={{
-            objectFit: "cover",
-      width:"100%"
-            
+    <Box
+      sx={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        // position: "relative",
+      }}
+    >
+      {title && (
+        <Typography
+          sx={{
+            // pb: 6,
+            // width: "50vw",
+            // position: "absolute",
+            // bottom: 0,
+            // left: 0,
+            // transform: { xs: "translate(0%,-5vh)", md: "translate(0, -7vh)" },
           }}
-      />
-      {title &&
-        <Typography sx={{ m: "0.8em", position: "absolute" }} variant="h2">
+          variant="h2"
+        >
           {title}
-        </Typography>}
-      </Box>
-    
+        </Typography>
+      )}
+      <img
+        src="../assets/wave.png"
+        alt="wave"
+        style={{
+          objectFit: "cover",
+          width: "20%",
+          margin:"auto",
+          maxHeight: "10vh",
+        }}
+      />
+    </Box>
   );
 }
 

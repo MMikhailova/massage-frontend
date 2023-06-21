@@ -30,9 +30,7 @@ const images = [
       sx={{
     
         height: {xs:"80vh", md: "90vh" },
-        pt: {
-          md: 8,
-        },
+      
       }}
     >
       {images.map((img) => (

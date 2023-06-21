@@ -28,7 +28,7 @@ const Root = styled("div")(({ theme }) => ({
       fontSize: "16px",
     },
     [theme.breakpoints.up("lg")]: {
-      fontSize: "24px",
+      fontSize: "20px",
     },
   },
 }));
@@ -41,16 +41,12 @@ export default function StyledButton({position,url}) {
       <Root>
         <Button
           sx={{
-            position: `${position.position}`,
-            top: `${position.top}`,
-                    transform: `${position.transform}`,
-            left:`${position.left}`
+            position: `${ position.position}`,
+            top: `${ position.top}`,
+            transform: `${ position.transform}`,
+            left: `${position.left}`,
           }}
-          onClick={() =>
-            openInNewTab(
-              url
-            )
-          }
+          onClick={() => openInNewTab(url)}
           variant="outlined"
         >
           Book a session

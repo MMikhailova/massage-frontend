@@ -2,16 +2,22 @@ import Section from '../components/Section';
 import { Box, Typography } from '@mui/material';
 import Banner from '../components/Banner';
 import DrawerAppBar from '../components/Navigation';
+import TreatmentItem from "../components/Servises";
 
-
+    
 const Home = () => {
   return (
     <Box
       sx={{
+
+        display: "flex",
+        flexDirection:"column",
         backgroundColor: "#FCF8E8",
-        width: "100%",
+        width: "99vw",
+    // my:2,
         height: "fit-content",
         px: { md: 5 },
+        py: { md: 8 },
       }}
     >
       <DrawerAppBar />
@@ -19,7 +25,12 @@ const Home = () => {
       <Section />
       <Box
         align="justify"
-        sx={{ width: { xs: "90vw", md: "65vw" }, margin: "auto" ,fontStyle:"italic",py:3}}
+        sx={{
+          width: { xs: "90vw", md: "65vw" },
+          margin: "auto",
+          fontStyle: "italic",
+          py: 3,
+        }}
       >
         <Typography variant="subtitle1">
           BeVibrant offers a holistic approach to health and wellness, which
@@ -32,7 +43,8 @@ const Home = () => {
           BeVibrant provides personalized services tailored to your specific
           goals and conditions. Whether you want to reduce stress, relieve pain,
           improve flexibility or receive health advice, beVibrant can create a
-          customized plan to meet your individual needs. Natalya Werthaim, an experienced and qualified professional who is passionate and dedicated
+          customized plan to meet your individual needs. Natalya Werthaim, an
+          experienced and qualified professional who is passionate and dedicated
           to her practice, ensures that her clients receive safe, effective, and
           high-quality services.
         </Typography>
@@ -42,7 +54,8 @@ const Home = () => {
           rejuvenating experience.
         </Typography>
       </Box>
-      <Section />
+      <Section title={"Well-being services"} />
+      <TreatmentItem/>
     </Box>
   );
 }
