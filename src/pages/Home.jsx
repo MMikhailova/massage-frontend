@@ -3,8 +3,9 @@ import { Box, Container, Typography } from '@mui/material';
 import Banner from '../components/Banner';
 import DrawerAppBar from '../components/Navigation';
 import TreatmentItem from "../components/Servises";
-
 import TestimonialCarousel from '../components/Testimonials';
+
+import MyComponent from '../components/Natalie';
 
 
     
@@ -16,8 +17,7 @@ const Home = () => {
         display: "flex",
         flexDirection: "column",
         backgroundColor: "#FCF8E8",
-        // width: "99vw",
-        // my:2,
+
         height: "fit-content",
         px: { xs: 0, md: 5 },
         py: { xs: 0, md: 8 },
@@ -51,7 +51,7 @@ const Home = () => {
           to her practice, ensures that her clients receive safe, effective, and
           high-quality services.
         </Typography>
-        <Typography align="center" m={2} variant="h5" color="#DF7861">
+        <Typography align="center" m={2} variant="h5" color="#678180">
           The welcoming and positive ambiance of beVibrant will make you feel at
           ease and promotes a sense of well-being, making it an enjoyable and
           rejuvenating experience.
@@ -60,10 +60,9 @@ const Home = () => {
       <Section title={"Well-being services"} />
       <TreatmentItem />
       <Section title={"Clients testimonials"} />
-      <TestimonialCarousel
-        ref={(el) => (this.Carousel = el)}
-        additionalTransfrom={-20 * 5}
-      />
+      <TestimonialCarousel />
+      <Section title={"About Natalya Werthaim"} />
+      <MyComponent />
     </Container>
   );
 }

@@ -18,6 +18,7 @@ let theme = createTheme({
       color: "#678180",
       fontWeight: 600,
     },
+  
   },
   components: {
     MuiButton: {
@@ -29,7 +30,6 @@ let theme = createTheme({
             "&:hover": {
               backgroundColor: "unset",
               borderColor: "unset",
-             
             },
           }),
           ...(ownerState.variant === "contained" && {

@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Paper, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Paper, Typography, useMediaQuery, useTheme,Container } from "@mui/material";
 
 const TestimonialCarousel = () => {
    const theme = useTheme();
@@ -37,69 +37,72 @@ const TestimonialCarousel = () => {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
       items: 3,
-      showDots: true,
+      
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 3,
-      showDots: true,
+     
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 2,
-      showDots: false,
+     
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      showDots: false,
+     
     },
   };
 
   return (
-    <Carousel
-      arrows={false}
-      infinite={true}
-      autoPlay={true}
-      autoPlaySpeed={5000}
-      keyBoardControl={true}
-      customTransition="all .5"
-      transitionDuration={200}
-      containerClass="carousel-container"
-      removeArrowOnDeviceType={["tablet", "mobile"]}
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px"
-      responsive={responsive}
-      showDots={isSmallScreen?false:true}
-    >
-      {testimonials.map((testimonial) => (
-        <Paper
-          key={testimonial.id}
-          elevation={3}
-          sx={{
-            backgroundColor: "#94B49F",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            height: { xs: "80%", md: "100%" },
-            wordWrap: "normal",
-            padding: "40px",
-            textAlign: "center",
-            color: "white",
-            m: 1,
-            overflow: { xs: "scroll", md: "unset" },
-          }}
-        >
-          <Typography variant="h6" sx={{ marginBottom: 2 }}>
-            {testimonial.name}
-          </Typography>
-          <Typography sx={{ height: "100%" }} variant="body1">
-            {testimonial.text}
-          </Typography>
-        </Paper>
-      ))}
-    </Carousel>
+    <Container maxWidth="lg"  sx={{my:3,p:0}}>
+      <Carousel
+        arrows={false}
+        infinite={true}
+        autoPlay={true}
+        autoPlaySpeed={5000}
+        keyBoardControl={true}
+        customTransition="all .5"
+        transitionDuration={200}
+        containerClass="carousel-container"
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px"
+        responsive={responsive}
+        showDots={isSmallScreen ? false : true}
+        width={isSmallScreen ? 100 : 100}
+      >
+        {testimonials.map((testimonial) => (
+          <Paper
+            key={testimonial.id}
+            elevation={3}
+            sx={{
+              backgroundColor: "#94B49F",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              height: { xs: "80%", md: "100%" },
+              wordWrap: "normal",
+              padding: 3,
+              textAlign: "left",
+              color: "white",
+              m: 1,
+              overflow: { xs: "scroll", md: "unset" },
+            }}
+          >
+            <Typography variant="h6" sx={{ marginBottom: 2 }}>
+              {testimonial.name}
+            </Typography>
+            <Typography sx={{ height: "100%" }} variant="body1">
+              {testimonial.text}
+            </Typography>
+          </Paper>
+        ))}
+      </Carousel>
+    </Container>
   );
 };
 
