@@ -1,41 +1,98 @@
-import * as React from "react";
-// import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-// import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Unstable_Grid2";
-import { Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
+
+import { Box, Typography } from "@mui/material";
+import StyledButton from "../components/Button";
+import { getTreatments } from "../api/viewModels/getTreatments";
+import BasicGrid from "../components/Services";
+import { getGallery } from "../api/viewModels/getGallery";
+import WovenImageList from "../components/Gallery";
+import DrawerAppBar from "../components/Navigation";
+import Footer from "../components/Footer";
 
 
+const bannerImg = [{id:"massage",
+  url: "../assets/handback.jpg"
+}, {id:"yoga",
+    url: "../assets/yoga_page.jpg",
+  }, {id:"health coaching",
+    url:"../assets/health_coaching.jpg"}
+];
+const positionBtn = {
+  top: "45%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  position: "absolute",
+};
+const Treatments = ({ page, setPage }) => {
 
-export default function BasicGrid({data}) {
-
-  return data.map((treatment) => (
-    <Box sx={{ my: 10 }}>
-      <Grid
-        container
-    
-        m="auto"
-        sx={{ justifyContent: "center", width: { xs: "100%", md: "80%" } }}
+  const [treatments, setTreatments] = useState([]);
+  const [gallery, setGallery] = useState([]);
+  const activePage = page.toLowerCase()
+  
+  useEffect(() => {
+    getTreatments(
+      `https://strapi-production-7702.up.railway.app/api/treatments?filters[type][$eq]=${activePage}&populate=*`
+    ).then((vm) => {
+      setTreatments(vm);
+    });
+    getGallery(
+      `https://strapi-production-7702.up.railway.app/api/galleries?filters[treatment][$eq]=${activePage}&populate=*`
+    ).then((vm) => setGallery(vm));
+  }, [activePage]);
+  console.log(treatments, gallery);
+  return (
+    <>
+      <Box
+        sx={{
+          height: "fitContent",
+          backgroundColor: "#FCF8E8",
+        }}
       >
-        <Grid xs={12} lg={4} textAlign="center">
+        <DrawerAppBar setPage={setPage} />
+        <Box
+          sx={{
+            width: "100%",
+            height: "65vh",
+            justifyContent: "center",
+            display: "flex",
+            alignContent: "center",
+            position: "relative",
+          }}
+          variant="quilted"
+          // gap={1}
+        >
           <img
-            style={{ objectFit: "fill",width:"80%",height:"90%"}}
-            src={treatment.attributes.imageMain.data.attributes.url}
-            alt=""
-          ></img>
-        </Grid>
-        <Grid xs={12} lg={6} px={3}>
-          <Typography variant="h4">{treatment.attributes.name}</Typography>
-          {treatment.attributes.prices.data.map((price) => (
-            <Typography variant="subtitle1">
-              {price.attributes.minutes} min - {price.attributes.priceEuro} €
-            </Typography>
-          ))}
-          <Typography variant="p">
-            {treatment.attributes.description}
+            style={{ objectFit: "cover", width: "100vw", opacity: "85%" }}
+            src={bannerImg.find(item => item.id === activePage)?.url
+            }
+            alt="1"
+            loading="lazy"
+          />
+          <StyledButton position={positionBtn} />
+
+          <Typography
+            variant="poster"
+            sx={{
+              position: "absolute",
+              bottom: 0,
+              margin: 0,
+              transform: {
+                xs: "translate(0%,-3.5vh)",
+                lg: "translate(0, -7vh)",
+              },
+            }}
+          >
+         {activePage.toUpperCase()}
           </Typography>
-        </Grid>
-      </Grid>
-    </Box>
-  ));
-}
+        </Box>
+
+        <BasicGrid data={treatments} />
+
+        <WovenImageList data={gallery} />
+      </Box>
+      <Footer />
+    </>
+  );
+};
+
+export default Treatments;

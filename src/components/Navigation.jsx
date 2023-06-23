@@ -17,6 +17,7 @@ import Button from "@mui/material/Button";
 import { MenuItem } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useNavigate } from "react-router-dom";
+
 const drawerWidth ="100vw";
 const navItemsLg = ["Home", "Treatments", "About", "Contact"];
 const navItemsSm = [
@@ -33,17 +34,28 @@ function DrawerAppBar(props) {
       const [anchorElUser, setAnchorElUser] = React.useState(null);
   const handleCloseUserMenu = (item) => {
     setAnchorElUser(null);
-    menuItems.includes(item) && navigate(`/${item}`);
-  };
-    const { window } = props;
+    menuItems.includes(item)&&handleClick(item)
+    
+}
+  const handleClick = (item) => {
+     console.log(item)
+     setPage(item)
+    item === "Home"?  navigate("/") :
+    item === "Health coaching" ?navigate("/Coaching"):
+     navigate(`/${item}`);
+         };
+
+
+
+    const { window,setPage} = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
-  };
+    };
+ 
   const handleOpenUserMenu = (event) => {
       setAnchorElUser(event.currentTarget);
-     
-                           
+        
   };
   const drawer = (
     <Box
@@ -70,13 +82,7 @@ function DrawerAppBar(props) {
       <Divider />
       <List>
         {navItemsSm.map((item) => (
-          <ListItem
-            onClick={() =>
-              item === "Home" ? navigate("/") : navigate(`/${item}`)
-            }
-            key={item}
-            disablePadding
-          >
+          <ListItem onClick={() => handleClick(item)} key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={item} />
             </ListItemButton>
@@ -88,7 +94,7 @@ function DrawerAppBar(props) {
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
-
+          
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -121,11 +127,7 @@ function DrawerAppBar(props) {
             {navItemsLg.map((item) => (
               <Button
                 onClick={
-                  item === "Treatments"
-                    ? handleOpenUserMenu
-                    : item === "Home"
-                    ? () => navigate("/")
-                    : () => navigate(`/${item}`)
+                  item === "Treatments" ? handleOpenUserMenu :()=> handleClick(item)
                 }
                 key={item}
                 sx={{ color: "#fff", px: 2 }}
@@ -153,8 +155,8 @@ function DrawerAppBar(props) {
               onClose={handleCloseUserMenu}
             >
               {menuItems.map((item) => (
-                  <MenuItem key={item} onClick={()=>handleCloseUserMenu(item)}>
-                      <Typography  textAlign="center">{item}</Typography>
+                <MenuItem key={item} onClick={() => handleCloseUserMenu(item)}>
+                  <Typography textAlign="center">{item}</Typography>
                 </MenuItem>
               ))}
             </Menu>

@@ -1,15 +1,15 @@
-import Section from '../components/Section';
+import Section from '../components/HomeSection';
 import { Box, Container, Typography } from '@mui/material';
-import Banner from '../components/Banner';
+import Banner from '../components/HomeBanner';
 import DrawerAppBar from '../components/Navigation';
-import TreatmentItem from "../components/Servises";
-import TestimonialCarousel from '../components/Testimonials';
-import MyComponent from '../components/Natalie';
+import TreatmentItem from "../components/HomeServises";
+import TestimonialCarousel from '../components/HomeTestimonials';
+import MyComponent from '../components/HomeAbout';
 import Footer from '../components/Footer';
 
 
     
-const Home = () => {
+const Home = ({ setPage}) => {
   return (
     <>
       <Container
@@ -18,13 +18,13 @@ const Home = () => {
           display: "flex",
           flexDirection: "column",
           backgroundColor: "#FCF8E8",
-
+          textAlign:"center",
           height: "fit-content",
           px: { xs: 0, md: 5 },
           py: { xs: 0, md: 8 },
         }}
       >
-        <DrawerAppBar />
+        <DrawerAppBar setPage={setPage} />
         <Banner />
         <Section />
         <Box
