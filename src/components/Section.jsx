@@ -5,22 +5,14 @@ const Section = ({title}) => {
   return (
     <Box
       sx={{
+        mt: { xs:"1em",md:"3em" },
         width: "100%",
         display: "flex",
         flexDirection: "column",
-        // position: "relative",
       }}
     >
       {title && (
         <Typography
-          sx={{
-            // pb: 6,
-            // width: "50vw",
-            // position: "absolute",
-            // bottom: 0,
-            // left: 0,
-            // transform: { xs: "translate(0%,-5vh)", md: "translate(0, -7vh)" },
-          }}
           variant="h2"
         >
           {title}

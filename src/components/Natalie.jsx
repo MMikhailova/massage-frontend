@@ -5,14 +5,16 @@ const MyComponent = () => {
   return (
     <Grid
       container
-          sx={{
-          my:3,
+      sx={{
+        my: 3,
         p: 2,
         position: "relative",
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
-        width: { md: "60vw" },
-        height: { md: "70vh" },
+        width: {
+          lg: "60vw",md:"100%"
+        },
+        height: { md:"70vh"},
         mx: "auto",
       }}
     >
@@ -35,7 +37,6 @@ const MyComponent = () => {
           style={{
             objectFit: "cover",
             width: "100%",
-            height: "100%",
             boxShadow: " 0px 0px 4px 0px",
           }}
         />

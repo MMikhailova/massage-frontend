@@ -17,6 +17,7 @@ const treatments = [
     image: "./assets/handback.jpg",
     title: "AYURVEDIC MASSAGE",
     description: [
+      "Ayurvedic facial massage and treatment",
       "Ayurvedic deep tissue massage",
       "Ayurvedic Yoga massage (AYM)",
       "Relaxation massage with healing sounds",
