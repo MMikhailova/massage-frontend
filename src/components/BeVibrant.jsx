@@ -13,7 +13,7 @@ const BeVibrant = () => {
         sx={{
            margin: 0,
            padding:0,
-          color: "#FCF8E8",
+         
           position: "absolute",
           bottom: 0,
           left: 0,

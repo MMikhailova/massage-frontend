@@ -7,6 +7,8 @@ import BasicGrid from '../components/Treatments';
 import { getGallery } from '../api/viewModels/getGallery';
 import WovenImageList from '../components/Gallery';
 import DrawerAppBar from '../components/Navigation';
+import Footer from '../components/Footer';
+
 
 const positionBtn = {
   top: "45%",
@@ -29,54 +31,58 @@ const Massage = () => {
       }, []);
       console.log(treatments, gallery);
     return (
-      <Box
-        sx={{
-          height: "fitContent",
-          backgroundColor: "#FCF8E8",
-        }}
-      >
-        <DrawerAppBar />
+      <>
         <Box
           sx={{
-            width: "100%",
-            height: "65vh",
-            justifyContent: "center",
-            display: "flex",
-            alignContent: "center",
-            position: "relative",
-            p: 0,
+            height: "fitContent",
+            backgroundColor: "#FCF8E8",
+  
           }}
-          variant="quilted"
-          // gap={1}
         >
-          <img
-            style={{ objectFit: "cover", width: "100vw", opacity: "85%" }}
-            src="../assets/handback.jpg"
-            alt="1"
-            loading="lazy"
-          />
-          <StyledButton position={positionBtn} />
-          <Typography
-            variant="h1"
-            marginBlockEnd="0em"
+          <DrawerAppBar />
+          <Box
             sx={{
-              position: "absolute",
-              bottom: -60,
-              margin: 0,
-              fontSize: "200px",
-              fontWeight: "600",
-              marginBlockEnd: "0em",
-              color: "#FCF8E8",
+              width: "100%",
+              height: "65vh",
+              justifyContent: "center",
+              display: "flex",
+              alignContent: "center",
+              position: "relative",
+            
             }}
+            variant="quilted"
+            // gap={1}
           >
-            MASSAGE
-          </Typography>
+            <img
+              style={{ objectFit: "cover", width: "100vw", opacity: "85%" }}
+              src="../assets/handback.jpg"
+              alt="1"
+              loading="lazy"
+            />
+            <StyledButton position={positionBtn} />
+
+            <Typography
+              variant="poster"
+              sx={{
+                position: "absolute",
+                bottom: 0,
+                margin: 0,
+                transform: {
+                  xs: "translate(0%,-3.5vh)",
+                  lg: "translate(0, -7vh)",
+                },
+              }}
+            >
+              MASSAGE
+            </Typography>
+          </Box>
+
+          <BasicGrid data={treatments} />
+
+          <WovenImageList data={gallery} />
         </Box>
-
-        <BasicGrid data={treatments} />
-
-        <WovenImageList data={gallery} />
-      </Box>
+        <Footer />
+      </>
     );
 }
 

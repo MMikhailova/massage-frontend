@@ -6,13 +6,6 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { Typography } from "@mui/material";
 
 
-// const Item = styled(Paper)(({ theme }) => ({
-//   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-//   ...theme.typography.body2,
-//   padding: theme.spacing(1),
-//   textAlign: "center",
-//   color: theme.palette.text.secondary,
-// }));
 
 export default function BasicGrid({data}) {
 
@@ -20,20 +13,19 @@ export default function BasicGrid({data}) {
     <Box sx={{ my: 10 }}>
       <Grid
         container
-        width="80%"
+    
         m="auto"
-        sx={{ justifyContent: "center" }}
+        sx={{ justifyContent: "center", width: { xs: "100%", md: "80%" } }}
       >
-        <Grid lg={4} >
+        <Grid xs={12} lg={4} textAlign="center">
           <img
-            style={{ objectFit: "cover" }}
-            width="80%"
+            style={{ objectFit: "fill",width:"80%",height:"90%"}}
             src={treatment.attributes.imageMain.data.attributes.url}
             alt=""
           ></img>
         </Grid>
-        <Grid xs={6} >
-          <Typography variant="h5">{treatment.attributes.name}</Typography>
+        <Grid xs={12} lg={6} px={3}>
+          <Typography variant="h4">{treatment.attributes.name}</Typography>
           {treatment.attributes.prices.data.map((price) => (
             <Typography variant="subtitle1">
               {price.attributes.minutes} min - {price.attributes.priceEuro} €

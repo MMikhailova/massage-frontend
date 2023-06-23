@@ -49,15 +49,18 @@ let theme = createTheme({
 });
 
 theme.typography.poster = {
-  lineHeight:0,
+  lineHeight: 0,
+  color: "#FCF8E8",
   fontSize: "70px",
   "@media (min-width:600px)": {
     fontSize: "100px",
     fontWeight: 700,
+    color: "#FCF8E8",
   },
   [theme.breakpoints.up("md")]: {
     fontSize: "200px",
     fontWeight: 700,
+    color: "#FCF8E8",
   },
 };
 

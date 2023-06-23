@@ -10,7 +10,7 @@ export default function WovenImageList({data}) {
         Gallery
       </Typography>
       <ImageList
-        sx={{ width: "80%", height: "auto", margin: "auto" }}
+        sx={{ width: "80%", height: "auto", margin: "auto",pb:3 }}
         variant="woven"
         cols={3}
         gap={8}
