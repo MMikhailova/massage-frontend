@@ -1,11 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 
-import App from './App';
-import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
-import Massage from './pages/Massage';
+import App from "./App";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material";
+import Treatment from "./components/Treatment";
 let theme = createTheme({
   typography: {
     fontFamily: "'Montserrat',sans serif",
@@ -18,7 +19,6 @@ let theme = createTheme({
       color: "#678180",
       fontWeight: 600,
     },
-  
   },
   components: {
     MuiButton: {
@@ -64,17 +64,23 @@ theme.typography.poster = {
   },
 };
 
-
-
 theme = responsiveFontSizes(theme);
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <Router>
         <Routes>
           <Route path="/" element={<App />}></Route>
-          <Route path="/Massage" element={<Massage />}></Route>
+          <Route
+            path="/Massage"
+            element={<Treatment page={"massage"} />}
+          ></Route>
+          <Route path="/Yoga" element={<Treatment page={"yoga"} />}></Route>
+          <Route
+            path="/Coaching"
+            element={<Treatment page={"coaching"} />}
+          ></Route>
         </Routes>
       </Router>
     </ThemeProvider>
@@ -84,4 +90,3 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-

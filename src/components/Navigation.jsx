@@ -29,11 +29,13 @@ const navItemsSm = [
 ];
 const menuItems = ["Massage", "Yoga", "Health coaching"];
 function DrawerAppBar(props) {
-      const navigate = useNavigate();
-      const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate();
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
   const handleCloseUserMenu = (item) => {
     setAnchorElUser(null);
-    menuItems.includes(item) && navigate(`/${item}`);
+     menuItems.includes(item) && navigate(`/${item==="Health coaching"?"Coaching":item}`);
+     
   };
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -41,7 +43,8 @@ function DrawerAppBar(props) {
     setMobileOpen((prevState) => !prevState);
   };
   const handleOpenUserMenu = (event) => {
-      setAnchorElUser(event.currentTarget);
+    setAnchorElUser(event.currentTarget);
+    
      
                            
   };
@@ -71,8 +74,10 @@ function DrawerAppBar(props) {
       <List>
         {navItemsSm.map((item) => (
           <ListItem
-            onClick={() =>
-              item === "Home" ? navigate("/") : navigate(`/${item}`)
+            onClick={
+              item === "Home" ?()=> navigate("/") : item === "Health coaching"
+                    ? () => navigate("/Coaching")
+                    : () => navigate(`/${item}`)
             }
             key={item}
             disablePadding
@@ -120,11 +125,13 @@ function DrawerAppBar(props) {
           >
             {navItemsLg.map((item) => (
               <Button
-                onClick={
+                onClick={ 
                   item === "Treatments"
                     ? handleOpenUserMenu
                     : item === "Home"
                     ? () => navigate("/")
+                    : item === "Health coaching"
+                    ? () => navigate("/Coaching")
                     : () => navigate(`/${item}`)
                 }
                 key={item}
@@ -153,8 +160,8 @@ function DrawerAppBar(props) {
               onClose={handleCloseUserMenu}
             >
               {menuItems.map((item) => (
-                  <MenuItem key={item} onClick={()=>handleCloseUserMenu(item)}>
-                      <Typography  textAlign="center">{item}</Typography>
+                <MenuItem key={item} onClick={()=>handleCloseUserMenu(item)}>
+                  <Typography textAlign="center">{item}</Typography>
                 </MenuItem>
               ))}
             </Menu>

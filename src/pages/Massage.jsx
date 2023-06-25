@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react'
 
-import { Box, Typography } from '@mui/material';
-import StyledButton from '../components/Button';
-import { getTreatments } from '../api/viewModels/getTreatments';
-import BasicGrid from '../components/Treatments';
-import { getGallery } from '../api/viewModels/getGallery';
-import WovenImageList from '../components/Gallery';
-import DrawerAppBar from '../components/Navigation';
-import Footer from '../components/Footer';
 
+import { Box, Typography } from "@mui/material";
+import StyledButton from "./Button";
+
+import BasicGrid from "./HomeTreatments";
+
+import WovenImageList from "./Gallery";
+import DrawerAppBar from "./Navigation";
+import Footer from "./Footer";
 
 const positionBtn = {
   top: "45%",
@@ -16,74 +15,65 @@ const positionBtn = {
   transform: "translate(-50%, -50%)",
   position: "absolute",
 };
-const Massage = () => {
-  const [treatments, setTreatments] = useState([]);
-  const [gallery, setGallery]=useState([])
-      useEffect(() => {
-        getTreatments(
-          "https://strapi-production-7702.up.railway.app/api/treatments?filters[type][$eq]=massage&populate=*"
-        ).then((vm) => {
-          setTreatments(vm);
-        });
-        getGallery(
-          "https://strapi-production-7702.up.railway.app/api/galleries?filters[treatment][$eq]=massage&populate=*"
-        ).then((vm) => setGallery(vm));
-      }, []);
-      console.log(treatments, gallery);
-    return (
-      <>
+const Massage = ({ page,treatments,gallery }) => {
+  const bannerImg = [
+    { id: "massage", url: "../assets/handback.jpg" },
+    { id: "yoga", url: "../assets/yoga_page.jpg" },
+    { id: "vibrant coaching", url: "../assets/health_coaching.jpg" },
+  ];
+
+  return (
+    <>
+      <Box
+        sx={{
+          height: "fitContent",
+          backgroundColor: "#FCF8E8",
+        }}
+      >
+        <DrawerAppBar />
         <Box
           sx={{
-            height: "fitContent",
-            backgroundColor: "#FCF8E8",
-  
+            width: "100%",
+            height: "65vh",
+            justifyContent: "center",
+            display: "flex",
+            alignContent: "center",
+            position: "relative",
           }}
+          variant="quilted"
+          // gap={1}
         >
-          <DrawerAppBar />
-          <Box
+          <img
+            style={{ objectFit: "fit", width: "100vw", opacity: "85%" }}
+            src="../assets/handback.jpg"
+            alt="1"
+            loading="back massage"
+          />
+          <StyledButton position={positionBtn} />
+
+          <Typography
+            variant="poster"
             sx={{
-              width: "100%",
-              height: "65vh",
-              justifyContent: "center",
-              display: "flex",
-              alignContent: "center",
-              position: "relative",
-            
+              position: "absolute",
+              bottom: 0,
+              margin: 0,
+              transform: {
+                xs: "translate(0%,-3.5vh)",
+                lg: "translate(0, -7vh)",
+              },
             }}
-            variant="quilted"
-            // gap={1}
           >
-            <img
-              style={{ objectFit: "cover", width: "100vw", opacity: "85%" }}
-              src="../assets/handback.jpg"
-              alt="1"
-              loading="lazy"
-            />
-            <StyledButton position={positionBtn} />
-
-            <Typography
-              variant="poster"
-              sx={{
-                position: "absolute",
-                bottom: 0,
-                margin: 0,
-                transform: {
-                  xs: "translate(0%,-3.5vh)",
-                  lg: "translate(0, -7vh)",
-                },
-              }}
-            >
-              MASSAGE
-            </Typography>
-          </Box>
-
-          <BasicGrid data={treatments} />
-
-          <WovenImageList data={gallery} />
+            {page.toUpperCase()}
+          </Typography>
         </Box>
-        <Footer />
-      </>
-    );
-}
 
-export default Massage
+        <BasicGrid data={treatments} />
+
+        <WovenImageList data={gallery} />
+      </Box>
+      <Footer />
+    </>
+  );
+};
+
+export default Massage;
