@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-
 import App from "./App";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material";
-import Treatment from "./components/Treatment";
+import Massage from "./pages/Massage";
+import Yoga from "./pages/Yoga";
+import Coaching from "./pages/Coaching";
 let theme = createTheme({
   typography: {
     fontFamily: "'Montserrat',sans serif",
@@ -75,12 +76,12 @@ root.render(
           <Route path="/" element={<App />}></Route>
           <Route
             path="/Massage"
-            element={<Treatment page={"massage"} />}
+            element={<Massage/>}
           ></Route>
-          <Route path="/Yoga" element={<Treatment page={"yoga"} />}></Route>
+          <Route path="/Yoga" element={<Yoga/>}></Route>
           <Route
             path="/Coaching"
-            element={<Treatment page={"coaching"} />}
+            element={<Coaching />}
           ></Route>
         </Routes>
       </Router>

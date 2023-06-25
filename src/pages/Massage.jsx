@@ -1,27 +1,19 @@
 
 
 import { Box, Typography } from "@mui/material";
-import StyledButton from "./Button";
-
-import BasicGrid from "./HomeTreatments";
-
-import WovenImageList from "./Gallery";
-import DrawerAppBar from "./Navigation";
-import Footer from "./Footer";
+import DrawerAppBar from "../components/Navigation";
+import StyledButton from "../components/Button";
+import Footer from "../components/Footer";
+import Treatment from "../components/Treatment";
 
 const positionBtn = {
-  top: "45%",
+  top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
   position: "absolute",
 };
-const Massage = ({ page,treatments,gallery }) => {
-  const bannerImg = [
-    { id: "massage", url: "../assets/handback.jpg" },
-    { id: "yoga", url: "../assets/yoga_page.jpg" },
-    { id: "vibrant coaching", url: "../assets/health_coaching.jpg" },
-  ];
-
+const Massage = () => {
+  
   return (
     <>
       <Box
@@ -33,21 +25,33 @@ const Massage = ({ page,treatments,gallery }) => {
         <DrawerAppBar />
         <Box
           sx={{
-            width: "100%",
-            height: "65vh",
+            m: {
+              xs: 0,
+              md: 8,
+            },
+            mt: {
+              xs: 0,
+              md: 8,
+            },
+            backgroundColor: "#504B3E",
+            height: "75vh",
             justifyContent: "center",
             display: "flex",
             alignContent: "center",
             position: "relative",
           }}
           variant="quilted"
-          // gap={1}
         >
           <img
-            style={{ objectFit: "fit", width: "100vw", opacity: "85%" }}
-            src="../assets/handback.jpg"
+            style={{
+              objectFit:  "cover",
+              width:"100%",
+              height: "auto",
+              opacity: "100%",
+            }}
+            src="../assets/handback.jpg"           
             alt="1"
-            loading="back massage"
+            loading="Massage"
           />
           <StyledButton position={positionBtn} />
 
@@ -63,13 +67,11 @@ const Massage = ({ page,treatments,gallery }) => {
               },
             }}
           >
-            {page.toUpperCase()}
+           MASSAGE
           </Typography>
         </Box>
 
-        <BasicGrid data={treatments} />
-
-        <WovenImageList data={gallery} />
+        <Treatment page={"massage"} />
       </Box>
       <Footer />
     </>
