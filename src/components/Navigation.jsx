@@ -44,9 +44,7 @@ function DrawerAppBar(props) {
   };
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
-    
-     
-                           
+                   
   };
   const drawer = (
     <Box
@@ -108,7 +106,7 @@ function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Box>
+          <Box onClick={()=>navigate("/")}>
             <img
               alt=""
               style={{ height: "15vh" }}
@@ -125,7 +123,7 @@ function DrawerAppBar(props) {
           >
             {navItemsLg.map((item) => (
               <Button
-                onClick={ 
+                onClick={
                   item === "Treatments"
                     ? handleOpenUserMenu
                     : item === "Home"
@@ -160,7 +158,7 @@ function DrawerAppBar(props) {
               onClose={handleCloseUserMenu}
             >
               {menuItems.map((item) => (
-                <MenuItem key={item} onClick={()=>handleCloseUserMenu(item)}>
+                <MenuItem key={item} onClick={() => handleCloseUserMenu(item)}>
                   <Typography textAlign="center">{item}</Typography>
                 </MenuItem>
               ))}

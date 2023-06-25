@@ -16,11 +16,6 @@ const positionBtn = {
   position: "absolute",
 };
 const Treatment = ({ page }) => {
-  const bannerImg = [
-    { id: "massage", url: "../assets/handback.jpg" },
-    { id: "yoga", url: "../assets/yoga_page.jpg" },
-    { id: "coaching", url: "../assets/health_coaching.jpg" },
-  ];
   const [treatments, setTreatments] = useState([]);
   const [gallery, setGallery] = useState([]);
   useEffect(() => {
@@ -45,31 +40,40 @@ const Treatment = ({ page }) => {
         <DrawerAppBar />
         <Box
           sx={{
-            m: 8,
-            mt: 8,
+            m: {
+              xs: 0,
+              md: 8,
+            },
+            mt: {
+              xs: 0,
+              md: 8,
+            },
             backgroundColor: "#504B3E",
             height: "75vh",
-            // px: { xs: 0, md: 5 },
-            // pt: { xs: 0, md: 8 },
             justifyContent: "center",
             display: "flex",
             alignContent: "center",
             position: "relative",
           }}
           variant="quilted"
-          // gap={1}
+  
         >
-     
           <img
             style={{
-              objectFit:page==="coaching"?"contain":"cover",
-            width:page==="coaching"?"40%":"100%",
+              objectFit: page === "coaching" ? "contain" : "cover",
+              width: page === "coaching" ? { md: "40%" } : "100%",
               height: "auto",
               opacity: "100%",
             }}
-            src={bannerImg.find((item) => item.id === page)?.url}
+            src={
+              page === "massage"
+                ? "../assets/handback.jpg"
+                : page === "yoga"
+                ? "../assets/yoga_page.jpg"
+                : "../assets/health_coaching.jpg"
+            }
             alt="1"
-            loading="lazy"
+            loading={page}
           />
           <StyledButton position={positionBtn} />
 

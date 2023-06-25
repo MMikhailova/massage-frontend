@@ -51,7 +51,8 @@ let theme = createTheme({
 theme.typography.poster = {
   lineHeight: 0,
   color: "#FCF8E8",
-  fontSize: "70px",
+  fontSize: "65px",
+  fontWeight: 700,
   "@media (min-width:600px)": {
     fontSize: "100px",
     fontWeight: 700,
