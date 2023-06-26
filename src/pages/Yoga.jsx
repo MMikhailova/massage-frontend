@@ -46,7 +46,7 @@ const Yoga = ({ page }) => {
               height: "auto",
               opacity: "100%",
             }}
-            src="../assets/yoga_page.jpg"
+            src="../assets/yoga_yoga_page.jpg"
             alt="1"
             loading="Yoga"
           />
@@ -57,7 +57,6 @@ const Yoga = ({ page }) => {
             sx={{
               position: "absolute",
               bottom: 0,
-              margin: 0,
               transform: {
                 xs: "translate(0%,-3.5vh)",
                 lg: "translate(0, -7vh)",
