@@ -16,7 +16,7 @@ const Footer = () => {
         width: "100%",
         height: "auto",
         backgroundColor: "#678180",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
       }}
     >
@@ -24,7 +24,7 @@ const Footer = () => {
         divider={<Divider sx={{mx:2}} color="white" orientation="vertical" flexItem />}
         sx={{
           py: { xs: "1.5rem", md: "2rem" },
-
+          textAlign:"center",
           spacing: 2,
           flexDirection: { xs: "column", md: "row" },
         }}
