@@ -74,15 +74,9 @@ root.render(
       <Router>
         <Routes>
           <Route path="/" element={<App />}></Route>
-          <Route
-            path="/Massage"
-            element={<Massage/>}
-          ></Route>
-          <Route path="/Yoga" element={<Yoga/>}></Route>
-          <Route
-            path="/Coaching"
-            element={<Coaching />}
-          ></Route>
+          <Route path="/Massage" element={<Massage page={"massage"} />}></Route>
+          <Route path="/Yoga" element={<Yoga page={"yoga"} />}></Route>
+          <Route path="/Coaching" element={<Coaching page={"coaching"} />}></Route>
         </Routes>
       </Router>
     </ThemeProvider>

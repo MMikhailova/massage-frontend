@@ -12,7 +12,7 @@ const positionBtn = {
   transform: "translate(-50%, -50%)",
   position: "absolute",
 };
-const Massage = () => {
+const Massage = ({ page }) => {
   
   return (
     <>
@@ -71,7 +71,7 @@ const Massage = () => {
           </Typography>
         </Box>
 
-        <Treatment page={"massage"} />
+        <Treatment page={page} />
       </Box>
       <Footer />
     </>
