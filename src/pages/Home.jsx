@@ -18,7 +18,7 @@ const Home = () => {
           display: "flex",
           flexDirection: "column",
           backgroundColor: "#FCF8E8",
-
+          textAlign:"center",
           height: "fit-content",
           px: { xs: 0, md: 5 },
           py: { xs: 0, md: 8 },
