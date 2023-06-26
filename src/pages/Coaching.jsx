@@ -46,7 +46,7 @@ const Coaching= ({page}) => {
               height: "auto",
               opacity: "100%",
             }}
-            src="../assets/health_coaching.jpg"
+            src="../assets/coaching.jpg"
     
             alt="1"
             loading="Coaching"
