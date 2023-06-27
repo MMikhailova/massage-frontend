@@ -9,8 +9,6 @@ import {
   Button,
 CardActionArea,
   CardMedia,
-  Stack,
-  Link,Divider
 } from "@mui/material";
 
 const positionBtn = {
