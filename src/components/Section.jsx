@@ -5,7 +5,7 @@ const Section = ({title}) => {
   return (
     <Box
       sx={{
-        mt: { xs:"1em",md:"3em" },
+        mt: { xs:"1em",md:3},
         width: "100%",
         display: "flex",
         flexDirection: "column",

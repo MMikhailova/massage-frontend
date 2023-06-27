@@ -1,43 +1,62 @@
-import { Typography, Box, } from "@mui/material";
+import { Typography,Link, Breadcrumbs } from "@mui/material";
 
 import React from 'react'
 
-
-
 const BeVibrant = () => {
-
   return (
     <>
       <Typography
-        variant="poster"
+        variant="h1"
         sx={{
-           margin: 0,
-           padding:0,
-         textAlign:"center",
+          color: "#FCF8E8",
+          fontWeight: 900,
           position: "absolute",
-          bottom: 0,
+          bottom: { xs: 40, md: 0 },
           left: 0,
           width: "100%",
-          textShadow: " 0px 4px 4px #94B49F",
+          textShadow: " 5px 0px 8px #94B49F",
           transform: {
-            xs: "translate(0%,-12vh)",
-            md: "translate(0%, -18vh)",
+            md: "translate(0%,20%)",
           },
         }}
       >
         beVibrant
       </Typography>
-      <Box
+
+      <Typography
+        sx={{ display: { xs: "none", md: "flex" } }}
+        py={4}
+        variant="h4"
+      >
+        wellbeing treatments
+      </Typography>
+      <Breadcrumbs
+        aria-label="breadcrumb"
+        underline="hover"
+        color="#DF7861"
         sx={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          transform: { xs: "translate(0%,-5vh)", md: "translate(0, -7vh)" },
-          backgroundColor: "#FCF8E8",
+          my: 5,
+          display: {
+            xs: "flex",
+            md: "none",
+          },
           width: "100%",
-          height: "4vh",
+          height: "fit-content",
+          justifyContent: "space-around",
+          alignItems: "center",
         }}
-      ></Box>
+      >
+        <Link color="#678180" variant="h5" underline="hover">
+          Yoga
+        </Link>
+        <Link color="#678180" variant="h5" underline="hover">
+          Massage
+        </Link>
+        <Link color="#678180" variant="h5" underline="hover">
+          Health Coaching
+        </Link>
+      </Breadcrumbs>
+ 
     </>
   );
 }

@@ -1,20 +1,58 @@
-import { Grid} from "@mui/material";
-import StyledButton from "./Button";
+
+// import StyledButton from "./Button";
+import { useState } from "react";
 import BeVibrant from "./BeVibrant";
+import {
+  Grid,
+  Typography,
+  Box,
+  Button,
+CardActionArea,
+  CardMedia,
+  Stack,
+  Link,Divider
+} from "@mui/material";
 
 const positionBtn = {
-  top: "60%",
+bottom:0,
   left: "50%",
-  transform: "translate(-50%, -50%)",
+  transform: "translate(-45%, -45%)",
   position: "absolute",
 };
 
+function Hero({section, display}) {
+   return (
+     <Box
+       position={positionBtn}
+       sx={{
+         display: display ? "flex" : "none",
+         height: "40%",
+         flexDirection: "column",
+         justifyContent: "space-around",
+         width: "50%",
+         alignItems: "center",
+         
+       }}
+     >
+       <Typography
+        sx={{display:{xs:"none",md:"block"}}}
+         borderBottom="#DF7861"
+         color="white"
+         variant="h3"
+       >
+         {section}
+       </Typography>
+       <Button size="medium" variant="contained">
+         Book a session
+       </Button>
+     </Box>
+   );
+}
+
 export default function Banner() {
-const images = [
-  "../assets/yoga_up.jpg",
-  "../assets/hands.jpg",
-  "../assets/massage.jpg",
-];
+  const [isYogaShown, setIsYogaShown] = useState(false)
+  const [isMassageShown, setIsMassageShown] = useState(false);
+     const [isCoachingShown, setIsCoachingShown] = useState(false);
       const mediaStyle = {
     width: "100%",
     height:"100%",
@@ -22,105 +60,111 @@ const images = [
 
   };
   return (
-    
     <Grid
       container
       justifyContent="center"
       position="relative"
       spacing={{ xs: 0, md: 2 }}
       sx={{
-    
-        height: {xs:"80vh", md: "80vh" },
-      
+        height: { xs: "75vh", md: "65vh" },
+        mb: { xs: 0, md: 3 },
       }}
     >
-      {images.map((img) => (
-        <Grid
-          key={img}
-          item
-          md={4}
-          xs={12}
-          sx={{
-            display: {
-              xs: `${images.indexOf(img) !== 1 && "none"}`,
-              md: "flex",
-            },
-            height: { xs: "90%", md: "90%" },
-            position: `${(images.indexOf(img) === 1) & "relative"}`,
-          }}
+      <Grid
+        item
+        md={4}
+        xs={12}
+        sx={{
+          display: {
+            xs: "none",
+            md: "flex",
+          },
+          height: { xs: "90%", md: "100%" },
+          position: "relative",
+        }}
+      >
+        <CardActionArea
+          sx={{ width: "100%", height: "100%" }}
+          onMouseMoveCapture={() => setIsYogaShown(true)}
+          onMouseOutCapture={() => setIsYogaShown(!isYogaShown)}
         >
-          <StyledButton
-            position={positionBtn}
-            url={"https://www.eleniavgenaki.com/category/6607051387109376"}
+          <CardMedia
+            component="img"
+            height="100%"
+            image="../assets/yoga_up.jpg"
+            alt="green iguana"
+            style={mediaStyle}
           />
-          <img src={img} alt={img} style={mediaStyle} />
-          <BeVibrant />
-     
-        </Grid>
-      ))}
+          <Hero section={"Yoga"} display={isYogaShown} />
+        </CardActionArea>
+      </Grid>
+      <Grid
+        item
+        md={4}
+        xs={12}
+        sx={{
+          display: {
+            xs: "flex",
+            md: "flex",
+          },
+          height: { xs: "90%", md: "100%" },
+          position: "relative",
+        }}
+      >
+        <CardActionArea
+          sx={{ width: "100%", height: "100%" }}
+          onMouseMoveCapture={() => setIsMassageShown(true)}
+          onMouseOutCapture={() => setIsMassageShown(!isMassageShown)}
+        >
+          <CardMedia
+            component="img"
+            height="100%"
+            image="../assets/massage.png"
+            alt="green iguana"
+            style={mediaStyle}
+          />
+          <Hero section={"Massage"} display={isMassageShown} />
+        </CardActionArea>
+      </Grid>
+      <Grid
+        item
+        md={4}
+        xs={12}
+        sx={{
+          display: {
+            xs: "none",
+            md: "flex",
+          },
+
+          height: { xs: "90%", md: "100%" },
+          position: "relative",
+        }}
+      >
+        <CardActionArea
+          onMouseMoveCapture={() => setIsCoachingShown(true)}
+          onMouseOutCapture={() => setIsCoachingShown(!isCoachingShown)}
+        >
+          <CardMedia
+            component="img"
+            height="100%"
+            image="../assets/hands.jpg"
+            alt="green iguana"
+            style={mediaStyle}
+          />
+          <Hero section={"Health coaching"} display={isCoachingShown} />
+        </CardActionArea>
+      </Grid>
+      <BeVibrant />
+
+      {/* <Grid item xs={12} textAlign="center"  mx="auto" mb={0} >
+       
+      </Grid> */}
     </Grid>
   );
+      
 }
   
 
 
 
   
-    // <Grid
-    //   container
-    //   spacing={2}
-    //   sx={{
-    //     p: "1em",
-    //     width: "99vw",
-    //     height: "80vh",
-    //     margin: "auto",
-    //   }}
-    // >
-    //   <Grid
-    //     item xs={0}md={4}
-
-    //     sx={{
-    //       opacity: "95%",
-    //       display: { xs: "none", sm: "block" },
-    //     }}
-    //   >
-    //     <img
-    //       style={{ objectFit: "cover", width: "100%", height: "100%" }}
-    //       src="../assets/yoga_up.jpg"
-    //       alt="1"
-    //       loading="lazy"
-    //     />
-    //   </Grid>
-      
-    //   <ImageListItem
-    //     sx={{
-    //       flexGrow: 1,
-    //       position: "relative",
-    //     }}
-    //   >
-    //     <StyledButton
-    //       position={positionBtn}
-    //       url={"https://www.eleniavgenaki.com/category/6607051387109376"}
-    //     />
-    //     <img
-    //       src="../assets/hands.jpg"
-    //       alt="2"
-    //       loading="lazy"
-    //       style={{ objectFit: "cover" }}
-    //     />
-    //   </ImageListItem>
-    //   <ImageListItem
-    //     sx={{
-    //       width: "30%",
-    //       opacity: "85%",
-    //       display: { xs: "none", sm: "block" },
-    //     }}
-    //   >
-    //     <img
-    //       style={{ objectFit: "cover" }}
-    //       src="../assets/massage.jpg"
-    //       alt="1"
-    //       loading="lazy"
-    //     />
-    //   </ImageListItem>
-    // </Grid>

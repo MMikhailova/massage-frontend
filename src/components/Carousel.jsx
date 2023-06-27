@@ -77,7 +77,7 @@ const ImagesCarousel = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              height: { xs: "80%", md: "100%" },
+              height: "100%",
               wordWrap: "normal",
               padding: 3,
               textAlign: "left",
