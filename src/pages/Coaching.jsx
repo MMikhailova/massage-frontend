@@ -16,7 +16,6 @@ const Coaching= ({page}) => {
       <Box
         sx={{
           height: "fitContent",
-          backgroundColor: "#FCF8E8",
         }}
       >
         <DrawerAppBar />
@@ -31,7 +30,6 @@ const Coaching= ({page}) => {
               md: 5,
             },
             background: " conic-gradient(#424236,#666353,#666353,#404034)",
-
             height: "75vh",
             justifyContent: "center",
             display: "flex",
@@ -43,7 +41,7 @@ const Coaching= ({page}) => {
           <img
             style={{
               objectFit: "cover",
-              width: "43%",
+              width:{xs:"100%",md:"43%"},
               height: "auto",
               opacity: "90%",
             }}

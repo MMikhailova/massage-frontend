@@ -30,7 +30,6 @@ const Yoga = ({ page }) => {
               xs: 0,
               md: 8,
             },
-            backgroundColor: "#504B3E",
             height: "75vh",
             justifyContent: "center",
             display: "flex",
