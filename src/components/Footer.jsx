@@ -10,7 +10,7 @@ const Footer = () => {
     <Box
       sx={{
         py: 5,
-        color: "white",
+       color: "white",
         display: "flex",
         flexDirection: "column",
         width: "100%",

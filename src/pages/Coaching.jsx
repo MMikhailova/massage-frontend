@@ -28,9 +28,10 @@ const Coaching= ({page}) => {
             },
             mt: {
               xs: 0,
-              md: 8,
+              md: 5,
             },
-            backgroundColor: "#504B3E",
+            background: " conic-gradient(#424236,#666353,#666353,#404034)",
+
             height: "75vh",
             justifyContent: "center",
             display: "flex",
@@ -41,13 +42,12 @@ const Coaching= ({page}) => {
         >
           <img
             style={{
-              objectFit:  "contain" ,
-              width: { md: "40%" } ,
+              objectFit: "cover",
+              width: "43%",
               height: "auto",
-              opacity: "100%",
+              opacity: "90%",
             }}
-            src="../assets/coaching.jpg"
-    
+            src="../assets/coaching.png"
             alt="1"
             loading="Coaching"
           />

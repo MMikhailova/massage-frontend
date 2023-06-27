@@ -1,32 +1,49 @@
+import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Cards from "./Cards";
-import "./carousel.css";
-import { CircularProgress } from "@mui/material";
+import {
+  Paper,
 
-  // const [blogData, setBlogData] = useState([])
-  //  const [isLoading, setIsLoading] = useState(true);
-   
-  // useEffect(() => { blogArticlesVm("https://strapi-production-7702.up.railway.app/api/blogs?populate=*")
-  //   .then((vm) => setBlogData(vm))
-  //   .then((res) => {
-  //     setTimeout(() => {
-  //       setIsLoading(false);
-  //     }, 2000);
-  //   }); }, [])
-  // console.log(blogData)
-// document.body.style.overflow = "hidden";
-const Slider = ({ data,isLoading }) => {
-console.log(data)
+  useMediaQuery,
+  useTheme,
+  Container,
+} from "@mui/material";
+
+const ImagesCarousel = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const certificates = [
+    {
+      id: 0,
+      name: "Anabel",
+      url: "../assets/Certificate_1.png",
+    },
+    {
+      id: 1,
+      name: "Andrian",
+      url: "../assets/Certificate_2.png",
+    },
+
+    {
+      id: 2,
+      name: "An",
+      url: "../assets/Certificate_3.png",
+    },
+    {
+      id: 3,
+      name: "Aan",
+      url: "../assets/Certificate_4.png",
+    }
+  ];
+
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 4,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -37,34 +54,53 @@ console.log(data)
       items: 1,
     },
   };
-  return isLoading ? (
-    <CircularProgress />
-  ) : (
-    <Carousel
-      arrows={true}
-      // showDots={true}
-      renderDotsOutside={true}
-      swipeable={true}
-      draggable={true}
-      responsive={responsive}
-      ssr={true} // means to render carousel on server-side.
-      infinite={true}
-      autoPlaySpeed={1000}
-      keyBoardControl={true}
-      customTransition="all .5"
-      transitionDuration={500}
-      containerClass="carousel-container"
-      removeArrowOnDeviceType={["tablet", "mobile"]}
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px"
-    >
-      {data.map((a) => (
-        <Cards key={a.attributes.dateOfArticle} data={a} />
-      ))}
-    </Carousel>
+
+  return (
+    <Container maxWidth="lg" sx={{ my: 3, p: 0 }}>
+      <Carousel
+        arrows={false}
+        infinite={true}
+        keyBoardControl={true}
+        containerClass="carousel-container"
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px"
+        responsive={responsive}
+        showDots={isSmallScreen?true:false}
+        width={isSmallScreen ? 100 : 100}
+      >
+        {certificates.map((certificate) => (
+          <Paper
+            key={certificate.id}
+            elevation={3}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              height: { xs: "80%", md: "100%" },
+              wordWrap: "normal",
+              padding: 3,
+              textAlign: "left",
+              color: "white",
+              m: 1,
+              overflow: { xs: "scroll", md: "unset" },
+            }}
+          >
+            <img
+              key={certificate.id}
+              src={certificate.url}
+              alt="yoga pose"
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+              }}
+            />
+          </Paper>
+        ))}
+      </Carousel>
+    </Container>
   );
-  
-}
+};
 
-export default Slider
-
+export default ImagesCarousel;

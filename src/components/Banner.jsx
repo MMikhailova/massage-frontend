@@ -22,6 +22,7 @@ const images = [
 
   };
   return (
+    
     <Grid
       container
       justifyContent="center"
@@ -29,7 +30,7 @@ const images = [
       spacing={{ xs: 0, md: 2 }}
       sx={{
     
-        height: {xs:"80vh", md: "90vh" },
+        height: {xs:"80vh", md: "80vh" },
       
       }}
     >
@@ -53,7 +54,8 @@ const images = [
             url={"https://www.eleniavgenaki.com/category/6607051387109376"}
           />
           <img src={img} alt={img} style={mediaStyle} />
-          <BeVibrant/>
+          <BeVibrant />
+     
         </Grid>
       ))}
     </Grid>

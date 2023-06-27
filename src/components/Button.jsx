@@ -9,7 +9,8 @@ import { Button } from '@mui/material';
       
 const Root = styled("div")(({ theme }) => ({
   button: {
-    color: "#DF7861",
+    color: "white",
+    backgroundColor:"#DF7861",
     // border: "none",
     "&:hover": {
       borderColor: "#DF7861",
@@ -17,7 +18,7 @@ const Root = styled("div")(({ theme }) => ({
       backgroundColor: "#DF7861",
     },
 
-    borderColor: "#DF7861",
+
     borderWidth: "0.2rem",
     fontWeight: "normal",
     padding: "0.5em",
@@ -47,7 +48,7 @@ export default function StyledButton({position,url}) {
             left: `${position.left}`,
           }}
           onClick={() => openInNewTab(url)}
-          variant="outlined"
+          variant="contained"
         >
           Book a session
         </Button>

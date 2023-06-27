@@ -95,7 +95,7 @@ const TreatmentItem = ({ treatment }) => {
             <ListItem
               sx={{
                 justifyContent: "center",
-                textAlign:"center",
+                textAlign: "center",
                 fontStyle: "italic",
                 fontWeight: 400,
               }}
@@ -108,12 +108,18 @@ const TreatmentItem = ({ treatment }) => {
         <Stack sx={{ m: 3 }} direction="row" spacing={2}>
           <Button
             variant="outlined"
+            target="_blank"
             href={treatment.url}
             size="medium"
           >
             Learn more
           </Button>
-          <Button variant="contained" size="medium" href={treatment.url}>
+          <Button
+            variant="contained"
+            size="medium"
+            target="_blank"
+            href={treatment.url}
+          >
             Book
           </Button>
         </Stack>
