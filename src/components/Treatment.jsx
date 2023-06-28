@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { getTreatments } from "../api/viewModels/getTreatments";
-import BasicGrid from "./HomeTreatments";
+import BasicGrid from "./TreatmentCadrs";
 import { getGallery } from "../api/viewModels/getGallery";
 import WovenImageList from "./Gallery";
 

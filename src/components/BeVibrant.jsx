@@ -46,17 +46,16 @@ const BeVibrant = () => {
           alignItems: "center",
         }}
       >
-        <Link color="#678180" variant="h5" underline="hover">
+        <Link href="/Yoga" color="#678180" variant="h5" underline="hover">
           Yoga
         </Link>
-        <Link color="#678180" variant="h5" underline="hover">
+        <Link href="/Massage" color="#678180" variant="h5" underline="hover">
           Massage
         </Link>
-        <Link color="#678180" variant="h5" underline="hover">
+        <Link href="/Coaching" color="#678180" variant="h5" underline="hover">
           Health Coaching
         </Link>
       </Breadcrumbs>
- 
     </>
   );
 }

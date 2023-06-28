@@ -73,9 +73,11 @@ function DrawerAppBar(props) {
         {navItemsSm.map((item) => (
           <ListItem
             onClick={
-              item === "Home" ?()=> navigate("/") : item === "Health coaching"
-                    ? () => navigate("/Coaching")
-                    : () => navigate(`/${item}`)
+              item === "Home"
+                ? () => navigate("/")
+                : item === "Health coaching"
+                ? () => navigate("/Coaching")
+                : () => navigate(`/${item}`)
             }
             key={item}
             disablePadding
@@ -106,7 +108,7 @@ function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Box onClick={()=>navigate("/")}>
+          <Box onClick={() => navigate("/")}>
             <img
               alt=""
               style={{ height: "15vh" }}

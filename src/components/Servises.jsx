@@ -9,6 +9,7 @@ import {
   Stack,
   Button
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 
 const treatments = [
@@ -16,6 +17,7 @@ const treatments = [
     id: 1,
     image: "./assets/handback.jpg",
     title: "AYURVEDIC MASSAGE",
+    type:"Massage",
     description: [
       "Ayurvedic facial massage and treatment",
       "Ayurvedic deep tissue massage",
@@ -31,6 +33,7 @@ const treatments = [
     id: 2,
     image: "./assets/tarapeutic_yoga.jpg",
     title: "THERAPEUTIC YOGA",
+    type:"Yoga",
     description: [
       "Experience the transformative power of yoga with individualized, one-on-one sessions guided by your own qualified yoga therapist. Each session is designed around your specific needs and physical abilities, as well as your medical history and current health status.",
     ],
@@ -40,6 +43,7 @@ const treatments = [
     id: 3,
     image: "./assets/embrace.jpg",
     title: "VIBRANT HEALTH COACHING",
+    type:"Coaching",
     description: [
       "Imagine having a dedicated partner on your wellness journey, someone who truly listens, understands, and supports you every step of the way. That's exactly what my personalized health coaching is all about. I'll work closely with you to uncover your unique needs and aspirations, and together, we'll create a roadmap towards a healthier, happier you.",
     ],
@@ -48,6 +52,7 @@ const treatments = [
 ];
 
 const TreatmentItem = ({ treatment }) => {
+  const navigate=useNavigate()
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -109,7 +114,7 @@ const TreatmentItem = ({ treatment }) => {
           <Button
             variant="outlined"
             target="_blank"
-            href={treatment.url}
+            href={`/${treatment.type}`}
             size="medium"
           >
             Learn more
