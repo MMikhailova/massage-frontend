@@ -31,7 +31,7 @@ const Yoga = ({ page }) => {
               xs: 0,
               md: 8,
             },
-            height: { md: "75vh", xs:"fit-content" },
+            height: { md: "60vh", xs: "fit-content" },
             justifyContent: "center",
             display: "flex",
             alignContent: "center",
@@ -55,6 +55,7 @@ const Yoga = ({ page }) => {
           <Typography
             variant="poster"
             sx={{
+              py: 0,
               position: "absolute",
               bottom: 0,
               transform: {
@@ -66,7 +67,18 @@ const Yoga = ({ page }) => {
             YOGA
           </Typography>
         </Box>
-
+        <Typography
+          textAlign="center"
+          mx="auto"
+          sx={{ width: { xs: "100%", md: "60%" }, p: { xs: 2, md: 0 } }}
+          variant="subtitle1"
+          color="#DF7861"
+          fontStyle="italic"
+        >
+          Let us embark on this journey together, where the transformative power
+          of yoga will enable you to experience the perfect balance of body,
+          mind, and spirit.
+        </Typography>
         <Treatment page={page} />
       </Box>
       <Footer />

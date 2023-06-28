@@ -31,7 +31,7 @@ const Coaching= ({page}) => {
               md: 5,
             },
             background: " conic-gradient(#424236,#666353,#666353,#404034)",
-            height: "75vh",
+            height: "60vh",
             justifyContent: "center",
             display: "flex",
             alignContent: "center",
@@ -42,7 +42,7 @@ const Coaching= ({page}) => {
           <img
             style={{
               objectFit: "cover",
-              width:{xs:"100%",md:"43%"},
+              width: { xs: "100%", md: "43%" },
               height: "auto",
               opacity: "90%",
             }}
@@ -67,7 +67,21 @@ const Coaching= ({page}) => {
             COACHING
           </Typography>
         </Box>
-
+        <Typography
+          textAlign="center"
+          mx="auto"
+          sx={{ width: { xs: "100%", md: "60%" }, p: { xs: 2, md: 0 } }}
+          variant="subtitle1"
+          color="#DF7861"
+          fontStyle="italic"
+        >
+          Imagine having a dedicated partner on your wellness journey, someone
+          who truly listens, understands, and supports you every step of the
+          way. That's exactly what my personalized health coaching is all about.
+          I'll work closely with you to uncover your unique needs and
+          aspirations, and together, we'll create a road map towards a healthier,
+          happier you.
+        </Typography>
         <Treatment page={page} />
       </Box>
       <Footer />

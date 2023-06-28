@@ -44,12 +44,12 @@ const Massage = ({ page }) => {
         >
           <img
             style={{
-              objectFit:  "cover",
-              width:"100%",
+              objectFit: "cover",
+              width: "100%",
               height: "auto",
               opacity: "100%",
             }}
-            src="../assets/handback.jpg"           
+            src="../assets/handback.jpg"
             alt="1"
             loading="Massage"
           />
@@ -67,10 +67,24 @@ const Massage = ({ page }) => {
               },
             }}
           >
-           MASSAGE
+            MASSAGE
           </Typography>
         </Box>
-
+        <Typography
+          textAlign="center"
+          mx="auto"
+          sx={{ width: { xs: "100%", md: "60%" }, p: { xs: 2, md: 0 } }}
+          variant="subtitle1"
+          color="#DF7861"
+          fontStyle="italic"
+        >
+          Imagine having a dedicated partner on your wellness journey, someone
+          who truly listens, understands, and supports you every step of the
+          way. That's exactly what my personalized health coaching is all about.
+          I'll work closely with you to uncover your unique needs and
+          aspirations, and together, we'll create a road map towards a
+          healthier, happier you.
+        </Typography>
         <Treatment page={page} />
       </Box>
       <Footer />
