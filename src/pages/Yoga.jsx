@@ -16,6 +16,7 @@ const Yoga = ({ page }) => {
       <Box
         sx={{
           height: "fitContent",
+          backgroundColor: "#FCF8E8",
           width: "100%",
         }}
       >

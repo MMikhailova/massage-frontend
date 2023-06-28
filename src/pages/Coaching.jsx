@@ -16,6 +16,7 @@ const Coaching= ({page}) => {
       <Box
         sx={{
           height: "fitContent",
+          backgroundColor: "#FCF8E8",
         }}
       >
         <DrawerAppBar />
