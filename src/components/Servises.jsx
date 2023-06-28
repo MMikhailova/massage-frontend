@@ -112,7 +112,6 @@ const TreatmentItem = ({ treatment }) => {
         <Stack sx={{ m: 3 }} direction="row" spacing={2}>
           <Button
             variant="outlined"
-            target="_blank"
             href={`/${treatment.type}`}
             size="medium"
           >
