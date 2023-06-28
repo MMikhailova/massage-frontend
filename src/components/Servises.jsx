@@ -9,7 +9,7 @@ import {
   Stack,
   Button
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+
 
 
 const treatments = [
@@ -52,7 +52,6 @@ const treatments = [
 ];
 
 const TreatmentItem = ({ treatment }) => {
-  const navigate=useNavigate()
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
