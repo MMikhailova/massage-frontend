@@ -17,6 +17,7 @@ const Yoga = ({ page }) => {
         sx={{
           height: "fitContent",
           backgroundColor: "#FCF8E8",
+          width: "100%",
         }}
       >
         <DrawerAppBar />
@@ -30,7 +31,7 @@ const Yoga = ({ page }) => {
               xs: 0,
               md: 8,
             },
-            height: "75vh",
+            height: { md: "75vh", xs:"fit-content" },
             justifyContent: "center",
             display: "flex",
             alignContent: "center",
@@ -41,7 +42,7 @@ const Yoga = ({ page }) => {
           <img
             style={{
               objectFit: "cover",
-              width:"100%",
+              width: "100%",
               height: "auto",
               opacity: "100%",
             }}
