@@ -51,12 +51,13 @@ export default function Banner() {
   const [isYogaShown, setIsYogaShown] = useState(false)
   const [isMassageShown, setIsMassageShown] = useState(false);
      const [isCoachingShown, setIsCoachingShown] = useState(false);
-      const mediaStyle = {
-    width: "100%",
-    height:"100%",
-    objectFit: 'cover',
+  //     const mediaStyle = {
+  //   width: "100%",
+  //   height:"100%",
+  //       objectFit: 'cover',
+   
 
-  };
+  // };
   return (
     <Grid
       container
@@ -89,9 +90,14 @@ export default function Banner() {
           <CardMedia
             component="img"
             height="100%"
-            image="../assets/yoga_up.jpg"
+            image="../assets/banner_1.jpg"
             alt="green iguana"
-            style={mediaStyle}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              opacity: "90%",
+            }}
           />
           <Hero section={"Yoga"} display={isYogaShown} />
         </CardActionArea>
@@ -117,9 +123,13 @@ export default function Banner() {
           <CardMedia
             component="img"
             height="100%"
-            image="../assets/massage.png"
+            image="../assets/banner_2.jpg"
             alt="green iguana"
-            style={mediaStyle}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
           />
           <Hero section={"Massage"} display={isMassageShown} />
         </CardActionArea>
@@ -145,9 +155,14 @@ export default function Banner() {
           <CardMedia
             component="img"
             height="100%"
-            image="../assets/hands.jpg"
+            image="../assets/banner_3.jpg"
             alt="green iguana"
-            style={mediaStyle}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              opacity: "90%",
+            }}
           />
           <Hero section={"Health coaching"} display={isCoachingShown} />
         </CardActionArea>
