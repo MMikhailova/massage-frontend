@@ -2,6 +2,7 @@
 import './App.css';
 import About from './pages/About';
 import Coaching from './pages/Coaching';
+import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Massage from './pages/Massage';
 import Yoga from './pages/Yoga';
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Yoga" element={<Yoga page={"yoga"} />} />
           <Route path="/Coaching" element={<Coaching page={"coaching"} />} />
           <Route path="/About" element={<About />} />
+          <Route path="/Contact" element={<Contact/>} />
         </Routes>
       </Router>
     </div>
