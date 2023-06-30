@@ -61,10 +61,12 @@ export default function Banner() {
   return (
     <Grid
       container
-      justifyContent="center"
+      maxWidth="xlg"
       position="relative"
-      spacing={{ xs: 0, md: 2 }}
+      spacing={{ xs: 0, md: 3 }}
       sx={{
+        display: "flex",
+        justifyContent:"center",
         height: { xs: "75vh", md: "65vh" },
         mb: { xs: 0, md: 3 },
       }}
@@ -80,6 +82,7 @@ export default function Banner() {
           },
           height: { xs: "90%", md: "100%" },
           position: "relative",
+
         }}
       >
         <CardActionArea
