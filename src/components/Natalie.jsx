@@ -12,9 +12,9 @@ const MyComponent = () => {
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         width: {
-          lg: "60vw",md:"100%"
+          lg: "70vw",md:"100%"
         },
-        height: { md:"70vh"},
+        height: "fit-content",
         mx: "auto",
       }}
     >
@@ -37,6 +37,7 @@ const MyComponent = () => {
           style={{
             objectFit: "cover",
             width: "100%",
+            height:"auto",
             boxShadow: " 0px 0px 4px 0px",
           }}
         />

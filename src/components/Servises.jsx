@@ -26,27 +26,6 @@ const TreatmentItem = () => {
     "Ayurvedic massage for pregnant women",
   ];
 
-  //   {
-  //     id: 2,
-  //     image: "./assets/tarapeutic_yoga.jpg",
-  //     title: "THERAPEUTIC YOGA",
-  //     type: "Yoga",
-  //     description: [
-  //       "Experience the transformative power of yoga with individualized, one-on-one sessions guided by your own qualified yoga therapist. Each session is designed around your specific needs and physical abilities, as well as your medical history and current health status.",
-  //     ],
-  //     url: "https://www.eleniavgenaki.com/category/6559915664539648",
-  //   },
-  //   {
-  //     id: 3,
-  //     image: "./assets/embrace.jpg",
-  //     title: "VIBRANT HEALTH COACHING",
-  //     type: "Coaching",
-  //     description: [
-  //       "Imagine having a dedicated partner on your wellness journey, someone who truly listens, understands, and supports you every step of the way. That's exactly what my personalized health coaching is all about. I'll work closely with you to uncover your unique needs and aspirations, and together, we'll create a roadmap towards a healthier, happier you.",
-  //     ],
-  //     url: "https://www.eleniavgenaki.com/category/6559915664539648",
-  //   },
-  // ];
   return (
     <Grid
       container
@@ -91,7 +70,6 @@ const TreatmentItem = () => {
                   sx={{
                     justifyContent: "center",
                     textAlign: "center",
-                    fontStyle: "italic",
                     fontWeight: 400,
                   }}
                 >
@@ -142,16 +120,15 @@ const TreatmentItem = () => {
               sx={{
                 justifyContent: "center",
                 textAlign: "center",
-                fontStyle: "italic",
                 fontWeight: 400,
                 p: 2,
               }}
             >
-              "Experience the transformative power of yoga with individualized,
+               Experience the transformative power of yoga with individualized,
               one-on-one sessions guided by your own qualified yoga therapist.
               Each session is designed around your specific needs and physical
               abilities, as well as your medical history and current health
-              status."
+              status.
             </Typography>
 
             <Stack
@@ -175,22 +152,21 @@ const TreatmentItem = () => {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12} md={8} lg={8} height={{ xs: "auto", md: "70vh" }}>
+      <Grid item xs={12} md={10} lg={8} height={{ xs: "auto", md: "fit-content" }}>
         <Card
           sx={{
             backgroundColor: "#FEE4D1",
             display: "flex",
             flexDirection: { xs: "column", md:"row"},
-            height: "100%",
             width: "100%",
           }}
         >
           <CardMedia
             component="img"
             sx={{
-              width: "auto",
+              width: { md: "50%" },
               height: {
-                md: "100%"
+                md: "auto"
               },
               objectFit: "cover",
             }}
@@ -204,17 +180,16 @@ const TreatmentItem = () => {
               sx={{
                 justifyContent: "center",
                 textAlign: "center",
-                fontStyle: "italic",
                 fontWeight: 400,
                 p: 2,
               }}
             >
-              "Imagine having a dedicated partner on your wellness journey,
+               Imagine having a dedicated partner on your wellness journey,
               someone who truly listens, understands, and supports you every
               step of the way. That's exactly what my personalized health
               coaching is all about. I'll work closely with you to uncover your
               unique needs and aspirations, and together, we'll create a road
-              map towards a healthier, happier you."
+              map towards a healthier, happier you.
             </Typography>
 
             <Stack
@@ -241,85 +216,4 @@ const TreatmentItem = () => {
     </Grid>
   );
 };
-  // const theme = useTheme();
-  // const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-
-  // const imageContainerStyle = {
-  //   justifyContent: isSmallScreen ? "center" : "flex-end",
-  //   marginBottom: isSmallScreen ? theme.spacing(1) : 0,
-  //   alignItems: "start",
-  //   // mx: "auto",
-
-  // };
-
-//   const imageStyle = {
-//     width:treatment.id === 3?"80%": "100%",
-//     height: isSmallScreen ? "auto" : treatment.id === 3?"auto":"100%",
-//     // height: isSmallScreen ? "auto" : treatment.id === 3 ? "70vh":"60vh",
-//     opacity: "95%",
-//     borderRadius: isSmallScreen ? theme.spacing(1) : 0,
-//   };
-
-//   return (
-//     <Grid container sx={{ marginBottom: theme.spacing(4), display:"flex",justifyContent:"center"}}>
-//       <Grid item xs={12} md={5} height={"50vh"} >
-//         <img src={treatment.image} alt={treatment.title} style={imageStyle} />
-//       </Grid>
-//       <Grid
-//         item
-//         xs={12}
-//         md={5}
-//         sx={{
-//           p: { md: 6, xs: 3 },
-//           backgroundColor: "#FEE4D1",
-//           display: "flex",
-//           flexDirection: "column",
-//           justifyContent: "center",
-//           alignItems: "center",
-//         }}
-//       >
-//         <Typography variant="h4">{treatment.title}</Typography>
-//         <List
-//           sx={{
-//             textAlign: "center",
-//           }}
-//         >
-//           {treatment.description.map((item) => (
-//             <ListItem
-//               sx={{
-//                 justifyContent: "center",
-//                 textAlign: "center",
-//                 fontStyle: "italic",
-//                 fontWeight: 400,
-//               }}
-//             >
-//               {item}
-//             </ListItem>
-//           ))}
-//         </List>
-//         {/* <Typography>{treatment.description.join("\n")}</Typography> */}
-//         <Stack sx={{ m: 3 }} direction="row" spacing={2}>
-//           <Button
-//             variant="outlined"
-//             href={`/${treatment.type}`}
-//             size="medium"
-//           >
-//             Learn more
-//           </Button>
-//           <Button
-//             variant="contained"
-//             size="medium"
-//             target="_blank"
-//             href={treatment.url}
-//           >
-//             Book
-//           </Button>
-//         </Stack>
-//       </Grid>
-//     </Grid>
-//   );
-// };
-
-
-
-export default TreatmentItem; 
+  export default TreatmentItem; 
