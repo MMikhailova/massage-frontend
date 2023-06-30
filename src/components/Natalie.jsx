@@ -1,59 +1,58 @@
+
+
 import React from "react";
-import { Grid, Typography,Button } from "@mui/material";
+import {
+  Typography,
+  Button,
+  Box,
+  useMediaQuery,
+  useTheme,
+
+} from "@mui/material";
+
 
 const MyComponent = () => {
+  const positioning={position: "absolute",top:20,left:"48%"}
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <Grid
-      container
+    <Box
       sx={{
-        my: 3,
-        p: 2,
-        position: "relative",
+        width: { xs: "100%", md: "70%" },
         display: "flex",
-        flexDirection: { xs: "column", md: "row" },
-        width: {
-          lg: "70vw",md:"100%"
-        },
+        flexDirection: { xs: "column", lg: "row" },
+        position: "relative",
+        // minHeight: "fit-content",
         height: "fit-content",
         mx: "auto",
+        my: "5em",
       }}
     >
-      <Grid
-        item
-        sx={{
-          display: "flex",
-          justifyContent: "end",
-          width: { xs: "100%", md: "50%" },
-          height: "100%",
-          position: { xs: "static", md: "absolute" },
-          top: -20,
-          left: 0,
+      <img
+        src="./assets/natalia.jpg"
+        alt="Natalia"
+        style={{
+          objectFit: "cover",
+          height: "auto",
+          boxShadow: " 0px 0px 4px 0px",
           zIndex: 1,
+          width: isSmallScreen ? "100%" : "50%",
         }}
-      >
-        <img
-          src="./assets/natalia.jpg"
-          alt="Natalia"
-          style={{
-            objectFit: "cover",
-            width: "100%",
-            height:"auto",
-            boxShadow: " 0px 0px 4px 0px",
-          }}
-        />
-      </Grid>
-      <Grid
-        item
+      />
+      <Box
+        position={isSmallScreen ? "unset" :  positioning }
         sx={{
-          width: { xs: "100%", md: "50%" },
-          marginLeft: { xs: 0, md: "50%" },
-          padding: { xs: 4, md: 8 },
-          color: "#FFFF",
-          textAlign: "left",
+          p: "3em",
+          width: isSmallScreen ? "100%" : "50%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "start",
+          flexDirection: "column",
           backgroundColor: "#8B9E95",
+          height: "100%",
         }}
       >
-        <Typography variant="subtitle1">
+        <Typography align="justify" color="white" variant="subtitle1">
           NATALYA WERTHAIM is a highly experienced and well-trained professional
           who has been providing therapeutic massage services for over 15 years.
           She has an extensive educational background in Ayurvedic massage,
@@ -71,8 +70,8 @@ const MyComponent = () => {
         >
           READ MORE
         </Button>
-      </Grid>
-    </Grid>
+      </Box>
+    </Box>
   );
 };
 

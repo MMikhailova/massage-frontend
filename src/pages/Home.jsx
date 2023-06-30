@@ -13,16 +13,17 @@ const Home = () => {
   return (
     <>
       <Container
-        maxWidth="xlg"
+        maxWidth="xl"
         sx={{
           display: "flex",
           flexDirection: "column",
           backgroundColor: "#FCF8E8",
-          textAlign:"center",
+          textAlign: "center",
           height: "fit-content",
-          px: { xs: 0, md: 5},
+          px: { xs: 0, md: 5 },
           py: { xs: 0, md: 8 },
-          justifyItems:"center"
+          pb: 15,
+      
         }}
       >
         <DrawerAppBar />
@@ -45,7 +46,11 @@ const Home = () => {
             health, beVibrant delivers a sense of energy, liveliness, and
             vitality.
           </Typography>
-          <Typography mt={2} variant="subtitle1" sx={{display:{xs:"none",md:"block"}}}>
+          <Typography
+            mt={2}
+            variant="subtitle1"
+            sx={{ display: { xs: "none", md: "block" } }}
+          >
             BeVibrant provides personalized services tailored to your specific
             goals and conditions. Whether you want to reduce stress, relieve
             pain, improve flexibility or receive health advice, beVibrant can
@@ -65,7 +70,7 @@ const Home = () => {
         <Section title={"Clients testimonials"} />
         <TestimonialCarousel />
         <Section title={"About Natalya Werthaim"} />
-        <MyComponent />
+          <MyComponent />
       </Container>
       <Footer />
     </>

@@ -9,6 +9,7 @@ const Footer = () => {
   return (
     <Box
       sx={{
+   mt:"auto",
         py: 5,
        color: "white",
         display: "flex",

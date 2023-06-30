@@ -51,13 +51,7 @@ export default function Banner() {
   const [isYogaShown, setIsYogaShown] = useState(false)
   const [isMassageShown, setIsMassageShown] = useState(false);
      const [isCoachingShown, setIsCoachingShown] = useState(false);
-  //     const mediaStyle = {
-  //   width: "100%",
-  //   height:"100%",
-  //       objectFit: 'cover',
-   
 
-  // };
   return (
     <Grid
       container
