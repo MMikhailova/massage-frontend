@@ -30,7 +30,7 @@ const TreatmentItem = () => {
     <Grid
       container
       height="fit-content"
-      spacing={3}
+      spacing={5}
       p={{xs:2,md:5}}
     
       sx={{

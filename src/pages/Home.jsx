@@ -34,7 +34,6 @@ const Home = () => {
           sx={{
             width: { xs: "90vw", md: "65vw" },
             margin: "auto",
-            fontStyle: "italic",
             py: 3,
           }}
         >
