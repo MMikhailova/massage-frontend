@@ -34,20 +34,20 @@ const Root = styled("div")(({ theme }) => ({
   },
 }));
 
-export default function StyledButton({position,url}) {
-    const openInNewTab = (url) => {
-      window.open(url, "_blank", "noopener,noreferrer");
-    };
+export default function StyledButton({ position, url }) {
+
+  
     return (
       <Root>
         <Button
           sx={{
-            position: `${ position.position}`,
-            top: `${ position.top}`,
-            transform: `${ position.transform}`,
+            position: `${position.position}`,
+            top: `${position.top}`,
+            transform: `${position.transform}`,
             left: `${position.left}`,
           }}
-          onClick={() => openInNewTab(url)}
+          target="_blank"
+          href={url}
           variant="contained"
         >
           Book a session

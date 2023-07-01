@@ -1,6 +1,6 @@
 
 // import StyledButton from "./Button";
-import { useState } from "react";
+import { useState,} from "react";
 import BeVibrant from "./BeVibrant";
 import {
   Grid,
@@ -11,6 +11,7 @@ CardActionArea,
   CardMedia,
 } from "@mui/material";
 
+
 const positionBtn = {
 bottom:0,
   left: "50%",
@@ -18,7 +19,10 @@ bottom:0,
   position: "absolute",
 };
 
-function Hero({section, display}) {
+function Hero({ section, display,url }) {
+
+console.log(url)
+
    return (
      <Box
        position={positionBtn}
@@ -29,25 +33,29 @@ function Hero({section, display}) {
          justifyContent: "space-around",
          width: "50%",
          alignItems: "center",
-         
        }}
      >
        <Typography
-        sx={{display:{xs:"none",md:"block"}}}
+         sx={{ display: { xs: "none", md: "block" } }}
          borderBottom="#DF7861"
          color="white"
          variant="h3"
        >
          {section}
        </Typography>
-       <Button size="medium" variant="contained">
+       <Button
+         onClick={() => window.open(url, "_blank", "noopener,noreferrer")}
+         size="medium"
+         variant="contained"
+       >
          Book a session
        </Button>
      </Box>
    );
 }
 
-export default function Banner() {
+export default function Banner({ booking }) {
+
   const [isYogaShown, setIsYogaShown] = useState(false)
   const [isMassageShown, setIsMassageShown] = useState(false);
      const [isCoachingShown, setIsCoachingShown] = useState(false);
@@ -60,7 +68,7 @@ export default function Banner() {
       spacing={{ xs: 0, md: 3 }}
       sx={{
         display: "flex",
-        justifyContent:"center",
+        justifyContent: "center",
         height: { xs: "75vh", md: "65vh" },
         mb: { xs: 0, md: 3 },
       }}
@@ -76,7 +84,6 @@ export default function Banner() {
           },
           height: { xs: "90%", md: "100%" },
           position: "relative",
-
         }}
       >
         <CardActionArea
@@ -96,7 +103,12 @@ export default function Banner() {
               opacity: "90%",
             }}
           />
-          <Hero section={"Yoga"} display={isYogaShown} />
+          {booking.yoga &&
+            <Hero
+              url={booking.yoga ? booking.yoga : ""}
+              section={"Yoga"}
+              display={isYogaShown}
+            />}
         </CardActionArea>
       </Grid>
       <Grid
@@ -128,7 +140,11 @@ export default function Banner() {
               objectFit: "cover",
             }}
           />
-          <Hero section={"Massage"} display={isMassageShown} />
+          <Hero
+            url={booking.massage ? booking.massage : ""}
+            section={"Massage"}
+            display={isMassageShown}
+          />
         </CardActionArea>
       </Grid>
       <Grid
@@ -161,7 +177,11 @@ export default function Banner() {
               opacity: "90%",
             }}
           />
-          <Hero section={"Health coaching"} display={isCoachingShown} />
+          <Hero
+            url={booking.coaching ? booking.coaching: ""}
+            section={"Health coaching"}
+            display={isCoachingShown}
+          />
         </CardActionArea>
       </Grid>
       <BeVibrant />

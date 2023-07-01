@@ -10,7 +10,7 @@ const positionBtn = {
   transform: "translate(-50%, -50%)",
   position: "absolute",
 };
-const Coaching= ({page}) => {
+const Coaching= ({page,url}) => {
   return (
     <>
       <Box
@@ -50,7 +50,7 @@ const Coaching= ({page}) => {
             alt="1"
             loading="Coaching"
           />
-          <StyledButton position={positionBtn} />
+          <StyledButton position={positionBtn} url={url} />
 
           <Typography
             variant="poster"

@@ -10,7 +10,7 @@ const positionBtn = {
   transform: "translate(-50%, -50%)",
   position: "absolute",
 };
-const Yoga = ({ page }) => {
+const Yoga = ({ page,url }) => {
   return (
     <>
       <Box
@@ -31,7 +31,7 @@ const Yoga = ({ page }) => {
               xs: 0,
               md: 8,
             },
-            height: { md: "60vh", xs: "fit-content" },
+            height: { md: "70vh", xs: "fit-content" },
             justifyContent: "center",
             display: "flex",
             alignContent: "center",
@@ -43,14 +43,14 @@ const Yoga = ({ page }) => {
             style={{
               objectFit: "cover",
               width: "100%",
-              height: "auto",
+              height: "100%",
               opacity: "100%",
             }}
             src="../assets/yoga_yoga_page.jpg"
             alt="1"
             loading="Yoga"
           />
-          <StyledButton position={positionBtn} />
+          <StyledButton position={positionBtn} url={url} />
 
           <Typography
             variant="poster"

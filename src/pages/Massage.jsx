@@ -12,7 +12,7 @@ const positionBtn = {
   transform: "translate(-50%, -50%)",
   position: "absolute",
 };
-const Massage = ({ page }) => {
+const Massage = ({ page,url }) => {
   
   return (
     <>
@@ -53,7 +53,7 @@ const Massage = ({ page }) => {
             alt="1"
             loading="Massage"
           />
-          <StyledButton position={positionBtn} />
+          <StyledButton position={positionBtn} url={url} />
 
           <Typography
             variant="poster"

@@ -13,7 +13,7 @@ const Contact = () => {
             display: "flex",
             flexDirection: "column",
             textAlign: "center",
-            height: "fit-content",
+            height: "100vh",
             justifyContent: "center",
             alignItems: "center",
        
@@ -26,10 +26,10 @@ const Contact = () => {
             
               display: "flex",
               width: "100%",
-              height: "80vh",
+                      minHeight: "100vh",
+                      height:"100%",
               justifyContent: "center",
             }}
-            spacing={{ xs: 0, md: 1 }}
           >
             <Grid
               item
@@ -66,8 +66,8 @@ const Contact = () => {
                 src="../assets/contact_img.jpg"
                 alt="natalya"
                 style={{
-                  height: "100%",
-                  width: "auto",
+                  height: "auto",
+                  width: "100%",
 
                   objectFit: "cover",
                 }}

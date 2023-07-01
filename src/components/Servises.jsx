@@ -15,7 +15,7 @@ Grid
 
 
 
-const TreatmentItem = () => {
+const TreatmentItem = ({booking}) => {
   const treatments = [
     "Ayurvedic facial massage and treatment",
     "Ayurvedic deep tissue massage",
@@ -31,8 +31,7 @@ const TreatmentItem = () => {
       container
       height="fit-content"
       spacing={5}
-      p={{xs:2,md:5}}
-    
+      p={{ xs: 2, md: 5 }}
       sx={{
         justifyContent: "center",
         textAlign: "center",
@@ -58,7 +57,7 @@ const TreatmentItem = () => {
             alt="back massage"
           ></CardMedia>
 
-          <CardContent minHeight="fit-content">
+          <CardContent>
             <Typography variant="h4">AYURVEDIC MASSAGE</Typography>
             <List
               sx={{
@@ -67,6 +66,7 @@ const TreatmentItem = () => {
             >
               {treatments.map((item) => (
                 <ListItem
+                  key={item}
                   sx={{
                     justifyContent: "center",
                     textAlign: "center",
@@ -79,14 +79,14 @@ const TreatmentItem = () => {
             </List>
 
             <Stack direction="row" spacing={2} justifyContent="center">
-              <Button variant="outlined" href={`/`} size="medium">
+              <Button variant="outlined" href={`/Massage`} size="medium">
                 Learn more
               </Button>
               <Button
                 variant="contained"
                 size="medium"
                 target="_blank"
-                href={`/`}
+                href={booking.massage}
               >
                 Book
               </Button>
@@ -113,7 +113,7 @@ const TreatmentItem = () => {
             image={"./assets/tarapeutic_yoga.jpg"}
             alt="back massage"
           />
-          <CardContent minHeight="fit-content">
+          <CardContent>
             <Typography variant="h4">THERAPEUTIC YOGA</Typography>
             <Typography
               variant="subtitle1"
@@ -124,7 +124,7 @@ const TreatmentItem = () => {
                 p: 2,
               }}
             >
-               Experience the transformative power of yoga with individualized,
+              Experience the transformative power of yoga with individualized,
               one-on-one sessions guided by your own qualified yoga therapist.
               Each session is designed around your specific needs and physical
               abilities, as well as your medical history and current health
@@ -137,14 +137,14 @@ const TreatmentItem = () => {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="outlined" href={`/`} size="medium">
+              <Button variant="outlined" href={`/Yoga`} size="medium">
                 Learn more
               </Button>
               <Button
                 variant="contained"
                 size="medium"
                 target="_blank"
-                href={`/`}
+                href={booking.yoga}
               >
                 Book
               </Button>
@@ -152,12 +152,18 @@ const TreatmentItem = () => {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12} md={10} lg={8} height={{ xs: "auto", md: "fit-content" }}>
+      <Grid
+        item
+        xs={12}
+        md={10}
+        lg={8}
+        height={{ xs: "auto", md: "fit-content" }}
+      >
         <Card
           sx={{
             backgroundColor: "#FEE4D1",
             display: "flex",
-            flexDirection: { xs: "column", md:"row"},
+            flexDirection: { xs: "column", md: "row" },
             width: "100%",
           }}
         >
@@ -166,7 +172,7 @@ const TreatmentItem = () => {
             sx={{
               width: { md: "50%" },
               height: {
-                md: "auto"
+                md: "auto",
               },
               objectFit: "cover",
             }}
@@ -184,7 +190,7 @@ const TreatmentItem = () => {
                 p: 2,
               }}
             >
-               Imagine having a dedicated partner on your wellness journey,
+              Imagine having a dedicated partner on your wellness journey,
               someone who truly listens, understands, and supports you every
               step of the way. That's exactly what my personalized health
               coaching is all about. I'll work closely with you to uncover your
@@ -198,14 +204,14 @@ const TreatmentItem = () => {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="outlined" href={`/`} size="medium">
+              <Button variant="outlined" href={`/Coaching`} size="medium">
                 Learn more
               </Button>
               <Button
                 variant="contained"
                 size="medium"
                 target="_blank"
-                href={`/`}
+                href={booking.coaching}
               >
                 Book
               </Button>

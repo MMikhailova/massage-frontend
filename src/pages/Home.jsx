@@ -8,8 +8,12 @@ import MyComponent from '../components/Natalie';
 import Footer from '../components/Footer';
 
 
+
     
-const Home = () => {
+const Home = ({booking}) => {
+
+
+  console.log(booking)
   return (
     <>
       <Container
@@ -27,7 +31,7 @@ const Home = () => {
         }}
       >
         <DrawerAppBar />
-        <Banner />
+        <Banner booking={booking} />
 
         <Section />
         <Box
@@ -66,7 +70,7 @@ const Home = () => {
           </Typography>
         </Box>
         <Section title={"Well-being services"} />
-        <TreatmentItem />
+        <TreatmentItem booking={booking} />
         <Section title={"Clients testimonials"} />
         <TestimonialCarousel />
         <Section title={"About Natalya Werthaim"} />
