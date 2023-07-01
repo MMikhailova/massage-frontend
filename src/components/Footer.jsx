@@ -1,17 +1,36 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography,Link } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Divider from "@mui/material/Divider";
 import React from "react";
+import { useEffect, useState } from "react";
+import { getContact } from "../api/viewModels/getContact";
 
-const Footer = () => {
+
+
+const Footer = ({ setContactInfo }) => {
+  
+  const [contact, setContact] = useState([]);
+
+ 
+  useEffect(() => {
+    getContact(
+      "https://strapi-production-7702.up.railway.app/api/contacts"
+    ).then((vm) => {
+      setContact(vm);
+      setContactInfo(vm);
+    });
+  }, [setContactInfo]);
+
+
+  console.log(contact)
   return (
     <Box
       sx={{
-   mt:"auto",
+        mt: "auto",
         py: 5,
-       color: "white",
+        color: "white",
         display: "flex",
         flexDirection: "column",
         width: "100%",
@@ -22,23 +41,61 @@ const Footer = () => {
       }}
     >
       <Stack
-        divider={<Divider sx={{mx:2}} color="white" orientation="vertical" flexItem />}
+        divider={
+          <Divider
+            sx={{ mx: 2 }}
+            color="white"
+            orientation="vertical"
+            flexItem
+          />
+        }
         sx={{
           py: { xs: "1.5rem", md: "2rem" },
-          textAlign:"center",
+          textAlign: "center",
           spacing: 2,
           flexDirection: { xs: "column", md: "row" },
         }}
       >
         <Stack spacing={2} direction="row" justifyContent="center">
-          <FacebookIcon />
-          <InstagramIcon />
-          <WhatsAppIcon />
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={contact.facebookUrl ? contact.facebookUrl : ""}
+          >
+            <FacebookIcon sx={{ color: "white" }} />
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={contact.instagramUrl ? contact.instagramUrl : ""}
+          >
+            <InstagramIcon color="action" sx={{ color: "white" }} />
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={contact.whatsupUrl ? contact.whatsupUrl : ""}
+          >
+            <WhatsAppIcon color="action" sx={{ color: "white" }} />
+          </a>
         </Stack>
-       
-        <Typography variant="body1">02-345-67-32</Typography>
-   
-        <Typography variant="body1">natalya.werthaim@gmail.com</Typography>
+
+        <Link
+          href={`mailto:${
+            contact.email ? contact.email : "natalywerthaim@gmail.com"
+          }`}
+          variant="inherit"
+          underline="hover"
+          sx={{
+            color: "white",
+            "&:hover:": { color: "white" },
+            textDecorationColor: "white",
+          }}
+        >
+          {contact.email ? contact.email : "natalywerthaim@gmail.com"}
+        </Link>
+
+        <Typography variant="body1">+{contact.phone?contact.phone: "+ 32488863960"}</Typography>
       </Stack>
       <Typography variant="body2" sx={{ mt: "1rem" }}>
         @ 2023 BE VIBRANT, Brussels

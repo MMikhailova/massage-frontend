@@ -2,8 +2,13 @@ import { Container,Grid, Typography } from '@mui/material'
 import React from 'react'
 import DrawerAppBar from '../components/Navigation';
 import Footer from '../components/Footer';
+import { useState } from "react";
+
 
 const Contact = () => {
+const [contactInfo, setContactInfo] = useState([]);
+
+console.log(contactInfo)
     return (
       <>
         <DrawerAppBar />
@@ -13,21 +18,19 @@ const Contact = () => {
             display: "flex",
             flexDirection: "column",
             textAlign: "center",
-            height: "100vh",
             justifyContent: "center",
             alignItems: "center",
-       
+
             backgroundColor: "#FCF8E8",
           }}
         >
           <Grid
             container
-                    sx={{
-            
+            sx={{
               display: "flex",
+              flexDirection: { xs: "column", md: "row" },
               width: "100%",
-                      minHeight: "100vh",
-                      height:"100%",
+              height: "fit-content",
               justifyContent: "center",
             }}
           >
@@ -35,20 +38,23 @@ const Contact = () => {
               item
               xs={12}
               md={6}
-                        sx={{
-                    px:5,     
-                            display: "flex",
-                textAlign:"center",
+              sx={{
+                display: "flex",
+                textAlign: "center",
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
               }}
             >
-              <Typography variant="h2">
-              Contact me on any questions
+              <Typography variant="h2">Contact me on any questions</Typography>
+              <Typography variant="h4">
+                {contactInfo.email
+                  ? contactInfo.email
+                  : "natalywerthaim@gmail.com"}
               </Typography>
-              <Typography variant="h4">beVibrant@gmail.com</Typography>
-              <Typography variant="h6">+32 893 67 23</Typography>
+              <Typography variant="h6">
+                +{contactInfo.phone ? contactInfo.phone : "+ 32488863960"}
+              </Typography>
             </Grid>
             <Grid
               item
@@ -75,7 +81,7 @@ const Contact = () => {
             </Grid>
           </Grid>
         </Container>
-        <Footer />
+        <Footer setContactInfo={setContactInfo} />
       </>
     );
 }

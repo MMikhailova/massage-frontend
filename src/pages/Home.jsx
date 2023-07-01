@@ -13,7 +13,7 @@ import Footer from '../components/Footer';
 const Home = ({booking}) => {
 
 
-  console.log(booking)
+ 
   return (
     <>
       <Container
