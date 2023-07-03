@@ -163,7 +163,7 @@ height:"100%",
         <Box
           sx={{
             width: "99vw" ,
-            height: { xs: "auto", md: "40vh" },
+            height: { xs: "auto", md: "fit-content" },
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             justifyContent: "space-evenly",

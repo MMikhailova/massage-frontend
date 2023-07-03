@@ -27,8 +27,8 @@ console.log(data)
         <Grid xs={12} lg={6} px={3}>
           <Typography variant="h4">{treatment.attributes.name.toUpperCase()}</Typography>
           {treatment.attributes.prices.data.map((price) => (
-            <Typography variant="subtitle1">
-              {price.attributes.duration} {price.attributes.package?"sessions":"mins"}- {price.attributes.priceEuro} €
+            <Typography variant="subtitle1" fontStyle="italic">
+              {price.attributes.duration} {price.attributes.package?"sessions":"mins"} - {price.attributes.priceEuro} €
             </Typography>
           ))}
           <Typography variant="p">
