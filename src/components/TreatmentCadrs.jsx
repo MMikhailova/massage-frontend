@@ -8,7 +8,7 @@ import { Typography } from "@mui/material";
 
 
 export default function BasicGrid({data}) {
-
+console.log(data)
   return data.map((treatment) => (
     <Box sx={{ my: 10 }}>
       <Grid
@@ -19,16 +19,16 @@ export default function BasicGrid({data}) {
       >
         <Grid xs={12} lg={4} textAlign="center">
           <img
-            style={{ objectFit: "fill",width:"80%",height:"90%"}}
-            src={treatment.attributes.imageMain.data.attributes.url}
+            style={{ objectFit: "fill",width:"80%",height:"auto"}}
+            src={treatment.attributes.imageMain.data?treatment.attributes.imageMain.data.attributes.url:""}
             alt=""
           ></img>
         </Grid>
         <Grid xs={12} lg={6} px={3}>
-          <Typography variant="h4">{treatment.attributes.name}</Typography>
+          <Typography variant="h4">{treatment.attributes.name.toUpperCase()}</Typography>
           {treatment.attributes.prices.data.map((price) => (
             <Typography variant="subtitle1">
-              {price.attributes.minutes} min - {price.attributes.priceEuro} €
+              {price.attributes.duration} {price.attributes.package?"sessions":"mins"}- {price.attributes.priceEuro} €
             </Typography>
           ))}
           <Typography variant="p">
