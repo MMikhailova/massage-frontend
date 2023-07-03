@@ -59,7 +59,7 @@ export default function Banner({ booking }) {
   const [isYogaShown, setIsYogaShown] = useState(false)
   const [isMassageShown, setIsMassageShown] = useState(false);
      const [isCoachingShown, setIsCoachingShown] = useState(false);
-
+console.log(booking)
   return (
     <Grid
       container
@@ -103,48 +103,13 @@ export default function Banner({ booking }) {
               opacity: "90%",
             }}
           />
-          {booking.yoga &&
+          {booking.yoga && (
             <Hero
               url={booking.yoga ? booking.yoga : ""}
               section={"Yoga"}
               display={isYogaShown}
-            />}
-        </CardActionArea>
-      </Grid>
-      <Grid
-        item
-        md={4}
-        xs={12}
-        sx={{
-          display: {
-            xs: "flex",
-            md: "flex",
-          },
-          height: { xs: "90%", md: "100%" },
-          position: "relative",
-        }}
-      >
-        <CardActionArea
-          sx={{ width: "100%", height: "100%" }}
-          onMouseMoveCapture={() => setIsMassageShown(true)}
-          onMouseOutCapture={() => setIsMassageShown(!isMassageShown)}
-        >
-          <CardMedia
-            component="img"
-            height="100%"
-            image="../assets/banner_2.jpg"
-            alt="green iguana"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          />
-          <Hero
-            url={booking.massage ? booking.massage : ""}
-            section={"Massage"}
-            display={isMassageShown}
-          />
+            />
+          )}
         </CardActionArea>
       </Grid>
       <Grid
@@ -168,7 +133,7 @@ export default function Banner({ booking }) {
           <CardMedia
             component="img"
             height="100%"
-            image="../assets/banner_3.jpg"
+            image="../assets/banner_2.jpg"
             alt="green iguana"
             style={{
               width: "100%",
@@ -178,12 +143,49 @@ export default function Banner({ booking }) {
             }}
           />
           <Hero
-            url={booking.coaching ? booking.coaching: ""}
+            url={booking.coaching ? booking.coaching : ""}
             section={"Health coaching"}
             display={isCoachingShown}
           />
         </CardActionArea>
       </Grid>
+      <Grid
+        item
+        md={4}
+        xs={12}
+        sx={{
+          display: {
+            xs: "flex",
+            md: "flex",
+          },
+          height: { xs: "90%", md: "100%" },
+          position: "relative",
+        }}
+      >
+        <CardActionArea
+          sx={{ width: "100%", height: "100%" }}
+          onMouseMoveCapture={() => setIsMassageShown(true)}
+          onMouseOutCapture={() => setIsMassageShown(!isMassageShown)}
+        >
+          <CardMedia
+            component="img"
+            height="100%"
+            image="../assets/banner_3.jpg"
+            alt="green iguana"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          />
+          <Hero
+            url={booking.massage ? booking.massage : ""}
+            section={"Massage"}
+            display={isMassageShown}
+          />
+        </CardActionArea>
+      </Grid>
+
       <BeVibrant />
 
       {/* <Grid item xs={12} textAlign="center"  mx="auto" mb={0} >
