@@ -53,7 +53,7 @@ const TreatmentItem = ({booking}) => {
               height: "auto",
               objectFit: "cover",
             }}
-            image={"./assets/handback.jpg"}
+            image={"./assets/handback.webp"}
             alt="back massage"
           ></CardMedia>
 
@@ -110,7 +110,7 @@ const TreatmentItem = ({booking}) => {
               height: "auto",
               objectFit: "cover",
             }}
-            image={"./assets/tarapeutic_yoga.jpg"}
+            image={"./assets/terapeutic_yoga.webp"}
             alt="back massage"
           />
           <CardContent>

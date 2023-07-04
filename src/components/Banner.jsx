@@ -94,7 +94,7 @@ console.log(booking)
           <CardMedia
             component="img"
             height="100%"
-            image="../assets/banner_1.jpg"
+            image="../assets/banner_1.webp"
             alt="green iguana"
             style={{
               width: "100%",

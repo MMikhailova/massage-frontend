@@ -60,7 +60,7 @@ console.log(contactInfo)
             }}
           >
             <img
-              src="../assets/contact_img.jpg"
+              src="../assets/contact_img.webp"
               alt="natalya"
               style={{
                 height: "auto",
