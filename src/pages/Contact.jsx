@@ -3,7 +3,7 @@ import React from 'react'
 import DrawerAppBar from '../components/Navigation';
 import Footer from '../components/Footer';
 import { useState } from "react";
-import { CircularProgress } from "@mui/material";
+
 
 const Contact = () => {
 const [contactInfo, setContactInfo] = useState([]);
