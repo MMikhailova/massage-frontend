@@ -118,10 +118,9 @@ export default function Banner({ booking }) {
         xs={12}
         sx={{
           display: {
-            xs: "none",
+            xs: "flex",
             md: "flex",
           },
-
           height: { xs: "90%", md: "100%" },
           position: "relative",
         }}
@@ -140,7 +139,6 @@ export default function Banner({ booking }) {
               width: "100%",
               height: "100%",
               objectFit: "cover",
-              opacity: "90%",
             }}
           />
           <Hero
@@ -156,9 +154,10 @@ export default function Banner({ booking }) {
         xs={12}
         sx={{
           display: {
-            xs: "flex",
+            xs: "none",
             md: "flex",
           },
+
           height: { xs: "90%", md: "100%" },
           position: "relative",
         }}
@@ -178,6 +177,7 @@ export default function Banner({ booking }) {
               width: "100%",
               height: "100%",
               objectFit: "cover",
+              opacity: "90%",
             }}
           />
           <Hero

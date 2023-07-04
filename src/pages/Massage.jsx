@@ -33,7 +33,6 @@ const Massage = ({ page,url }) => {
               xs: 0,
               md: 8,
             },
-            backgroundColor:"red",
             height: "75vh",
             justifyContent: "center",
             display: "flex",
