@@ -33,7 +33,7 @@ const Massage = ({ page,url }) => {
               xs: 0,
               md: 8,
             },
-            backgroundColor: "#504B3E",
+            backgroundColor:"red",
             height: "75vh",
             justifyContent: "center",
             display: "flex",
@@ -59,12 +59,8 @@ const Massage = ({ page,url }) => {
             variant="poster"
             sx={{
               position: "absolute",
-              bottom: 0,
+              bottom: "0.3em",
               margin: 0,
-              transform: {
-                xs: "translate(0%,-3.5vh)",
-                lg: "translate(0, -7vh)",
-              },
             }}
           >
             MASSAGE

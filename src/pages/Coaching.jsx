@@ -28,7 +28,7 @@ const Coaching= ({page,url}) => {
             },
             mt: {
               xs: 0,
-              md: 5,
+              md: 8,
             },
             background: " conic-gradient(#424236,#666353,#666353,#404034)",
             height: "60vh",
@@ -56,12 +56,8 @@ const Coaching= ({page,url}) => {
             variant="poster"
             sx={{
               position: "absolute",
-              bottom: 0,
+              bottom: "0.3em",
               margin: 0,
-              transform: {
-                xs: "translate(0%,-3.5vh)",
-                lg: "translate(0, -7vh)",
-              },
             }}
           >
             COACHING

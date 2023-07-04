@@ -57,11 +57,7 @@ const Yoga = ({ page,url }) => {
             sx={{
               py: 0,
               position: "absolute",
-              bottom: 0,
-              transform: {
-                xs: "translate(0%,-3.5vh)",
-                lg: "translate(0, -7vh)",
-              },
+              bottom: "0.3em",
             }}
           >
             YOGA
