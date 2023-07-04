@@ -151,7 +151,7 @@ height:"100%",
               radiance...”
             </Typography>
             <Typography
-              align="end"
+              align="right"
               variant="h5"
               color="#DF7861"
               fontStyle="italic"

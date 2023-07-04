@@ -10,7 +10,6 @@ const bookingUrl = result.reduce((acc, obj) => {
   acc[type] = url;
   return acc;
 }, {});
- console.log(bookingUrl);
 
   return bookingUrl
 }

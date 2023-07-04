@@ -20,7 +20,7 @@ const Treatment = ({ page }) => {
       `https://strapi-production-7702.up.railway.app/api/galleries?filters[treatment][$eq]=${page}&populate=*`
     ).then((vm) => setGallery(vm));
   }, [page]);
-  console.log(treatments, gallery);
+
   return (
     <>
         <BasicGrid data={treatments} />

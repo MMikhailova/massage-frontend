@@ -8,7 +8,7 @@ import { useState } from "react";
 const Contact = () => {
 const [contactInfo, setContactInfo] = useState([]);
 
-console.log(contactInfo)
+
     return (
       <>
         <DrawerAppBar />

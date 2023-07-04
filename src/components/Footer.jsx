@@ -19,12 +19,12 @@ const Footer = ({ setContactInfo }) => {
       "https://strapi-production-7702.up.railway.app/api/contacts"
     ).then((vm) => {
       setContact(vm);
-      setContactInfo(vm);
+      setContactInfo && setContactInfo(vm);
     });
   }, [setContactInfo]);
 
 
-  console.log(contact)
+
   return (
     <Box
       sx={{

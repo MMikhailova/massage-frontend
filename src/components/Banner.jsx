@@ -21,7 +21,6 @@ bottom:0,
 
 function Hero({ section, display,url }) {
 
-console.log(url)
 
    return (
      <Box
@@ -59,7 +58,7 @@ export default function Banner({ booking }) {
   const [isYogaShown, setIsYogaShown] = useState(false)
   const [isMassageShown, setIsMassageShown] = useState(false);
      const [isCoachingShown, setIsCoachingShown] = useState(false);
-console.log(booking)
+
   return (
     <Grid
       container
@@ -87,6 +86,7 @@ console.log(booking)
         }}
       >
         <CardActionArea
+          component="div"
           sx={{ width: "100%", height: "100%" }}
           onMouseMoveCapture={() => setIsYogaShown(true)}
           onMouseOutCapture={() => setIsYogaShown(!isYogaShown)}
@@ -127,6 +127,7 @@ console.log(booking)
         }}
       >
         <CardActionArea
+          component="div"
           onMouseMoveCapture={() => setIsCoachingShown(true)}
           onMouseOutCapture={() => setIsCoachingShown(!isCoachingShown)}
         >
@@ -163,6 +164,7 @@ console.log(booking)
         }}
       >
         <CardActionArea
+          component="div"
           sx={{ width: "100%", height: "100%" }}
           onMouseMoveCapture={() => setIsMassageShown(true)}
           onMouseOutCapture={() => setIsMassageShown(!isMassageShown)}

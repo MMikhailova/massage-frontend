@@ -41,6 +41,7 @@ export default function StyledButton({ position, url }) {
       <Root>
         <Button
           sx={{
+            display:url?"block":"none",
             position: `${position.position}`,
             top: `${position.top}`,
             transform: `${position.transform}`,

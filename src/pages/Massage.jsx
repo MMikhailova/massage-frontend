@@ -49,7 +49,7 @@ const Massage = ({ page,url }) => {
               height: "auto",
               opacity: "100%",
             }}
-            src="../assets/handback.jpg"
+            src="../assets/handback.webp"
             alt="1"
             loading="Massage"
           />
