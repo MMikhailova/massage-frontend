@@ -20,4 +20,4 @@ const sitemapInstance = sitemap.createSitemap({
     const fs = require("fs");
 
     // Write sitemap to public directory
-    fs.writeFileSync("../public/sitemap.xml", sitemapInstance.toString());
+    fs.writeFileSync("./public/sitemap.xml", sitemapInstance.toString());
