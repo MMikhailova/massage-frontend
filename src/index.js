@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material";
-
+import { HelmetProvider } from 'react-helmet-async'
 let theme = createTheme({
   typography: {
     fontFamily: "'Montserrat',sans serif",
@@ -67,7 +67,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <App />
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
     </ThemeProvider>
   </React.StrictMode>
 );

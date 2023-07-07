@@ -3,7 +3,7 @@ import Treatment from "../components/Treatment";
 import DrawerAppBar from "../components/Navigation";
 import StyledButton from "../components/Button";
 import Footer from "../components/Footer";
-
+import {Helmet} from 'react-helmet-async'
 const positionBtn = {
   top: "50%",
   left: "50%",
@@ -13,6 +13,14 @@ const positionBtn = {
 const Coaching= ({page,url}) => {
   return (
     <>
+      <Helmet>
+        <title>Health Coaching</title>
+        <meta
+          name="description"
+          content="Imagine having a dedicated partner on your wellness journey, someone who truly listens, understands, and supports you every step of the way. "
+        />
+        <link rel="canonical" href="/Coaching"></link>
+      </Helmet>
       <Box
         sx={{
           height: "fitContent",
@@ -75,8 +83,8 @@ const Coaching= ({page,url}) => {
           who truly listens, understands, and supports you every step of the
           way. That's exactly what my personalized health coaching is all about.
           I'll work closely with you to uncover your unique needs and
-          aspirations, and together, we'll create a road map towards a healthier,
-          happier you.
+          aspirations, and together, we'll create a road map towards a
+          healthier, happier you.
         </Typography>
         <Treatment page={page} />
       </Box>

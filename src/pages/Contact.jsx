@@ -3,7 +3,7 @@ import React from 'react'
 import DrawerAppBar from '../components/Navigation';
 import Footer from '../components/Footer';
 import { useState } from "react";
-
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
 const [contactInfo, setContactInfo] = useState([]);
@@ -11,6 +11,14 @@ const [contactInfo, setContactInfo] = useState([]);
 
     return (
       <>
+        <Helmet>
+          <title>Contact</title>
+          <meta
+            name="description"
+            content="Reach out to me on any questions "
+          />
+          <link rel="canonical" href="/Contact"></link>
+        </Helmet>
         <DrawerAppBar />
         <Grid
           container
@@ -21,7 +29,6 @@ const [contactInfo, setContactInfo] = useState([]);
             width: "100%",
             height: "100%",
             justifyContent: "center",
-  
           }}
         >
           <Grid
@@ -33,12 +40,16 @@ const [contactInfo, setContactInfo] = useState([]);
               textAlign: "center",
               flexDirection: "column",
               m: "auto",
-              py: { xs:"10%", md: 0 },
-              height:"100%"
+              py: { xs: "10%", md: 0 },
+              height: "100%",
             }}
           >
-            <Typography  variant="h2">Contact me on any questions</Typography>
-            <Typography color="#678180" width={{ xxs: "80%",xs:"100%"}} variant="h5">
+            <Typography variant="h2">Contact me on any questions</Typography>
+            <Typography
+              color="#678180"
+              width={{ xxs: "80%", xs: "100%" }}
+              variant="h5"
+            >
               {contactInfo.email
                 ? contactInfo.email
                 : "natalywerthaim@gmail.com"}

@@ -3,7 +3,7 @@ import React from "react";
 import DrawerAppBar from "../components/Navigation";
 import Footer from "../components/Footer";
 import ImagesCarousel from "../components/Carousel";
-
+import {Helmet} from 'react-helmet-async'
 
 const About = () => {
 
@@ -15,6 +15,15 @@ height:"100%",
   };
   return (
     <>
+      <Helmet>
+        <title>Natalya Werthaim</title>
+        <meta
+          name="description"
+          content="Natalya Werthaim is a certified Ayurvedic Massage Therapist, Therapeutic Yoga & Health Coach and a Reiki practitioner"/>
+        <link rel="canonical" href="/About"></link>
+          
+   
+      </Helmet>
       <Container
         maxWidth="xlg"
         sx={{
@@ -23,7 +32,7 @@ height:"100%",
           textAlign: "center",
           height: "fit-content",
           alignItems: "center",
-          pb:15
+          pb: 15,
         }}
       >
         <DrawerAppBar />
@@ -87,7 +96,7 @@ height:"100%",
             m: "auto",
             width: { xs: "95%", md: "80%" },
             height: "fit-content",
-            pb:15
+            pb: 15,
           }}
           textAlign="justify"
           gap={2}
@@ -162,7 +171,7 @@ height:"100%",
         </Grid>
         <Box
           sx={{
-            width: "99vw" ,
+            width: "99vw",
             height: { xs: "auto", md: "fit-content" },
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
@@ -171,7 +180,7 @@ height:"100%",
             py: 2,
           }}
         >
-          <ImagesCarousel/>
+          <ImagesCarousel />
         </Box>
       </Container>
       <Footer />

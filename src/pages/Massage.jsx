@@ -5,7 +5,7 @@ import DrawerAppBar from "../components/Navigation";
 import StyledButton from "../components/Button";
 import Footer from "../components/Footer";
 import Treatment from "../components/Treatment";
-
+import { Helmet } from "react-helmet-async";
 const positionBtn = {
   top: "50%",
   left: "50%",
@@ -16,6 +16,14 @@ const Massage = ({ page,url }) => {
   
   return (
     <>
+      <Helmet>
+        <title>Massage</title>
+        <meta
+          name="description"
+          content="A relaxing massage technique targeting specific brainwave patterns to promote healing and deep relaxation on both body and mind."
+        />
+        <link rel="canonical" href="/Massage"></link>
+      </Helmet>
       <Box
         sx={{
           height: "fitContent",

@@ -8,13 +8,13 @@ import MyComponent from '../components/Natalie';
 import Footer from '../components/Footer';
 
 
-
     
 const Home = ({booking}) => {
 
 
   return (
     <>
+      
       <Container
         maxWidth="xl"
         sx={{
@@ -26,7 +26,6 @@ const Home = ({booking}) => {
           px: { xs: 0, md: 5 },
           py: { xs: 0, md: 8 },
           pb: 15,
-      
         }}
       >
         <DrawerAppBar />
@@ -73,7 +72,7 @@ const Home = ({booking}) => {
         <Section title={"Clients testimonials"} />
         <TestimonialCarousel />
         <Section title={"About Natalya Werthaim"} />
-          <MyComponent />
+        <MyComponent />
       </Container>
       <Footer />
     </>

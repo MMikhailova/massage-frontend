@@ -3,7 +3,7 @@ import Treatment from "../components/Treatment";
 import DrawerAppBar from "../components/Navigation";
 import StyledButton from "../components/Button";
 import Footer from "../components/Footer";
-
+import { Helmet } from "react-helmet-async";
 const positionBtn = {
   top: "50%",
   left: "50%",
@@ -13,6 +13,14 @@ const positionBtn = {
 const Yoga = ({ page,url }) => {
   return (
     <>
+      <Helmet>
+        <title>Yoga</title>
+        <meta
+          name="description"
+          content="Let us embark on this journey together, where the transformative power of yoga will enable you to experience the perfect balance of body, mind, and spirit."
+        />
+        <link rel="canonical" href="/Yoga"></link>
+      </Helmet>
       <Box
         sx={{
           height: "fitContent",
