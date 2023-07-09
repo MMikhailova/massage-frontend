@@ -58,7 +58,9 @@ const TreatmentItem = ({booking}) => {
           ></CardMedia>
 
           <CardContent>
-            <Typography variant="h4">AYURVEDIC MASSAGE</Typography>
+            <Typography variant="h4" component="h3">
+              AYURVEDIC MASSAGE
+            </Typography>
             <List
               sx={{
                 textAlign: "center",
@@ -114,9 +116,12 @@ const TreatmentItem = ({booking}) => {
             alt="back massage"
           />
           <CardContent>
-            <Typography variant="h4">THERAPEUTIC YOGA</Typography>
+            <Typography variant="h4" component="h3">
+              THERAPEUTIC YOGA
+            </Typography>
             <Typography
               variant="subtitle1"
+              component="h4"
               sx={{
                 justifyContent: "center",
                 textAlign: "center",
@@ -180,9 +185,12 @@ const TreatmentItem = ({booking}) => {
             alt="back massage"
           />
           <CardContent sx={{ m: "auto" }}>
-            <Typography variant="h4"> VIBRANT HEALTH COACHING</Typography>
+            <Typography variant="h4" component="h3">
+              VIBRANT HEALTH COACHING
+            </Typography>
             <Typography
               variant="subtitle1"
+              component="h4"
               sx={{
                 justifyContent: "center",
                 textAlign: "center",

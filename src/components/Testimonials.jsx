@@ -57,7 +57,7 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <Container maxWidth="lg"  sx={{my:3,p:0}}>
+    <Container maxWidth="lg" sx={{ my: 3, p: 0 }}>
       <Carousel
         arrows={false}
         infinite={true}
@@ -93,7 +93,7 @@ const TestimonialCarousel = () => {
               overflow: { xs: "scroll", md: "unset" },
             }}
           >
-            <Typography variant="h6" sx={{ marginBottom: 2 }}>
+            <Typography variant="h6" component="h3" sx={{ marginBottom: 2 }}>
               {testimonial.name}
             </Typography>
             <Typography sx={{ height: "100%" }} variant="body1">

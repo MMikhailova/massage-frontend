@@ -14,7 +14,6 @@ const Home = ({booking}) => {
 
   return (
     <>
-      
       <Container
         maxWidth="xl"
         sx={{
@@ -40,7 +39,7 @@ const Home = ({booking}) => {
             py: 3,
           }}
         >
-          <Typography variant="subtitle1">
+          <Typography variant="subtitle1" component="h3">
             BeVibrant offers a holistic approach to health and wellness, which
             combines the benefits of massage, yoga, Ayurveda, and health
             coaching to promote physical, mental, and emotional well-being. By
@@ -51,6 +50,7 @@ const Home = ({booking}) => {
           <Typography
             mt={2}
             variant="subtitle1"
+            component="h3"
             sx={{ display: { xs: "none", md: "block" } }}
           >
             BeVibrant provides personalized services tailored to your specific
@@ -61,7 +61,13 @@ const Home = ({booking}) => {
             passionate and dedicated to her practice, ensures that her clients
             receive safe, effective, and high-quality services.
           </Typography>
-          <Typography align="center" m={2} variant="h5" color="#94B49F">
+          <Typography
+            align="center"
+            m={2}
+            variant="h5"
+            component="h4"
+            color="#94B49F"
+          >
             The welcoming and positive ambiance of beVibrant will make you feel
             at ease and promotes a sense of well-being, making it an enjoyable
             and rejuvenating experience.

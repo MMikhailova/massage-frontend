@@ -27,6 +27,7 @@ const BeVibrant = () => {
         sx={{ display: { xs: "none", md: "flex" } }}
         py={4}
         variant="h4"
+        component="h2"
       >
         wellbeing treatments
       </Typography>

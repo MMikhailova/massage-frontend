@@ -40,7 +40,7 @@ const MyComponent = () => {
         }}
       />
       <Box
-        position={isSmallScreen ? "unset" :  positioning }
+        position={isSmallScreen ? "unset" : positioning}
         sx={{
           p: "3em",
           width: isSmallScreen ? "100%" : "50%",
@@ -52,7 +52,12 @@ const MyComponent = () => {
           height: "100%",
         }}
       >
-        <Typography align="justify" color="white" variant="subtitle1">
+        <Typography
+          align="justify"
+          color="white"
+          variant="subtitle1"
+          component="h3"
+        >
           NATALYA WERTHAIM is a highly experienced and well-trained professional
           who has been providing therapeutic massage services for over 15 years.
           She has an extensive educational background in Ayurvedic massage,
