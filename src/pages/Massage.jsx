@@ -6,6 +6,8 @@ import StyledButton from "../components/Button";
 import Footer from "../components/Footer";
 import Treatment from "../components/Treatment";
 import { Helmet } from "react-helmet-async";
+
+
 const positionBtn = {
   top: "50%",
   left: "50%",
@@ -41,7 +43,7 @@ const Massage = ({ page,url }) => {
               xs: 0,
               md: 8,
             },
-            height: "75vh",
+            height: "60vh",
             justifyContent: "center",
             display: "flex",
             alignContent: "center",
@@ -74,19 +76,43 @@ const Massage = ({ page,url }) => {
           </Typography>
         </Box>
         <Typography
-          textAlign="center"
           mx="auto"
-          sx={{ width: { xs: "100%", md: "60%" }, p: { xs: 2, md: 0 } }}
+          sx={{ width: { xs: "100%", md: "65%" }, p: { xs: 2, md: 0 } }}
           variant="subtitle1"
+          // color="#DF7861"
+          // fontStyle="italic"
+          textAlign="justify"
+        >
+          My journey as a massage therapist began in 2005 in India, where I had
+          the incredible opportunity to live in an Ashram for one year and
+          practice meditation. During my time there, fate led me to meet the
+          esteemed Master Kusum Modak, the visionary creator of the Ayurvedic
+          Yoga massage technique. It was through experiencing this
+          transformative massage first-hand that I was profoundly moved and
+          inspired.
+          <br /> Since that momentous encounter, I have been unwavering in my
+          dedication and passion in studying and developing my knowledge in this
+          healing technique. I have immersed myself in continuous learning,
+          exploring various modalities and techniques to deepen my expertise and
+          provide the most effective and transformative experience to my
+          clients.
+          <br /> My commitment to sharing this profound healing experience with
+          others has become my life's purpose. I consider it a privilege to pass
+          on the benefits of this ancient wisdom and therapeutic touch to those
+          seeking relaxation, rejuvenation, and healing.
+        </Typography>
+        <Typography
+          mx="auto"
+          mt="1.5em"
+          sx={{ width: { xs: "100%", md: "65%" }, p: { xs: 2, md: 0 } }}
+          variant="h6"
           color="#DF7861"
           fontStyle="italic"
+          textAlign="center"
         >
-          Imagine having a dedicated partner on your wellness journey, someone
-          who truly listens, understands, and supports you every step of the
-          way. That's exactly what my personalized health coaching is all about.
-          I'll work closely with you to uncover your unique needs and
-          aspirations, and together, we'll create a road map towards a
-          healthier, happier you.
+          Together, let us embark on a transformative journey of wellness and
+          rediscover the innate potential for health, joy, and harmony within
+          you.
         </Typography>
         <Treatment page={page} />
       </Box>

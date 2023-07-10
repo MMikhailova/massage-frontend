@@ -32,7 +32,7 @@ const Coaching= ({page,url}) => {
           sx={{
             m: {
               xs: 0,
-              md: 8,
+              md: 5,
             },
             mt: {
               xs: 0,
@@ -50,7 +50,7 @@ const Coaching= ({page,url}) => {
           <img
             style={{
               objectFit: "cover",
-              width: { xs: "100%", md: "43%" },
+              width: { xs: "100%", md: "60%" },
               height: "auto",
               opacity: "90%",
             }}
@@ -74,8 +74,8 @@ const Coaching= ({page,url}) => {
         <Typography
           textAlign="center"
           mx="auto"
-          sx={{ width: { xs: "100%", md: "60%" }, p: { xs: 2, md: 0 } }}
-          variant="subtitle1"
+          sx={{ width: { xs: "100%", md: "75%" }, p: { xs: 2, md: 0 } }}
+          variant="h6"
           color="#DF7861"
           fontStyle="italic"
         >

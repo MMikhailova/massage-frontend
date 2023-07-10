@@ -39,7 +39,7 @@ const Yoga = ({ page,url }) => {
               xs: 0,
               md: 8,
             },
-            height: { md: "70vh", xs: "fit-content" },
+            height: { md: "60vh", xs: "fit-content" },
             justifyContent: "center",
             display: "flex",
             alignContent: "center",
@@ -74,8 +74,8 @@ const Yoga = ({ page,url }) => {
         <Typography
           textAlign="center"
           mx="auto"
-          sx={{ width: { xs: "100%", md: "60%" }, p: { xs: 2, md: 0 } }}
-          variant="subtitle1"
+          sx={{ width: { xs: "100%", md: "65%" }, p: { xs: 2, md: 0 } }}
+          variant="h6"
           color="#DF7861"
           fontStyle="italic"
         >

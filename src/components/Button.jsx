@@ -40,6 +40,7 @@ export default function StyledButton({ position, url }) {
     return (
       <Root>
         <Button
+          size="large"
           sx={{
             display:url?"block":"none",
             position: `${position.position}`,
