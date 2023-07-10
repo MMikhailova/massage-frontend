@@ -19,12 +19,15 @@ const Massage = ({ page,url }) => {
   return (
     <>
       <Helmet>
-        <title>Massage</title>
+        <title>
+          Ayurvedic massage |Yoga massage |Tissue massage |Massage for pregnant
+          women |Brussels
+        </title>
         <meta
           name="description"
-          content="A relaxing massage technique targeting specific brainwave patterns to promote healing and deep relaxation on both body and mind."
+          content="Ayurvedic massages in Brussels. Relaxation massage with healing sounds, Indian head massage, Chair “Lunch boost” back & shoulders massage"
         />
-        <link rel="canonical" href="/Massage"></link>
+        <link rel="canonical" href="/ayurvedic-massages-brussels"></link>
       </Helmet>
       <Box
         sx={{

@@ -14,7 +14,7 @@ const Coaching= ({page,url}) => {
   return (
     <>
       <Helmet>
-        <title>Health Coaching</title>
+        <title>Well-being coaching in Brussels</title>
         <meta
           name="description"
           content="Imagine having a dedicated partner on your wellness journey, someone who truly listens, understands, and supports you every step of the way. "

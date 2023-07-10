@@ -14,10 +14,10 @@ const Yoga = ({ page,url }) => {
   return (
     <>
       <Helmet>
-        <title>Yoga</title>
+        <title>Therapeutic Yoga in Brussels</title>
         <meta
           name="description"
-          content="Let us embark on this journey together, where the transformative power of yoga will enable you to experience the perfect balance of body, mind, and spirit."
+          content="Experience the transformative power of yoga with individualized, one-on-one sessions guided by your own qualified yoga therapist in Brussels."
         />
         <link rel="canonical" href="/Yoga"></link>
       </Helmet>
