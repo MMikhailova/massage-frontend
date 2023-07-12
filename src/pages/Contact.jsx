@@ -27,6 +27,7 @@ const [contactInfo, setContactInfo] = useState([]);
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             width: "100%",
+            minHeight:"85vh",
             height: "100%",
             justifyContent: "center",
           }}
