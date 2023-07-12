@@ -27,7 +27,7 @@ const Massage = ({ page,url }) => {
           name="description"
           content="Ayurvedic massages in Brussels. Relaxation massage with healing sounds, Indian head massage, Chair “Lunch boost” back & shoulders massage"
         />
-        <link rel="canonical" href="/ayurvedic-massages-brussels"></link>
+        <link rel="canonical" href="/Massage"></link>
       </Helmet>
       <Box
         sx={{

@@ -6,7 +6,7 @@ import TreatmentItem from "../components/Servises";
 import TestimonialCarousel from '../components/Testimonials';
 import MyComponent from '../components/Natalie';
 import Footer from '../components/Footer';
-
+import { Helmet } from "react-helmet-async";
 
     
 const Home = ({booking}) => {
@@ -14,6 +14,17 @@ const Home = ({booking}) => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          Ayurvedic Massage, Therapeutic Yoga, Health coaching and Reiki at
+          beVibrant in Brussels
+        </title>
+        <meta
+          name="description"
+          content="BeVibrant offers a holistic approach to health and wellness, which combines the benefits of Massage, Yoga, Ayurveda and Health Coaching"
+        />
+        <link rel="canonical" href="/"></link>
+      </Helmet>
       <Container
         maxWidth="xl"
         sx={{
