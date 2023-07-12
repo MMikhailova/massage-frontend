@@ -24,7 +24,7 @@ const Treatment = ({ page }) => {
   return (
     <>
         <BasicGrid data={treatments} />
-        <WovenImageList data={gallery} />
+      <WovenImageList data={gallery} page={page} />
     </>
   );
 };
