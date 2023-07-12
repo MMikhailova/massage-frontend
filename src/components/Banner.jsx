@@ -95,7 +95,7 @@ export default function Banner({ booking }) {
             component="img"
             height="100%"
             image="../assets/banner_1.webp"
-            alt="green iguana"
+            alt="therapeutic yoga"
             style={{
               width: "100%",
               height: "100%",
@@ -134,7 +134,7 @@ export default function Banner({ booking }) {
             component="img"
             height="100%"
             image="../assets/banner_2.jpg"
-            alt="green iguana"
+            alt="Ayurvedic massage"
             style={{
               width: "100%",
               height: "100%",
@@ -172,7 +172,7 @@ export default function Banner({ booking }) {
             component="img"
             height="100%"
             image="../assets/banner_3.jpg"
-            alt="green iguana"
+            alt="Vibrant wellbeing coaching"
             style={{
               width: "100%",
               height: "100%",
@@ -190,9 +190,6 @@ export default function Banner({ booking }) {
 
       <BeVibrant />
 
-      {/* <Grid item xs={12} textAlign="center"  mx="auto" mb={0} >
-       
-      </Grid> */}
     </Grid>
   );
       

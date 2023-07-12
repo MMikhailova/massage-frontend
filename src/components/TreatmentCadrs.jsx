@@ -16,7 +16,7 @@ export default function BasicGrid({data}) {
         m="auto"
         sx={{ justifyContent: "center", width: { xs: "100%", md: "80%" } }}
       >
-        <Grid xs={12} lg={4} textAlign="center">
+        <Grid xs={12} sm={4} lg={4} textAlign="center">
           <img
             style={{ objectFit: "fill", width: "80%", height: "auto" }}
             src={
@@ -27,7 +27,7 @@ export default function BasicGrid({data}) {
             alt=""
           ></img>
         </Grid>
-        <Grid xs={12} lg={6} px={3}>
+        <Grid xs={12} sm={8} lg={6} px={3}>
           <Typography variant="h4">
             {treatment.attributes.name.toUpperCase()}
           </Typography>
