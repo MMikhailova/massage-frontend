@@ -168,23 +168,23 @@ const TreatmentItem = ({booking}) => {
           sx={{
             backgroundColor: "#FEE4D1",
             display: "flex",
-            flexDirection: { xs: "column", md: "row" },
+            flexDirection: { xs: "column",sm:"row", },
             width: "100%",
           }}
         >
           <CardMedia
             component="img"
             sx={{
-              width: { md: "50%" },
+              width: { sm: "50%" },
               height: {
-                md: "auto",
+                sm: "auto",
               },
               objectFit: "cover",
             }}
             image={"./assets/embrace.jpg"}
             alt="back massage"
           />
-          <CardContent sx={{ m: "auto" }}>
+          <CardContent sx={{ m: "auto", width: { sm: "50%" } }}>
             <Typography variant="h4" component="h3">
               VIBRANT HEALTH COACHING
             </Typography>
