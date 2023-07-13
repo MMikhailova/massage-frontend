@@ -4,13 +4,18 @@ import DrawerAppBar from "../components/Navigation";
 import StyledButton from "../components/Button";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
+
 const positionBtn = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
   position: "absolute",
 };
-const Yoga = ({ page,url }) => {
+const Yoga = ({ page, url }) => {
+    useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }, []);
   return (
     <>
       <Helmet>

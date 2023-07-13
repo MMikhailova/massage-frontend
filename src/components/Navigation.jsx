@@ -46,6 +46,7 @@ function DrawerAppBar(props) {
     setAnchorElUser(event.currentTarget);
                    
   };
+
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
@@ -74,7 +75,7 @@ function DrawerAppBar(props) {
           <ListItem
             onClick={
               item === "Home"
-                ? () => navigate("/")
+                ? () => { navigate("/") }
                 : item === "Health coaching"
                 ? () => navigate("/Coaching")
                 : () => navigate(`/${item}`)
@@ -131,7 +132,12 @@ function DrawerAppBar(props) {
                     : item === "Home"
                     ? () => navigate("/")
                     : item === "Health coaching"
-                    ? () => navigate("/Coaching")
+                        ? () => {
+                          navigate("/Coaching");
+                          
+                        }
+
+
                     : () => navigate(`/${item}`)
                 }
                 key={item}

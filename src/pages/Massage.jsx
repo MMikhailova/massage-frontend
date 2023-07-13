@@ -6,6 +6,7 @@ import StyledButton from "../components/Button";
 import Footer from "../components/Footer";
 import Treatment from "../components/Treatment";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 
 
 const positionBtn = {
@@ -15,7 +16,9 @@ const positionBtn = {
   position: "absolute",
 };
 const Massage = ({ page,url }) => {
-  
+    useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }, []);
   return (
     <>
       <Helmet>

@@ -1,12 +1,14 @@
 import { Container,Grid,Box, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import DrawerAppBar from "../components/Navigation";
 import Footer from "../components/Footer";
 import ImagesCarousel from "../components/Carousel";
 import {Helmet} from 'react-helmet-async'
 
 const About = () => {
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
   const mediaStyle = {
     width: "100%",
 height:"100%",

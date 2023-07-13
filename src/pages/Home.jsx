@@ -7,11 +7,13 @@ import TestimonialCarousel from '../components/Testimonials';
 import MyComponent from '../components/Natalie';
 import Footer from '../components/Footer';
 import { Helmet } from "react-helmet-async";
+import { useEffect } from 'react';
 
-    
 const Home = ({booking}) => {
 
-
+   useEffect(() => {
+     window.scrollTo({ top: 0, behavior: "instant" });
+   }, []);
   return (
     <>
       <Helmet>
