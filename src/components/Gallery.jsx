@@ -30,8 +30,10 @@ export default function MasonryImageList({ data, page }) {
             width: { xs: "100%", md: "80%" },
             height: " 60vh",
             my: 2,
+            border:"none"
           }}
           component="iframe"
+          loading="lazy"
           controls
           src="https://www.youtube.com/embed/tyjUry32DyU"
         ></CardMedia>
