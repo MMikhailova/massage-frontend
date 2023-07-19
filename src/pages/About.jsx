@@ -57,15 +57,15 @@ height:"100%",
             }}
           >
             <img
-              src="../assets/about_1.jpg"
+              src="../assets/yoga-pose.jpg"
               alt="yoga pose"
               style={{ width: "100%", height: "100%", objectFit: "fill" }}
             />
           </Grid>
           <Grid item md={4} xs={12} height="45vh">
             <img
-              src="../assets/about_2.jpg"
-              alt="yoga pose"
+              src="../assets/yoga-position.jpg"
+              alt="yoga seating position"
               style={mediaStyle}
             />
           </Grid>
@@ -82,8 +82,8 @@ height:"100%",
             }}
           >
             <img
-              src="../assets/about_3.jpg"
-              alt="yoga pose"
+              src="../assets/yoga-open-air.jpg"
+              alt="yoga at open air"
               style={{ height: "100%", width: "100%", objectFit: "cover" }}
             />
           </Grid>
@@ -105,8 +105,8 @@ height:"100%",
         >
           <Grid xs={12} md={5} textAlign="center" item>
             <img
-              src="../assets/about_natalia.webp"
-              alt="natalya"
+              src="../assets/natalya-werthaim-photo.webp"
+              alt="natalya werthaim"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </Grid>

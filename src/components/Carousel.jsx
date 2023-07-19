@@ -16,23 +16,23 @@ const ImagesCarousel = () => {
     {
       id: 0,
       name: "Anabel",
-      url: "../assets/Certificate_1.png",
+      url: "../assets/yoga-certificate-level-one.png",
     },
     {
       id: 1,
       name: "Andrian",
-      url: "../assets/Certificate_2.png",
+      url: "../assets/yoga-certificate-advance.png",
     },
 
     {
       id: 2,
       name: "An",
-      url: "../assets/Certificate_3.png",
+      url: "../assets/massage-certificate-chine.png",
     },
     {
       id: 3,
       name: "Aan",
-      url: "../assets/Certificate_4.png",
+      url: "../assets/yoga-instructor-certificate.png",
     }
   ];
 

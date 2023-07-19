@@ -18,6 +18,14 @@ let theme = createTheme({
     },
   },
   components: {
+    image: {
+    width: "100%",
+    height: "auto",
+    maxWidth: "100%",
+    maxHeight: "100%",
+    objectFit: "cover",
+    opacity: "90%"
+  },
     MuiButton: {
       styleOverrides: {
         root: ({ ownerState }) => ({

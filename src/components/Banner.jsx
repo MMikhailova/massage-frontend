@@ -1,6 +1,5 @@
+import { useState, } from "react";
 
-// import StyledButton from "./Button";
-import { useState,} from "react";
 import BeVibrant from "./BeVibrant";
 import {
   Grid,
@@ -12,6 +11,7 @@ CardActionArea,
 } from "@mui/material";
 
 
+ 
 const positionBtn = {
 bottom:0,
   left: "50%",
@@ -23,6 +23,7 @@ function Hero({ section, display,url }) {
 
 
    return (
+    
      <Box
        position={positionBtn}
        sx={{
@@ -54,6 +55,7 @@ function Hero({ section, display,url }) {
 }
 
 export default function Banner({ booking }) {
+
 
   const [isYogaShown, setIsYogaShown] = useState(false)
   const [isMassageShown, setIsMassageShown] = useState(false);
@@ -94,14 +96,8 @@ export default function Banner({ booking }) {
           <CardMedia
             component="img"
             height="100%"
-            image="../assets/banner_1.webp"
+            image="../assets/ayurvedic-yoga.webp"
             alt="therapeutic yoga"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              opacity: "90%",
-            }}
           />
           {booking.yoga && (
             <Hero
@@ -133,13 +129,8 @@ export default function Banner({ booking }) {
           <CardMedia
             component="img"
             height="100%"
-            image="../assets/banner_2.jpg"
+            image="../assets/massage-therapist.jpg"
             alt="Ayurvedic massage"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
           />
           <Hero
             url={booking.coaching ? booking.coaching : ""}
@@ -171,14 +162,8 @@ export default function Banner({ booking }) {
           <CardMedia
             component="img"
             height="100%"
-            image="../assets/banner_3.jpg"
+            image="../assets/back-massage.jpg"
             alt="Vibrant wellbeing coaching"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              opacity: "90%",
-            }}
           />
           <Hero
             url={booking.massage ? booking.massage : ""}
@@ -189,7 +174,6 @@ export default function Banner({ booking }) {
       </Grid>
 
       <BeVibrant />
-
     </Grid>
   );
       

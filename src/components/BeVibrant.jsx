@@ -6,8 +6,11 @@ const BeVibrant = () => {
   return (
     <>
       <Typography
-        variant="h1"
+      
         sx={{
+          fontSize: {
+            xs: "64px", md: "80px", lg: "80px"
+          },
           color: "#FCF8E8",
           fontWeight: 900,
           position: "absolute",
@@ -16,7 +19,7 @@ const BeVibrant = () => {
           width: "100%",
           textShadow: " 5px 0px 8px #94B49F",
           transform: {
-            md: "translate(0%,20%)",
+            md: "translate(0%,30%)",
           },
         }}
       >
