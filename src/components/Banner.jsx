@@ -8,6 +8,7 @@ import {
   Button,
 CardActionArea,
   CardMedia,
+  Link
 } from "@mui/material";
 
 
@@ -23,7 +24,6 @@ function Hero({ section, display,url }) {
 
 
    return (
-    
      <Box
        position={positionBtn}
        sx={{
@@ -43,12 +43,26 @@ function Hero({ section, display,url }) {
        >
          {section}
        </Typography>
+       <Link
+         href="tel:+32488863960"
+         variant="h5"
+         sx={{
+           color: "white",
+           display: { xs: "block", md: "none" },
+           underline: "hover",
+           "&:hover::after": {
+             backgroundColor: "white",
+           },
+         }}
+       >
+         +32488863960
+       </Link>
        <Button
          onClick={() => window.open(url, "_blank", "noopener,noreferrer")}
          size="medium"
          variant="contained"
        >
-         Book a session
+         Book online
        </Button>
      </Box>
    );
