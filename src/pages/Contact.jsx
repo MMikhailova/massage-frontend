@@ -82,6 +82,7 @@ const [contactInfo, setContactInfo] = useState([]);
                 backgroundColor: "#93B49E",
                 justifyContent: "center",
                 mx: "auto",
+                borderRadius: "25px",
               }}
             >
               <Typography variant="body1" component="h3">
