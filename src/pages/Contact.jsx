@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@mui/material'
+import { Grid, Typography,Link,Box } from '@mui/material'
 import React from 'react'
 import DrawerAppBar from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -27,7 +27,7 @@ const [contactInfo, setContactInfo] = useState([]);
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             width: "100%",
-            minHeight:"85vh",
+            minHeight: "85vh",
             height: "100%",
             justifyContent: "center",
           }}
@@ -45,19 +45,58 @@ const [contactInfo, setContactInfo] = useState([]);
               height: "100%",
             }}
           >
-            <Typography variant="h2">Contact me on any questions</Typography>
-            <Typography
-              color="#678180"
-              width={{ xxs: "80%", xs: "100%" }}
-              variant="h5"
+            {/* <Typography variant="h2">Contact me on any questions</Typography> */}
+            <Typography variant="subtitle1" component="h3">
+              <span style={{ color: "#678180", fontWeight: "bold" }}>
+                BeVibrant
+              </span>{" "}
+              is located in the heart of Brussels' European Quarter, its space
+              thoughtfully designed to embrace you with a relaxed ambiance,
+              infused with good cheer and an abundance of positive energy.{" "}
+              <span style={{ color: "#678180", fontWeight: "bold" }}>
+                BeVibrant
+              </span>{" "}
+              shares its quarters with
+              <Link
+                sx={{
+                  ml: 0.2,
+                  color: "#000000",
+                  textDecorationLine: "underline",
+                  textDecorationColor: "#000000",
+                }}
+                href="https://app.kiute.com/esthetique-hellene/home"
+              >
+                Eleni Avgenaki
+              </Link>
+              , an expert of holistic care. Together, they create a haven of
+              tranquility for your moments of respite, whether it be after a
+              long day's work or on a leisurely weekend.
+            </Typography>
+            <Box
+              sx={{
+                my: "2rem",
+                p: 2,
+                width: "fit-content",
+                display: "flex",
+                flexDirection: "column",
+                backgroundColor: "#93B49E",
+                justifyContent: "center",
+                mx: "auto",
+              }}
             >
-              {contactInfo.email
-                ? contactInfo.email
-                : "natalywerthaim@gmail.com"}
-            </Typography>
-            <Typography variant="h6">
-              +{contactInfo.phone ? contactInfo.phone : "+ 32488863960"}
-            </Typography>
+              <Typography variant="body1" component="h3">
+                Rue du Trône 173, 1050 Bruxelles
+              </Typography>
+              <Typography variant="subtitle1" component="h3">
+                Working Hours:{" "}
+              </Typography>
+              <Typography variant="subtitle1" component="h3">
+                Monday - Friday 10:00 - 19:00
+              </Typography>
+              <Typography variant="subtitle1" component="h3">
+                Saturday 10:00 - 18:00
+              </Typography>
+            </Box>
           </Grid>
           <Grid
             item
@@ -84,7 +123,7 @@ const [contactInfo, setContactInfo] = useState([]);
           </Grid>
         </Grid>
 
-        <Footer setContactInfo={setContactInfo} />
+        <Footer contactInfo={contactInfo} setContactInfo={setContactInfo} />
       </>
     );
 }

@@ -56,30 +56,6 @@ const Footer = ({ setContactInfo }) => {
           flexDirection: { xs: "column", md: "row" },
         }}
       >
-        <Stack spacing={2} direction="row" justifyContent="center">
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href={contact.facebookUrl ? contact.facebookUrl : ""}
-          >
-            <FacebookIcon sx={{ color: "white" }} />
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href={contact.instagramUrl ? contact.instagramUrl : ""}
-          >
-            <InstagramIcon color="action" sx={{ color: "white" }} />
-          </a>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href={contact.whatsupUrl ? contact.whatsupUrl : ""}
-          >
-            <WhatsAppIcon color="action" sx={{ color: "white" }} />
-          </a>
-        </Stack>
-
         <Link
           href={`mailto:${
             contact.email ? contact.email : "natalywerthaim@gmail.com"
@@ -95,10 +71,49 @@ const Footer = ({ setContactInfo }) => {
           {contact.email ? contact.email : "natalywerthaim@gmail.com"}
         </Link>
 
-        <Typography variant="body1">+{contact.phone?contact.phone: "+ 32488863960"}</Typography>
+        <Typography variant="body1">
+          +{contact.phone ? contact.phone : "+ 32488863960"}
+        </Typography>
+        <Typography variant="body1">
+          Rue du Trône 173, 1050 Bruxelles
+        </Typography>
       </Stack>
+      <Stack spacing={2} direction="row" justifyContent="center">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href={contact.facebookUrl ? contact.facebookUrl : ""}
+        >
+          <FacebookIcon sx={{ color: "white" }} />
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href={contact.instagramUrl ? contact.instagramUrl : ""}
+        >
+          <InstagramIcon color="action" sx={{ color: "white" }} />
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href={contact.whatsupUrl ? contact.whatsupUrl : ""}
+        >
+          <WhatsAppIcon color="action" sx={{ color: "white" }} />
+        </a>
+      </Stack>
+
       <Typography variant="body2" sx={{ mt: "1rem" }}>
-        @ 2023 BE VIBRANT, Brussels
+        @ 2023 BE VIBRANT | Developed by{" "}
+        <Link
+          sx={{
+            color: "#FFFFFF",
+            textDecorationLine: "underline",
+            textDecorationColor: "#FFFFFF",
+          }}
+          href="https://www.linkedin.com/in/1404mikhailova/"
+        >
+          MMikhailova
+        </Link>
       </Typography>
     </Box>
   );
