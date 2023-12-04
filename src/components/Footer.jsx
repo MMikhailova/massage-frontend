@@ -71,13 +71,13 @@ const Footer = ({ setContactInfo }) => {
           {contact.email ? contact.email : "natalywerthaim@gmail.com"}
         </Link>
         <Link
-          href={`+${contact.phone ? contact.phone : "+ 32488863960"}`}
+          href={`tel:+${contact.phone ? contact.phone : "+ 32488863960"}`}
           variant="body1"
           sx={{
             color: "white",
             underline: "hover",
             "&:hover:": { color: "white" },
-            textDecorationColor: "white"
+            textDecorationColor: "white",
           }}
         >
           {contact.phone ? contact.phone : "+ 32488863960"}
