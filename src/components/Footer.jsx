@@ -70,14 +70,18 @@ const Footer = ({ setContactInfo }) => {
         >
           {contact.email ? contact.email : "natalywerthaim@gmail.com"}
         </Link>
-        <Typography variant="body1">
-          <a
-            href={`+${contact.phone ? contact.phone : "+ 32488863960"}`}
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            {contact.phone ? `+ ${contact.phone}` : "+ 32488863960"}
-          </a>
-        </Typography>
+        <Link
+          href={`+${contact.phone ? contact.phone : "+ 32488863960"}`}
+          variant="body1"
+          sx={{
+            color: "white",
+            underline: "hover",
+            "&:hover:": { color: "white" },
+            textDecorationColor: "white"
+          }}
+        >
+          {contact.phone ? contact.phone : "+ 32488863960"}
+        </Link>
         <Typography variant="body1">
           Rue du Trône 173, 1050 Bruxelles
         </Typography>
