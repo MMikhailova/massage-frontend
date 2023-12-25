@@ -18,7 +18,7 @@ height:"100%",
   return (
     <>
       <Helmet>
-        <title>Natalya Werthaim</title>
+        <title>AuNatalya Werthaim</title>
         <meta
           name="description"
           content="Natalya Werthaim is a certified Ayurvedic Massage Therapist, Therapeutic Yoga & Health Coach and a Reiki practitioner"/>

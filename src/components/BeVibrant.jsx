@@ -6,10 +6,11 @@ const BeVibrant = () => {
   return (
     <>
       <Typography
-      
         sx={{
           fontSize: {
-            xs: "64px", md: "80px", lg: "80px"
+            xs: "64px",
+            md: "80px",
+            lg: "80px",
           },
           color: "#FCF8E8",
           fontWeight: 900,
@@ -25,15 +26,24 @@ const BeVibrant = () => {
       >
         beVibrant
       </Typography>
+  
+        {/* <Typography
+          sx={{ display: { xs: "none", md: "flex" } }}
+          py={4}
+          variant="h4"
+          component="h2"
+        >
+          Massage | Yoga | Coaching
+        </Typography> */}
+        <Typography
+          sx={{ display: { xs: "none", md: "flex" } }}
+          py={4}
+          variant="h4"
+          component="h2"
+        >
+      Best Massage and Yoga in Brussels
+        </Typography>
 
-      <Typography
-        sx={{ display: { xs: "none", md: "flex" } }}
-        py={4}
-        variant="h4"
-        component="h2"
-      >
-        wellbeing treatments
-      </Typography>
       <Breadcrumbs
         aria-label="breadcrumb"
         underline="hover"

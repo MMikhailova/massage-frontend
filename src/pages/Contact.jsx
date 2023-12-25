@@ -12,10 +12,10 @@ const [contactInfo, setContactInfo] = useState([]);
     return (
       <>
         <Helmet>
-          <title>Contact</title>
+          <title>beVibrant Brussels address</title>
           <meta
             name="description"
-            content="Reach out to me on any questions "
+            content="beVibrant massage and yoga studio in Brussels, Ixelles "
           />
           <link rel="canonical" href="/Contact"></link>
         </Helmet>

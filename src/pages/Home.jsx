@@ -18,12 +18,11 @@ const Home = ({booking}) => {
     <>
       <Helmet>
         <title>
-          Ayurvedic Massage, Therapeutic Yoga, Health coaching and Reiki at
-          beVibrant in Brussels
+          Ayurvedic Massage and Yoga in Brussels, Massage and Yoga Ixelles
         </title>
         <meta
           name="description"
-          content="BeVibrant offers a holistic approach to health and wellness, which combines the benefits of Massage, Yoga, Ayurveda and Health Coaching"
+          content="Holistic approach to health and wellness in Brussels, Ixelles. Deep tissue massage, Massage for pregnant women and Yoga"
         />
         <link rel="canonical" href="/"></link>
       </Helmet>
@@ -54,11 +53,13 @@ const Home = ({booking}) => {
         >
           <Typography variant="subtitle1" component="h3">
             BeVibrant offers a holistic approach to health and wellness, which
-            combines the benefits of massage, yoga, Ayurveda, and health
-            coaching to promote physical, mental, and emotional well-being. By
-            addressing the whole person, rather than just one aspect of their
-            health, beVibrant delivers a sense of energy, liveliness, and
-            vitality.
+            combines the benefits of {" "}
+            <Box component="span" fontWeight="bold" color="#678180">
+              Massage, Yoga, Ayurveda, and Health coaching
+            </Box>{" "}
+            to promote physical, mental, and emotional well-being. By addressing
+            the whole person, rather than just one aspect of their health,
+            beVibrant delivers a sense of energy, liveliness, and vitality.
           </Typography>
           <Typography
             mt={2}
@@ -67,12 +68,15 @@ const Home = ({booking}) => {
             sx={{ display: { xs: "none", md: "block" } }}
           >
             BeVibrant provides personalized services tailored to your specific
-            goals and conditions. Whether you want to reduce stress, relieve
-            pain, improve flexibility or receive health advice, beVibrant can
-            create a customized plan to meet your individual needs. Natalya
-            Werthaim, an experienced and qualified professional who is
-            passionate and dedicated to her practice, ensures that her clients
-            receive safe, effective, and high-quality services.
+            goals and conditions. Whether you want{" "}
+            <Box component="span" fontWeight="bold" color="#678180">
+              to reduce stress, relieve pain, improve flexibility or receive
+              health advice,
+            </Box>{" "}
+            beVibrant can create a customized plan to meet your individual
+            needs. Natalya Werthaim, an experienced and qualified professional
+            who is passionate and dedicated to her practice, ensures that her
+            clients receive safe, effective, and high-quality services.
           </Typography>
           <Typography
             align="center"
