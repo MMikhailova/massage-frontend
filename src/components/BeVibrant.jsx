@@ -32,7 +32,7 @@ const BeVibrant = () => {
         variant="h4"
         component="h2"
       >
-        wellbeing treatments
+      Best Massage and Yoga in Brussels
       </Typography>
       <Breadcrumbs
         aria-label="breadcrumb"
