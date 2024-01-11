@@ -35,7 +35,7 @@ const Home = ({booking}) => {
           textAlign: "center",
           height: "fit-content",
           px: { xs: 0, md: 5 },
-          py: { xs: 0, md: 8 },
+          py: { xs: 0, md: 6 },
           pb: 15,
         }}
       >
@@ -48,12 +48,17 @@ const Home = ({booking}) => {
           sx={{
             width: { xs: "90vw", md: "65vw" },
             margin: "auto",
-            py: 3,
+            py: { md: 4 },
+            mt: { md: 2 },
           }}
         >
           <Typography variant="subtitle1" component="h3">
-            BeVibrant offers a holistic approach to health and wellness, which
-            combines the benefits of {" "}
+            At beVibrant, I welcome clients in{" "}
+            <Box component="span" fontWeight="bold" color="#678180">
+              English, French, Greek, Russian, and Hebrew
+            </Box>
+            , offering a holistic approach to health and wellness, which
+            combines the benefits of{" "}
             <Box component="span" fontWeight="bold" color="#678180">
               Massage, Yoga, Ayurveda, and Health coaching
             </Box>{" "}
