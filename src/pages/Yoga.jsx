@@ -22,7 +22,7 @@ const Yoga = ({ page, url }) => {
         <title>Therapeutic Yoga in Brussels</title>
         <meta
           name="description"
-          content="Individualized, one-on-one sessions guided by your own qualified yoga therapist in Brussels."
+          content="Individual Yoga sessions in Brussels."
         />
         <link rel="canonical" href="/Yoga"></link>
       </Helmet>

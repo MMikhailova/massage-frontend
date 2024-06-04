@@ -18,8 +18,7 @@ const Home = ({booking}) => {
     <>
       <Helmet>
         <title>
-          Ayurvedic Massage, Therapeutic Yoga, Health coaching and Reiki at
-          beVibrant in Brussels
+          Ayurvedic Massage and Yoga in Brussels, Massage and Yoga Ixelles
         </title>
         <meta
           name="description"
@@ -36,7 +35,7 @@ const Home = ({booking}) => {
           textAlign: "center",
           height: "fit-content",
           px: { xs: 0, md: 5 },
-          py: { xs: 0, md: 8 },
+          py: { xs: 0, md: 6 },
           pb: 15,
         }}
       >
@@ -49,16 +48,20 @@ const Home = ({booking}) => {
           sx={{
             width: { xs: "90vw", md: "65vw" },
             margin: "auto",
-            py: 3,
+            py: { md: 4 },
+            mt: { md: 2 },
           }}
         >
           <Typography variant="subtitle1" component="h3">
-            BeVibrant offers a holistic approach to health and wellness, which
+            At beVibrant, I welcome clients in{" "}
+            <Box component="span" fontWeight="bold" color="#678180">
+              English, French, Greek, Russian, and Hebrew
+            </Box>
+            , offering a holistic approach to health and wellness, which
             combines the benefits of{" "}
-            <span style={{ fontWeight: "bold", color: "#678180" }}>
-              {" "}
-              Massage, Yoga, Ayurveda, and Health Coaching{" "}
-            </span>{" "}
+            <Box component="span" fontWeight="bold" color="#678180">
+              Massage, Yoga, Ayurveda, and Health coaching
+            </Box>{" "}
             to promote physical, mental, and emotional well-being. By addressing
             the whole person, rather than just one aspect of their health,
             beVibrant delivers a sense of energy, liveliness, and vitality.
@@ -71,10 +74,10 @@ const Home = ({booking}) => {
           >
             BeVibrant provides personalized services tailored to your specific
             goals and conditions. Whether you want{" "}
-            <span style={{ fontWeight: "bold", color: "#678180" }}>
+            <Box component="span" fontWeight="bold" color="#678180">
               to reduce stress, relieve pain, improve flexibility or receive
               health advice,
-            </span>{" "}
+            </Box>{" "}
             beVibrant can create a customized plan to meet your individual
             needs. Natalya Werthaim, an experienced and qualified professional
             who is passionate and dedicated to her practice, ensures that her

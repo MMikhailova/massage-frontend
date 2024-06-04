@@ -85,7 +85,7 @@ export default function Banner({ booking }) {
         display: "flex",
         justifyContent: "center",
         height: { xs: "75vh", md: "65vh" },
-        mb: { xs: 0, md: 3 },
+        mb: { xs: 0, md:2 },
       }}
     >
       <Grid
