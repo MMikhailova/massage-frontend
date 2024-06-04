@@ -33,7 +33,22 @@ const ImagesCarousel = () => {
       id: 3,
       name: "Aan",
       url: "../assets/yoga-instructor-certificate.png",
-    }
+    },
+    {
+      id: 4,
+      name: "Aan",
+      url: "../assets/championatship_diploma_1.png",
+    },
+    {
+      id: 5,
+      name: "Aan",
+      url: "../assets/championatship_diploma_2.png",
+    },
+    {
+      id: 6,
+      name: "Aan",
+      url: "../assets/championatship_diploma_3.png",
+    },
   ];
 
   const responsive = {
@@ -58,14 +73,14 @@ const ImagesCarousel = () => {
   return (
     <Container maxWidth="lg" sx={{ my: 3, p: 0 }}>
       <Carousel
-        arrows={false}
+        arrows={true}
         infinite={true}
         keyBoardControl={true}
         containerClass="carousel-container"
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
         responsive={responsive}
-        showDots={isSmallScreen?true:false}
+        showDots={false}
         width={isSmallScreen ? 100 : 100}
       >
         {certificates.map((certificate) => (

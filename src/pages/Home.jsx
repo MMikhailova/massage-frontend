@@ -23,7 +23,7 @@ const Home = ({booking}) => {
         </title>
         <meta
           name="description"
-          content="Ayurvedic Massage Brussels, Deep Tissue Massage Ixelles, Therapeutic Yoga"
+          content="Massage Ayurvedic Brussels, Deep Tissue Massage Ixelles, Therapeutic Yoga"
         />
         <link rel="canonical" href="/"></link>
       </Helmet>
