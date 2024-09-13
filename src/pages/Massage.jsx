@@ -1,12 +1,12 @@
 
 
-import { Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import DrawerAppBar from "../components/Navigation";
 import StyledButton from "../components/Button";
 import Footer from "../components/Footer";
 import Treatment from "../components/Treatment";
 import { Helmet } from "react-helmet-async";
-import { useEffect,useState } from "react";
+// import { useState } from "react";
 
 
 
@@ -17,27 +17,27 @@ const positionBtn = {
   position: "absolute",
 };
 const Massage = ({ page, url }) => {
-   const [openPopup, setOpenPopup] = useState(false);
-  const [hasPopupBeenShown, setHasPopupBeenShown] = useState(false);
+  //  const [openPopup, setOpenPopup] = useState(false);
+  // const [hasPopupBeenShown, setHasPopupBeenShown] = useState(false);
 
-   const handlePopupOpen = () => {
-     setOpenPopup(true);
-     setHasPopupBeenShown(true);
-   };
+  //  const handlePopupOpen = () => {
+  //    setOpenPopup(true);
+  //    setHasPopupBeenShown(true);
+  //  };
 
-   const handlePopupClose = () => {
-     setOpenPopup(false);
-   };
+  //  const handlePopupClose = () => {
+  //    setOpenPopup(false);
+  //  };
 
-   useEffect(() => {
-     window.scrollTo({ top: 0, behavior: "instant" });
-     const popupTimeout = setTimeout(() => {
-       if (!hasPopupBeenShown) {
-         handlePopupOpen();
-       }
-     }, 3000);
-     return () => clearTimeout(popupTimeout); // Cleanup on unmount
-   }, [hasPopupBeenShown]);
+  //  useEffect(() => {
+  //    window.scrollTo({ top: 0, behavior: "instant" });
+  //    const popupTimeout = setTimeout(() => {
+  //      if (!hasPopupBeenShown) {
+  //        handlePopupOpen();
+  //      }
+  //    }, 3000);
+  //    return () => clearTimeout(popupTimeout); // Cleanup on unmount
+  //  }, [hasPopupBeenShown]);
 
   return (
     <>
@@ -50,10 +50,7 @@ const Massage = ({ page, url }) => {
           name="description"
           content="Ayurvedic massages in Brussels. Relaxation massage with healing sounds, Indian head massage, Chair “Lunch boost” back & shoulders massage"
         />
-        <link
-          rel="canonical"
-          href="https://bevibrant.be/Massage"
-        ></link>
+        <link rel="canonical" href="https://bevibrant.be/Massage"></link>
       </Helmet>
       <Box
         sx={{
@@ -103,11 +100,11 @@ const Massage = ({ page, url }) => {
           >
             MASSAGE
           </Typography>
-          <Dialog open={openPopup} onClose={handlePopupClose}>
+          {/* <Dialog open={openPopup} onClose={handlePopupClose}>
             <DialogTitle>Special Offer!</DialogTitle>
             <DialogContent>
               <img
-                src="path_to_your_image.jpg"
+                src="../assets/handback.webp"
                 alt="Advertisement"
                 style={{ maxWidth: "100%", height: "auto" }}
               />
@@ -116,13 +113,17 @@ const Massage = ({ page, url }) => {
                 and rejuvenating experience.
               </DialogContentText>
             </DialogContent>
+
             <DialogActions>
               <Button onClick={handlePopupClose} color="primary">
                 Close
               </Button>
-              <Button color="primary">Book Now</Button>
+              <Button href=
+              "www.google.com" color="primary">
+                Book Now
+              </Button>
             </DialogActions>
-          </Dialog>
+          </Dialog> */}
         </Box>
 
         <Typography
