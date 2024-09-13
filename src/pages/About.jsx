@@ -23,7 +23,7 @@ height:"100%",
           name="description"
           content="Natalya Werthaim is a certified Ayurvedic Massage Therapist, Therapeutic Yoga & Health Coach and a Reiki practitioner"
         />
-        <link rel="canonical" href="/About"></link>
+        <link rel="canonical" href="https://bevibrant.be/About"></link>
       </Helmet>
       <Container
         maxWidth="xlg"
@@ -113,9 +113,10 @@ height:"100%",
             <Typography variant="subtitle1">
               Originally from Ukraine, I have spent most of my life in Tel Aviv,
               Israel. I am fluent in{" "}
-              <Box component="span" fontStyle="Italic" >
+              <Box component="span" fontStyle="Italic">
                 English, French, Greek, Russian, and Hebrew
-              </Box>, welcoming my clients in these languages to ensure a smooth and
+              </Box>
+              , welcoming my clients in these languages to ensure a smooth and
               inclusive experience for individuals seeking holistic well-being.
               <br />
               I embarked on a spiritual journey in my late 20s. This quest for

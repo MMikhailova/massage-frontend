@@ -24,7 +24,7 @@ const Yoga = ({ page, url }) => {
           name="description"
           content="Individual Yoga sessions in Brussels."
         />
-        <link rel="canonical" href="/Yoga"></link>
+        <link rel="canonical" href="https://bevibrant.be/Yoga"></link>
       </Helmet>
       <Box
         sx={{

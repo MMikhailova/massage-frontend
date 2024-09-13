@@ -1,12 +1,13 @@
 
 
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from "@mui/material";
 import DrawerAppBar from "../components/Navigation";
 import StyledButton from "../components/Button";
 import Footer from "../components/Footer";
 import Treatment from "../components/Treatment";
 import { Helmet } from "react-helmet-async";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
+
 
 
 const positionBtn = {
@@ -15,22 +16,44 @@ const positionBtn = {
   transform: "translate(-50%, -50%)",
   position: "absolute",
 };
-const Massage = ({ page,url }) => {
-    useEffect(() => {
-      window.scrollTo({ top: 0, behavior: "instant" });
-    }, []);
+const Massage = ({ page, url }) => {
+   const [openPopup, setOpenPopup] = useState(false);
+  const [hasPopupBeenShown, setHasPopupBeenShown] = useState(false);
+
+   const handlePopupOpen = () => {
+     setOpenPopup(true);
+     setHasPopupBeenShown(true);
+   };
+
+   const handlePopupClose = () => {
+     setOpenPopup(false);
+   };
+
+   useEffect(() => {
+     window.scrollTo({ top: 0, behavior: "instant" });
+     const popupTimeout = setTimeout(() => {
+       if (!hasPopupBeenShown) {
+         handlePopupOpen();
+       }
+     }, 3000);
+     return () => clearTimeout(popupTimeout); // Cleanup on unmount
+   }, [hasPopupBeenShown]);
+
   return (
     <>
       <Helmet>
         <title>
-          Ayurvedic massage | Yoga massage | Tissue massage | Massage for pregnant
-          women | Brussels
+          Ayurvedic massage | Yoga massage | Tissue massage | Massage for
+          pregnant women | Brussels
         </title>
         <meta
           name="description"
           content="Ayurvedic massages in Brussels. Relaxation massage with healing sounds, Indian head massage, Chair “Lunch boost” back & shoulders massage"
         />
-        <link rel="canonical" href="/Massage"></link>
+        <link
+          rel="canonical"
+          href="https://bevibrant.be/Massage"
+        ></link>
       </Helmet>
       <Box
         sx={{
@@ -80,7 +103,28 @@ const Massage = ({ page,url }) => {
           >
             MASSAGE
           </Typography>
+          <Dialog open={openPopup} onClose={handlePopupClose}>
+            <DialogTitle>Special Offer!</DialogTitle>
+            <DialogContent>
+              <img
+                src="path_to_your_image.jpg"
+                alt="Advertisement"
+                style={{ maxWidth: "100%", height: "auto" }}
+              />
+              <DialogContentText>
+                Discover our exclusive massage offers. Book now for a relaxing
+                and rejuvenating experience.
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={handlePopupClose} color="primary">
+                Close
+              </Button>
+              <Button color="primary">Book Now</Button>
+            </DialogActions>
+          </Dialog>
         </Box>
+
         <Typography
           mx="auto"
           sx={{ width: { xs: "100%", md: "65%" }, p: { xs: 2, md: 0 } }}

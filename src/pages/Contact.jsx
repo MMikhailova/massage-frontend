@@ -17,7 +17,7 @@ const [contactInfo, setContactInfo] = useState([]);
             name="description"
             content="beVibrant massage and yoga studio in Brussels, Ixelles "
           />
-          <link rel="canonical" href="/Contact"></link>
+          <link rel="canonical" href="https://bevibrant.be/Contact"></link>
         </Helmet>
         <DrawerAppBar />
         <Grid

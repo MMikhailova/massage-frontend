@@ -24,7 +24,7 @@ const Coaching = ({ page, url }) => {
           name="description"
           content="Imagine having a dedicated partner on your wellness journey, someone who truly listens, understands, and supports you every step of the way. "
         />
-        <link rel="canonical" href="/Coaching"></link>
+        <link rel="canonical" href="https://bevibrant.be/Coaching"></link>
       </Helmet>
       <Box
         sx={{

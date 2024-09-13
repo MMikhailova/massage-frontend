@@ -24,7 +24,7 @@ const Home = ({booking}) => {
           name="description"
           content="Holistic approach to health and wellness in Brussels, Ixelles. Deep tissue massage, Massage for pregnant women and Yoga"
         />
-        <link rel="canonical" href="/"></link>
+        <link rel="canonical" href="https://bevibrant.be/"></link>
       </Helmet>
       <Container
         maxWidth="xl"
