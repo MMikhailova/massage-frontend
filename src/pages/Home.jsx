@@ -18,12 +18,11 @@ const Home = ({booking}) => {
     <>
       <Helmet>
         <title>
-          Ayurvedic Massage, Therapeutic Yoga, Health coaching and Reiki at
-          beVibrant in Brussels
+          Ayurvedic Massage and Yoga in Brussels, Massage and Yoga Ixelles
         </title>
         <meta
           name="description"
-          content="BeVibrant offers a holistic approach to health and wellness, which combines the benefits of Massage, Yoga, Ayurveda and Health Coaching"
+          content="Massage Ayurvedic Brussels, Deep Tissue Massage Ixelles, Therapeutic Yoga"
         />
         <link rel="canonical" href="/"></link>
       </Helmet>
@@ -36,7 +35,7 @@ const Home = ({booking}) => {
           textAlign: "center",
           height: "fit-content",
           px: { xs: 0, md: 5 },
-          py: { xs: 0, md: 8 },
+          py: { xs: 0, md: 6 },
           pb: 15,
         }}
       >
@@ -49,16 +48,23 @@ const Home = ({booking}) => {
           sx={{
             width: { xs: "90vw", md: "65vw" },
             margin: "auto",
-            py: 3,
+            py: { md: 4 },
+            mt: { md: 2 },
           }}
         >
           <Typography variant="subtitle1" component="h3">
-            BeVibrant offers a holistic approach to health and wellness, which
-            combines the benefits of massage, yoga, Ayurveda, and health
-            coaching to promote physical, mental, and emotional well-being. By
-            addressing the whole person, rather than just one aspect of their
-            health, beVibrant delivers a sense of energy, liveliness, and
-            vitality.
+            At beVibrant, I welcome clients in{" "}
+            <Box component="span" fontWeight="bold" color="#678180">
+              English, French, Greek, Russian, and Hebrew
+            </Box>
+            , offering a holistic approach to health and wellness, which
+            combines the benefits of{" "}
+            <Box component="span" fontWeight="bold" color="#678180">
+              Massage, Yoga, Ayurveda, and Health coaching
+            </Box>{" "}
+            to promote physical, mental, and emotional well-being. By addressing
+            the whole person, rather than just one aspect of their health,
+            beVibrant delivers a sense of energy, liveliness, and vitality.
           </Typography>
           <Typography
             mt={2}
@@ -67,12 +73,15 @@ const Home = ({booking}) => {
             sx={{ display: { xs: "none", md: "block" } }}
           >
             BeVibrant provides personalized services tailored to your specific
-            goals and conditions. Whether you want to reduce stress, relieve
-            pain, improve flexibility or receive health advice, beVibrant can
-            create a customized plan to meet your individual needs. Natalya
-            Werthaim, an experienced and qualified professional who is
-            passionate and dedicated to her practice, ensures that her clients
-            receive safe, effective, and high-quality services.
+            goals and conditions. Whether you want{" "}
+            <Box component="span" fontWeight="bold" color="#678180">
+              to reduce stress, relieve pain, improve flexibility or receive
+              health advice,
+            </Box>{" "}
+            beVibrant can create a customized plan to meet your individual
+            needs. Natalya Werthaim, an experienced and qualified professional
+            who is passionate and dedicated to her practice, ensures that her
+            clients receive safe, effective, and high-quality services.
           </Typography>
           <Typography
             align="center"

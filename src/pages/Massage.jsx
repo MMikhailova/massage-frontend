@@ -23,8 +23,8 @@ const Massage = ({ page,url }) => {
     <>
       <Helmet>
         <title>
-          Ayurvedic massage |Yoga massage |Tissue massage |Massage for pregnant
-          women |Brussels
+          Ayurvedic massage | Yoga massage | Tissue massage | Massage for pregnant
+          women | Brussels
         </title>
         <meta
           name="description"

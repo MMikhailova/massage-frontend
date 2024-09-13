@@ -2,6 +2,7 @@ import { Box, Stack, Typography,Link } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 import Divider from "@mui/material/Divider";
 import React from "react";
 import { useEffect, useState } from "react";
@@ -107,6 +108,13 @@ const Footer = ({ setContactInfo }) => {
           href={contact.whatsupUrl ? contact.whatsupUrl : ""}
         >
           <WhatsAppIcon color="action" sx={{ color: "white" }} />
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://youtube.com/@holistictherapist_natalya?si=B1zVu14Uc06k_yCS"
+        >
+          <YouTubeIcon color="action" sx={{ color: "white" }} />
         </a>
       </Stack>
 

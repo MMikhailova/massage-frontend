@@ -18,7 +18,7 @@ height:"100%",
   return (
     <>
       <Helmet>
-        <title>Natalya Werthaim</title>
+        <title>AuNatalya Werthaim</title>
         <meta
           name="description"
           content="Natalya Werthaim is a certified Ayurvedic Massage Therapist, Therapeutic Yoga & Health Coach and a Reiki practitioner"
@@ -111,19 +111,24 @@ height:"100%",
           </Grid>
           <Grid xs={12} md={5} item>
             <Typography variant="subtitle1">
-              Originally from Ukraine, but having spent most of my life in Tel
-              Aviv, Israel, I embarked on a spiritual journey in my late 20s.
-              This quest for deeper meaning led me to live in seven different
-              countries, explore various spiritual techniques, and learn
-              different bodywork disciplines to enhance well-being. My journey
-              began in Prague, where I ran my own events company. However, I
-              felt unfulfilled by the corporate world and sought something more
-              meaningful in mylife. After a long period of travelling, this
-              search eventually led me to India, where I spent almost a year
-              living in an Ashram in Puna. Here, I delved deep into Yoga and
-              meditation, studying at the Iyengar Institute and completing
-              various transformative courses under the tutelage of spiritual
-              leaders. <br />
+              Originally from Ukraine, I have spent most of my life in Tel Aviv,
+              Israel. I am fluent in{" "}
+              <Box component="span" fontStyle="Italic" >
+                English, French, Greek, Russian, and Hebrew
+              </Box>, welcoming my clients in these languages to ensure a smooth and
+              inclusive experience for individuals seeking holistic well-being.
+              <br />
+              I embarked on a spiritual journey in my late 20s. This quest for
+              deeper meaning led me to live in seven different countries,
+              explore various spiritual techniques, and learn different bodywork
+              disciplines to enhance well-being. My journey began in Prague,
+              where I ran my own events company. However, I felt unfulfilled by
+              the corporate world and sought something more meaningful in my
+              life. After a long period of traveling, this search eventually led
+              me to India, where I spent almost a year living in an Ashram in
+              Puna. Here, I delved deep into Yoga and meditation, studying at
+              the Iyengar Institute and completing various transformation
+              courses under the tutelage of spiritual leaders. <br />
               During my time in India, I was lucky to meet the great Master
               Kusum Modak and study Ayurvedic Yoga massage methods at her
               institute and to become a certified therapist. I have been
