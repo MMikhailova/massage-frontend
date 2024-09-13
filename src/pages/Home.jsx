@@ -22,7 +22,7 @@ const Home = ({booking}) => {
         </title>
         <meta
           name="description"
-          content="Holistic approach to health and wellness in Brussels, Ixelles. Deep tissue massage, Massage for pregnant women and Yoga"
+          content="Massage Ayurvedic Brussels, Deep Tissue Massage Ixelles, Therapeutic Yoga"
         />
         <link rel="canonical" href="https://bevibrant.be/"></link>
       </Helmet>
