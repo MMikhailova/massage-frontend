@@ -21,10 +21,9 @@ height:"100%",
         <title>Natalya Werthaim</title>
         <meta
           name="description"
-          content="Natalya Werthaim is a certified Ayurvedic Massage Therapist, Therapeutic Yoga & Health Coach and a Reiki practitioner"/>
-        <link rel="canonical" href="/About"></link>
-          
-   
+          content="Natalya Werthaim is a certified Ayurvedic Massage Therapist, Therapeutic Yoga & Health Coach and a Reiki practitioner"
+        />
+        <link rel="canonical" href="https://bevibrant.be/About"></link>
       </Helmet>
       <Container
         maxWidth="xlg"
