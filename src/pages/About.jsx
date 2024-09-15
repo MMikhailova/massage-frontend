@@ -18,12 +18,14 @@ height:"100%",
   return (
     <>
       <Helmet>
-        <title>Natalya Werthaim</title>
+        <title>
+          Natalya Werthaim - Ayurvedic Massage Therapist at beVibrant, Brussels
+        </title>
         <meta
           name="description"
-          content="Natalya Werthaim is a certified Ayurvedic Massage Therapist, Therapeutic Yoga & Health Coach and a Reiki practitioner"
+          content="Natalya Werthaim, a certified Ayurvedic Massage Therapist, Therapeutic Yoga & Health Coach, and Reiki practitioner, welcomes clients in English, French, Greek, Russian, and Hebrew at beVibrant, Brussels, offering holistic well-being services"
         />
-        <link rel="canonical" href="https://bevibrant.be/About"></link>
+        <link rel="canonical" href="https://bevibrant.be/about"></link>
       </Helmet>
       <Container
         maxWidth="xlg"

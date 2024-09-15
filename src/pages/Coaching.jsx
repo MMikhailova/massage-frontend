@@ -19,12 +19,14 @@ const Coaching = ({ page, url }) => {
   return (
     <>
       <Helmet>
-        <title>Well-being coaching in Brussels</title>
+        <title>
+          Holistic Health and Wellness Coaching in Brussels | beVibrant
+        </title>
         <meta
           name="description"
-          content="Imagine having a dedicated partner on your wellness journey, someone who truly listens, understands, and supports you every step of the way. "
+          content="At beVibrant, we offer holistic health coaching that integrates nutrition, physical activity, stress management, and emotional well-being. Join Natalya on a personalized journey to balance and vitality, with expert guidance tailored to your unique goals. "
         />
-        <link rel="canonical" href="https://bevibrant.be/Coaching"></link>
+        <link rel="canonical" href="https://bevibrant.be/coaching"></link>
       </Helmet>
       <Box
         sx={{

@@ -42,15 +42,12 @@ const Massage = ({ page, url }) => {
   return (
     <>
       <Helmet>
-        <title>
-          Ayurvedic massage | Yoga massage | Tissue massage | Massage for
-          pregnant women | Brussels
-        </title>
+        <title>Ayurvedic massage in Ixelles, Brussels | beVibrant</title>
         <meta
           name="description"
-          content="Ayurvedic massages in Brussels. Relaxation massage with healing sounds, Indian head massage, Chair “Lunch boost” back & shoulders massage"
+          content="Ayurvedic massages in Brussels. Offering relaxation massage with healing sounds, Indian head massage, and Chair 'Lunch boost' back & shoulders massage at beVibrant."
         />
-        <link rel="canonical" href="https://bevibrant.be/Massage"></link>
+        <link rel="canonical" href="https://bevibrant.be/massage"></link>
       </Helmet>
       <Box
         sx={{

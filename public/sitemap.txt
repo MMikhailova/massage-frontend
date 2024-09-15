@@ -1,6 +1,6 @@
 https://bevibrant.be/
-https://bevibrant.be/About
-https://bevibrant.be/Contact
-https://bevibrant.be/Massage
-https://bevibrant.be/Yoga
-https://bevibrant.be/Coaching
+https://bevibrant.be/about
+https://bevibrant.be/contact
+https://bevibrant.be/massage
+https://bevibrant.be/yoga
+https://bevibrant.be/coaching

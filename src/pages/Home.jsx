@@ -17,12 +17,10 @@ const Home = ({booking}) => {
   return (
     <>
       <Helmet>
-        <title>
-          Ayurvedic Massage and Yoga in Brussels, Massage and Yoga Ixelles
-        </title>
+        <title>Massage and Yoga in Brussels, Ixelles | beVibrant</title>
         <meta
           name="description"
-          content="Massage Ayurvedic Brussels, Deep Tissue Massage Ixelles, Therapeutic Yoga"
+          content="At beVibrant in Brussels, Ixelles, Natalya Werthaim offers holistic wellness services in English, French, Greek, Russian, and Hebrew, combining Massage, Yoga, Ayurveda, and Health Coaching to promote physical, mental, and emotional well-being. Personalized plans address stress, pain, and flexibility."
         />
         <link rel="canonical" href="https://bevibrant.be/"></link>
       </Helmet>

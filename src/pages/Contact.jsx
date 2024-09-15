@@ -12,12 +12,15 @@ const [contactInfo, setContactInfo] = useState([]);
     return (
       <>
         <Helmet>
-          <title>beVibrant Brussels address</title>
+          <title>
+            Contact beVibrant - Holistic Wellness and Massage Therapy in
+            Brussels
+          </title>
           <meta
             name="description"
-            content="beVibrant massage and yoga studio in Brussels, Ixelles "
+            content="Get in touch with beVibrant for personalized Ayurvedic massage, yoga therapy, and health coaching services in Brussels. Reach out to Natalya Werthaim for holistic well-being support in English, French, Greek, Russian, and Hebrew."
           />
-          <link rel="canonical" href="https://bevibrant.be/Contact"></link>
+          <link rel="canonical" href="https://bevibrant.be/contact"></link>
         </Helmet>
         <DrawerAppBar />
         <Grid

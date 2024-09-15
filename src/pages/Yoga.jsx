@@ -19,12 +19,12 @@ const Yoga = ({ page, url }) => {
   return (
     <>
       <Helmet>
-        <title>Therapeutic Yoga in Brussels</title>
+        <title>Individual Yoga session in Ixelles, Brussels | beVibrant</title>
         <meta
           name="description"
-          content="Individual Yoga sessions in Brussels."
+          content="Experience personalized one-on-one yoga therapy sessions tailored to your unique health needs. Improve physical and mental well-being through custom postures, breathing exercises, and therapeutic techniques designed to address anxiety, chronic pain, stress, and more."
         />
-        <link rel="canonical" href="https://bevibrant.be/Yoga"></link>
+        <link rel="canonical" href="https://bevibrant.be/yoga"></link>
       </Helmet>
       <Box
         sx={{
