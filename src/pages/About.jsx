@@ -89,7 +89,7 @@ height:"100%",
             />
           </Grid>
         </Grid>
-        <Typography py="3rem" variant="h2">
+        <Typography py="3rem" variant="h2" component="h1">
           About Natalya Werthaim
         </Typography>
         <Grid

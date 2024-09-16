@@ -64,7 +64,7 @@ function DrawerAppBar(props) {
         }}
       >
         <img
-          alt=""
+          alt="beVibrant logo featuring an orange sun with a beige wave in Ayurvedic style"
           style={{ objectFit: "fill", height: "15vh" }}
           src="../assets/logo.svg"
         ></img>
@@ -75,7 +75,9 @@ function DrawerAppBar(props) {
           <ListItem
             onClick={
               item === "Home"
-                ? () => { navigate("/") }
+                ? () => {
+                    navigate("/");
+                  }
                 : item === "Health coaching"
                 ? () => navigate("/Coaching")
                 : () => navigate(`/${item}`)
@@ -111,7 +113,7 @@ function DrawerAppBar(props) {
           </IconButton>
           <Box onClick={() => navigate("/")}>
             <img
-              alt=""
+              alt="beVibrant logo featuring an orange sun with a beige wave in Ayurvedic style"
               style={{ height: "15vh" }}
               src="../assets/logo.svg"
             ></img>
@@ -132,12 +134,9 @@ function DrawerAppBar(props) {
                     : item === "Home"
                     ? () => navigate("/")
                     : item === "Health coaching"
-                        ? () => {
-                          navigate("/Coaching");
-                          
-                        }
-
-
+                    ? () => {
+                        navigate("/Coaching");
+                      }
                     : () => navigate(`/${item}`)
                 }
                 key={item}

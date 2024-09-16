@@ -7,9 +7,15 @@ const BeVibrant = () => {
     <>
       <Stack
         direction={"column"}
-        sx={{ display: "flex", flexDirection: "column", rowGap: { md: 1.5 },alignItems:"center"}}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          rowGap: { md: 1.5 },
+          alignItems: "center",
+        }}
       >
         <Typography
+          component="h1"
           sx={{
             fontSize: {
               xs: "64px",
@@ -57,7 +63,9 @@ const BeVibrant = () => {
             Health Coaching
           </Link>
         </Breadcrumbs>
-       <Typography sx={{display:{xs:"flex",md:"none"}}}>Ixelles, Brussels</Typography>
+        <Typography sx={{ display: { xs: "flex", md: "none" } }}>
+          Ixelles, Brussels
+        </Typography>
         <Typography
           sx={{
             display: {

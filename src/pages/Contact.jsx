@@ -48,8 +48,7 @@ const [contactInfo, setContactInfo] = useState([]);
               height: "100%",
             }}
           >
-            {/* <Typography variant="h2">Contact me on any questions</Typography> */}
-            <Typography variant="subtitle1" component="h3">
+            <Typography variant="subtitle1" component="h1">
               <span style={{ color: "#678180", fontWeight: "bold" }}>
                 BeVibrant
               </span>{" "}

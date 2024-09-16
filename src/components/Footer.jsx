@@ -88,20 +88,26 @@ const Footer = ({ setContactInfo }) => {
         </Typography>
       </Stack>
       <Stack spacing={2} direction="row" justifyContent="center">
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href={contact.facebookUrl ? contact.facebookUrl : ""}
-        >
-          <FacebookIcon sx={{ color: "white" }} />
-        </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href={contact.instagramUrl ? contact.instagramUrl : ""}
-        >
-          <InstagramIcon color="action" sx={{ color: "white" }} />
-        </a>
+        {contact.facebookUrl && (
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={contact.facebookUrl}
+            aria-label="Follow us on Facebook"
+          >
+            <FacebookIcon color="action" sx={{ color: "white" }} />
+          </a>
+        )}
+        {contact.instagramUrl && (
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={contact.instagramUrl}
+            aria-label="Follow us on Instagram"
+          >
+            <InstagramIcon color="action" sx={{ color: "white" }} />
+          </a>
+        )}
         <a
           target="_blank"
           rel="noreferrer"
@@ -109,11 +115,7 @@ const Footer = ({ setContactInfo }) => {
         >
           <WhatsAppIcon color="action" sx={{ color: "white" }} />
         </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://youtube.com/@holistictherapist_natalya?si=B1zVu14Uc06k_yCS"
-        >
+        <a href="https://youtube.com/@holistictherapist_natalya?si=B1zVu14Uc06k_yCS">
           <YouTubeIcon color="action" sx={{ color: "white" }} />
         </a>
       </Stack>
@@ -126,9 +128,9 @@ const Footer = ({ setContactInfo }) => {
             textDecorationLine: "underline",
             textDecorationColor: "#FFFFFF",
           }}
-          href="https://www.linkedin.com/in/1404mikhailova/"
+          href="https://www.mmwebsites.be"
         >
-          MMikhailova
+          MMWebsites
         </Link>
       </Typography>
     </Box>

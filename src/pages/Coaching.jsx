@@ -69,6 +69,7 @@ const Coaching = ({ page, url }) => {
 
           <Typography
             variant="poster"
+            component="h1"
             sx={{
               position: "absolute",
               bottom: "0.3em",

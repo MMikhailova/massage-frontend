@@ -67,6 +67,7 @@ const Yoga = ({ page, url }) => {
 
           <Typography
             variant="poster"
+            component="h1"
             sx={{
               py: 0,
               position: "absolute",
