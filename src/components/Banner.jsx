@@ -143,7 +143,7 @@ export default function Banner({ booking }) {
           <CardMedia
             component="img"
             height="100%"
-            image="../assets/massage-therapist.jpg"
+            image="../assets/massage-therapist.webp"
             alt="Ayurvedic massage"
           />
           <Hero
@@ -176,7 +176,7 @@ export default function Banner({ booking }) {
           <CardMedia
             component="img"
             height="100%"
-            image="../assets/back-massage.jpg"
+            image="../assets/back-massage.webp"
             alt="Vibrant wellbeing coaching"
           />
           <Hero
