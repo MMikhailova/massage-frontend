@@ -82,7 +82,7 @@ const TreatmentItem = ({booking}) => {
 
             <Stack direction="row" spacing={2} justifyContent="center">
               <Button variant="outlined" href={`/Massage`} size="medium">
-                Learn more
+                See All Massage Services
               </Button>
               <Button
                 variant="contained"
@@ -90,7 +90,7 @@ const TreatmentItem = ({booking}) => {
                 target="_blank"
                 href={booking.massage}
               >
-                Book
+                Book a treatment
               </Button>
             </Stack>
           </CardContent>
@@ -142,8 +142,8 @@ const TreatmentItem = ({booking}) => {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="outlined" href={`/Yoga`} size="medium">
-                Learn more
+              <Button variant="outlined" href={`/yoga`} size="medium">
+                See All Yoga Services
               </Button>
               <Button
                 variant="contained"
@@ -151,7 +151,7 @@ const TreatmentItem = ({booking}) => {
                 target="_blank"
                 href={booking.yoga}
               >
-                Book
+                Book a session
               </Button>
             </Stack>
           </CardContent>
@@ -168,7 +168,7 @@ const TreatmentItem = ({booking}) => {
           sx={{
             backgroundColor: "#FEE4D1",
             display: "flex",
-            flexDirection: { xs: "column",sm:"row", },
+            flexDirection: { xs: "column", sm: "row" },
             width: "100%",
           }}
         >
@@ -208,12 +208,12 @@ const TreatmentItem = ({booking}) => {
 
             <Stack
               sx={{ m: 3 }}
-              direction="row"
+              direction="column"
               spacing={2}
               justifyContent="center"
             >
               <Button variant="outlined" href={`/Coaching`} size="medium">
-                Learn more
+                More about Bevibrant coaching
               </Button>
               <Button
                 variant="contained"
@@ -221,7 +221,7 @@ const TreatmentItem = ({booking}) => {
                 target="_blank"
                 href={booking.coaching}
               >
-                Book
+                Book a session
               </Button>
             </Stack>
           </CardContent>
