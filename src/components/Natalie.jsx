@@ -29,7 +29,7 @@ const MyComponent = () => {
       }}
     >
       <img
-        src="./assets/natalya-werthaim.jpg"
+        src="./assets/natalya-werthaim-bevibrant.webp"
         alt="Natalia"
         style={{
           objectFit: "cover",

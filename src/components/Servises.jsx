@@ -181,7 +181,7 @@ const TreatmentItem = ({booking}) => {
               },
               objectFit: "cover",
             }}
-            image={"./assets/embrace.jpg"}
+            image={"./assets/embrace.webp"}
             alt="back massage"
           />
           <CardContent sx={{ m: "auto", width: { sm: "50%" } }}>
@@ -213,7 +213,7 @@ const TreatmentItem = ({booking}) => {
               justifyContent="center"
             >
               <Button variant="outlined" href={`/Coaching`} size="medium">
-                More about Bevibrant coaching
+                More about Vibrant coaching
               </Button>
               <Button
                 variant="contained"
