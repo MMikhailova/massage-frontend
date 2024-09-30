@@ -11,14 +11,14 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import Button from "@mui/material/Button";
 import { MenuItem } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { useNavigate } from "react-router-dom";
-const drawerWidth ="100vw";
-const navItemsLg = ["Home", "Treatments", "About", "Contact"];
+import { Link } from "react-router-dom";
+
+const drawerWidth = "100vw";
+const navItemsLg = ["Home", "Treatments", "about", "contact"];
 const navItemsSm = [
   "Home",
   "Massage",
@@ -29,22 +29,18 @@ const navItemsSm = [
 ];
 const menuItems = ["Massage", "Yoga", "Health coaching"];
 function DrawerAppBar(props) {
-  const navigate = useNavigate();
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-  const handleCloseUserMenu = (item) => {
+  const handleCloseUserMenu = () => {
     setAnchorElUser(null);
-     menuItems.includes(item) && navigate(`/${item==="Health coaching"?"Coaching":item}`);
-     
   };
-    const { window } = props;
-    const [mobileOpen, setMobileOpen] = React.useState(false);
-    const handleDrawerToggle = () => {
+  const { window } = props;
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
-                   
   };
 
   const drawer = (
@@ -72,21 +68,24 @@ function DrawerAppBar(props) {
       <Divider />
       <List>
         {navItemsSm.map((item) => (
-          <ListItem
-            onClick={
-              item === "Home"
-                ? () => {
-                    navigate("/");
-                  }
-                : item === "Health coaching"
-                ? () => navigate("/Coaching")
-                : () => navigate(`/${item}`)
-            }
-            key={item}
-            disablePadding
-          >
+          <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <Link
+                to={
+                  item === "Home"
+                    ? "/"
+                    : item === "Health coaching"
+                    ? "/coaching"
+                    : `/${item.toLowerCase()}`
+                }
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  width: "100%",
+                }}
+              >
+                <ListItemText primary={item} />
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -111,12 +110,14 @@ function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Box onClick={() => navigate("/")}>
-            <img
-              alt="beVibrant logo featuring an orange sun with a beige wave in Ayurvedic style"
-              style={{ height: "15vh" }}
-              src="../assets/logo.svg"
-            ></img>
+          <Box>
+            <Link to="/" style={{ display: "flex" }}>
+              <img
+                alt="beVibrant logo featuring an orange sun with a beige wave in Ayurvedic style"
+                style={{ height: "15vh" }}
+                src="../assets/logo.svg"
+              />
+            </Link>
           </Box>
 
           <Box
@@ -127,23 +128,26 @@ function DrawerAppBar(props) {
             }}
           >
             {navItemsLg.map((item) => (
-              <Button
-                onClick={
-                  item === "Treatments"
-                    ? handleOpenUserMenu
-                    : item === "Home"
-                    ? () => navigate("/")
-                    : item === "Health coaching"
-                    ? () => {
-                        navigate("/Coaching");
-                      }
-                    : () => navigate(`/${item}`)
-                }
-                key={item}
-                sx={{ color: "#fff", px: 2 }}
-              >
-                {item}
-                {item === "Treatments" && <KeyboardArrowDownIcon />}
+              <Button key={item} sx={{ color: "#fff", px: 2 }}>
+                {item === "Treatments" ? (
+                  <>
+                    <span>{item}</span>
+                    <KeyboardArrowDownIcon onClick={handleOpenUserMenu} />
+                  </>
+                ) : (
+                  <Link
+                    to={
+                      item === "Home"
+                        ? "/"
+                        : item === "Health coaching"
+                        ? "/coaching"
+                        : `/${item.toLowerCase()}`
+                    }
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    {item}
+                  </Link>
+                )}
               </Button>
             ))}
           </Box>
@@ -165,8 +169,21 @@ function DrawerAppBar(props) {
               onClose={handleCloseUserMenu}
             >
               {menuItems.map((item) => (
-                <MenuItem key={item} onClick={() => handleCloseUserMenu(item)}>
-                  <Typography textAlign="center">{item}</Typography>
+                <MenuItem key={item}>
+                  <Link
+                    to={
+                      item === "Health coaching"
+                        ? "/coaching"
+                        : `/${item.toLowerCase()}`
+                    }
+                    style={{
+                      textDecoration: "none",
+                      color: "inherit",
+                      width: "100%",
+                    }}
+                  >
+                    {item}
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -199,6 +216,5 @@ function DrawerAppBar(props) {
     </Box>
   );
 }
-
 
 export default DrawerAppBar;

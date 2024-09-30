@@ -45,7 +45,7 @@ const Coaching = ({ page, url }) => {
               xs: 0,
               md: 8,
             },
-            background: " conic-gradient(#424236,#666353,#666353,#404034)",
+            background: "#595748",
             height: "60vh",
             justifyContent: "center",
             display: "flex",
@@ -61,7 +61,7 @@ const Coaching = ({ page, url }) => {
               height: "auto",
               opacity: "90%",
             }}
-            src="../assets/coaching.png"
+            src="../assets/coaching.svg"
             alt="1"
             loading="Coaching"
           />

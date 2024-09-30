@@ -28,19 +28,19 @@ function App() {
         <Routes>
           <Route path="/" element={<Home booking={booking} />} />
           <Route
-            path="/Massage"
+            path="/massage"
             element={<Massage page={"massage"} url={booking.massage} />}
           />
           <Route
-            path="/Yoga"
+            path="/yoga"
             element={<Yoga page={"yoga"} url={booking.yoga} />}
           />
           <Route
-            path="/Coaching"
+            path="/coaching"
             element={<Coaching page={"coaching"} url={booking.coaching} />}
           />
-          <Route path="/About" element={<About />} />
-          <Route path="/Contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
     </div>
