@@ -61,7 +61,7 @@ const Coaching = ({ page, url }) => {
               height: "auto",
               opacity: "90%",
             }}
-            src="../assets/coaching.svg"
+            src="../assets/coaching.webp"
             alt="1"
             loading="Coaching"
           />
