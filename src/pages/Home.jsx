@@ -23,6 +23,12 @@ const Home = ({booking}) => {
           content="At beVibrant in Brussels, Ixelles, Natalya Werthaim offers holistic wellness services in English, French, Greek, Russian, and Hebrew, combining Massage, Yoga, Ayurveda, and Health Coaching to promote physical, mental, and emotional well-being. Personalized plans address stress, pain, and flexibility."
         />
         <link rel="canonical" href="https://bevibrant.be/"></link>
+        <link
+          rel="preload"
+          href={"../assets/massage-therapist.webp"}
+          as="image"
+          imagesrcset={"../assets/massage-therapist.webp"}
+        />
       </Helmet>
       <Container
         maxWidth="xl"
