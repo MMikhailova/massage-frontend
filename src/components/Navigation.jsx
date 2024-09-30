@@ -15,30 +15,43 @@ import Menu from "@mui/material/Menu";
 import Button from "@mui/material/Button";
 import { MenuItem } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { Link } from "react-router-dom";
 
-const drawerWidth = "100vw";
-const navItemsLg = ["Home", "Treatments", "about", "contact"];
-const navItemsSm = [
-  "Home",
-  "Massage",
-  "Yoga",
-  "Health coaching",
-  "About",
-  "Contact",
+
+// Critical links that should be included in the raw HTML
+const navItemsLg = [
+  { label: "Home", path: "/" },
+  { label: "Treatments", path: "/treatments" },
+  { label: "About", path: "/about" },
+  { label: "Contact", path: "/contact" },
 ];
-const menuItems = ["Massage", "Yoga", "Health coaching"];
+
+const navItemsSm = [
+  { label: "Home", path: "/" },
+  { label: "Massage", path: "/massage" },
+  { label: "Yoga", path: "/yoga" },
+  { label: "Health Coaching", path: "/coaching" },
+  { label: "About", path: "/about" },
+  { label: "Contact", path: "/contact" },
+];
+
+const menuItems = [
+  { label: "Massage", path: "/massage" },
+  { label: "Yoga", path: "/yoga" },
+  { label: "Health Coaching", path: "/coaching" },
+];
+
 function DrawerAppBar(props) {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -63,29 +76,23 @@ function DrawerAppBar(props) {
           alt="beVibrant logo featuring an orange sun with a beige wave in Ayurvedic style"
           style={{ objectFit: "fill", height: "15vh" }}
           src="../assets/logo.svg"
-        ></img>
+        />
       </Box>
       <Divider />
       <List>
         {navItemsSm.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.label} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <Link
-                to={
-                  item === "Home"
-                    ? "/"
-                    : item === "Health coaching"
-                    ? "/coaching"
-                    : `/${item.toLowerCase()}`
-                }
+              <a
+                href={item.path} // Fallback for raw HTML
                 style={{
                   textDecoration: "none",
                   color: "inherit",
                   width: "100%",
                 }}
               >
-                <ListItemText primary={item} />
-              </Link>
+                <ListItemText primary={item.label} />
+              </a>
             </ListItemButton>
           </ListItem>
         ))}
@@ -94,7 +101,7 @@ function DrawerAppBar(props) {
   );
 
   const container =
-    window !== undefined ? () => window().document.body : undefined;
+    props.window !== undefined ? () => props.window().document.body : undefined;
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -111,13 +118,13 @@ function DrawerAppBar(props) {
             <MenuIcon />
           </IconButton>
           <Box>
-            <Link to="/" style={{ display: "flex" }}>
+            <a href="/" style={{ display: "flex" }}>
               <img
                 alt="beVibrant logo featuring an orange sun with a beige wave in Ayurvedic style"
                 style={{ height: "15vh" }}
                 src="../assets/logo.svg"
               />
-            </Link>
+            </a>
           </Box>
 
           <Box
@@ -128,25 +135,20 @@ function DrawerAppBar(props) {
             }}
           >
             {navItemsLg.map((item) => (
-              <Button key={item} sx={{ color: "#fff", px: 2 }}>
-                {item === "Treatments" ? (
+              <Button key={item.label} sx={{ color: "#fff", px: 2 }}>
+                {item.label === "Treatments" ? (
                   <>
-                    <span>{item}</span>
+                    <span>{item.label}</span>
                     <KeyboardArrowDownIcon onClick={handleOpenUserMenu} />
                   </>
                 ) : (
-                  <Link
-                    to={
-                      item === "Home"
-                        ? "/"
-                        : item === "Health coaching"
-                        ? "/coaching"
-                        : `/${item.toLowerCase()}`
-                    }
+                  // Use both <a> and <Link> for fallback
+                  <a
+                    href={item.path} // Fallback for SEO and non-JS crawlers
                     style={{ textDecoration: "none", color: "inherit" }}
                   >
-                    {item}
-                  </Link>
+                    {item.label}
+                  </a>
                 )}
               </Button>
             ))}
@@ -169,21 +171,17 @@ function DrawerAppBar(props) {
               onClose={handleCloseUserMenu}
             >
               {menuItems.map((item) => (
-                <MenuItem key={item}>
-                  <Link
-                    to={
-                      item === "Health coaching"
-                        ? "/coaching"
-                        : `/${item.toLowerCase()}`
-                    }
+                <MenuItem key={item.label}>
+                  <a
+                    href={item.path} // Fallback for non-JS clients
                     style={{
                       textDecoration: "none",
                       color: "inherit",
                       width: "100%",
                     }}
                   >
-                    {item}
-                  </Link>
+                    {item.label}
+                  </a>
                 </MenuItem>
               ))}
             </Menu>
@@ -203,7 +201,7 @@ function DrawerAppBar(props) {
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
+              width: "100vw",
             },
           }}
         >
