@@ -50,12 +50,14 @@ const TreatmentItem = ({booking}) => {
           <CardMedia
             component="img"
             sx={{
-              height: "auto",
+              height: "auto", // This allows the image to be responsive
               objectFit: "cover",
             }}
             image={"./assets/handback.webp"}
             alt="back massage"
-          ></CardMedia>
+            width="668" // Explicit width
+            height="440" // Explicit height
+          />
 
           <CardContent>
             <Typography variant="h4" component="h3">
@@ -109,11 +111,13 @@ const TreatmentItem = ({booking}) => {
           <CardMedia
             component="img"
             sx={{
-              height: "auto",
+              height: "auto", // Allows responsive scaling
               objectFit: "cover",
             }}
-            image={"./assets/therapeutic_yoga.webp"}
+            image={"./assets/terapeutic_yoga.webp"}
             alt="therapeutic yoga"
+            width="668" // Explicit width
+            height="440" // Explicit height
           />
           <CardContent>
             <Typography variant="h4" component="h3">
