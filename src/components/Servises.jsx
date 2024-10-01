@@ -50,15 +50,20 @@ const TreatmentItem = ({booking}) => {
           <CardMedia
             component="img"
             sx={{
-              height: "auto", // This allows the image to be responsive
+              height: "auto",
               objectFit: "cover",
             }}
             image={"./assets/handback.webp"}
             alt="back massage"
             width="668" // Explicit width
             height="440" // Explicit height
+            srcSet={`
+    ./assets/handback-320w.webp 320w,
+    ./assets/handback-480w.webp 480w,
+    ./assets/handback-668w.webp 668w,
+  `}
+            sizes="(max-width: 600px) 320px, (max-width: 960px) 480px, (max-width: 1280px) 668px"
           />
-
           <CardContent>
             <Typography variant="h4" component="h3">
               AYURVEDIC MASSAGE
