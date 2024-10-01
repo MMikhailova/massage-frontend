@@ -84,7 +84,7 @@ export default function Banner({ booking }) {
       sx={{
         display: "flex",
         justifyContent: "center",
-        height: { xs: "75vh", md: "65vh" },
+        height: { xs: "75vh", md: "70vh" },
         mb: { xs: 0, md:2 },
       }}
     >
@@ -175,8 +175,9 @@ export default function Banner({ booking }) {
         >
           <CardMedia
             component="img"
+            width="100%"
             height="100%"
-            image="../assets/back-massage.webp"
+            image="../assets/back-massage-large.webp"
             alt="Vibrant wellbeing coaching"
           />
           <Hero

@@ -112,8 +112,8 @@ const TreatmentItem = ({booking}) => {
               height: "auto",
               objectFit: "cover",
             }}
-            image={"./assets/terapeutic_yoga.webp"}
-            alt="back massage"
+            image={"./assets/therapeutic_yoga.webp"}
+            alt="therapeutic yoga"
           />
           <CardContent>
             <Typography variant="h4" component="h3">
