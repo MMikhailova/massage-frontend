@@ -131,7 +131,7 @@ export default function Banner({ booking }) {
             xs: "flex",
             md: "flex",
           },
-          height: { xs: "auto", md: "100%" }, // Responsive height
+          height: { xs: "90%", md: "100%" }, // Responsive height
           position: "relative",
         }}
       >
@@ -146,15 +146,15 @@ export default function Banner({ booking }) {
         >
           <CardMedia
             component="img"
-            image="../assets/massage-therapist.webp"
-            alt="Ayurvedic massage"
             sx={{
-              width: { xs: "100%", md: "100%" }, 
-              height: { xs: "auto", md: "100%" }, 
-              objectFit: "cover",
+              width: { xs: "100%", md: "100%" }, // 100% width on mobile and large screens
+              height: { xs: "100%", md: "100%" }, // Auto height for mobile, full height on large screens
+              objectFit: "cover", // Ensure the image covers the available space without stretching
             }}
             width="1280" // Explicit width for high-DPI screens
             height="880" // Explicit height for high-DPI screens
+            image="../assets/massage-therapist.webp"
+            alt="Ayurvedic massage"
           />
           <Hero
             url={booking.coaching ? booking.coaching : ""}

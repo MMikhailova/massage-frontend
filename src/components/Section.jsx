@@ -5,7 +5,7 @@ const Section = ({title}) => {
   return (
     <Box
       sx={{
-        mt: { xs:0,md:4},
+        mt: { xs: 0, md: 4 },
         width: "100%",
         display: "flex",
         flexDirection: "column",
@@ -23,9 +23,9 @@ const Section = ({title}) => {
         alt="wave"
         style={{
           objectFit: "cover",
-          width: "20%",
+          width: { xs: "12px", md: "250px" },
           margin:"auto",
-          maxHeight: "10vh",
+         height: "10vh",
         }}
       />
     </Box>

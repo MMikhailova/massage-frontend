@@ -31,12 +31,14 @@ const MyComponent = () => {
       <img
         src="./assets/natalya-werthaim-bevibrant.webp"
         alt="Natalia"
+        width={600} // Explicit width
+        height={900} // Explicit height
         style={{
           objectFit: "cover",
-          height: "auto",
           boxShadow: " 0px 0px 4px 0px",
           zIndex: 1,
-          width: isSmallScreen ? "100%" : "50%",
+          width: isSmallScreen ? "100%" : "50%", // Responsive width
+          height: isSmallScreen ? "auto" : "100%", // Maintain aspect ratio on larger screens
         }}
       />
       <Box
