@@ -125,10 +125,16 @@ function DrawerAppBar(props) {
           </IconButton>
           <Box>
             <a href="/" style={{ display: "flex" }}>
-              <img
-                alt="beVibrant logo featuring an orange sun with a beige wave in Ayurvedic style"
-                style={{ height: "15vh" }}
+              <Box
+                component="img"
                 src="../assets/logo.svg"
+                alt="beVibrant logo featuring an orange sun with a beige wave in Ayurvedic style"
+                sx={{
+                  objectFit: "fill",
+                  width: { xs: "120px", md: "180px" }, // Explicit width for different screen sizes
+                  height: "auto", // Maintain aspect ratio
+                  maxHeight: "15vh", // Limit height to stay within container
+                }}
               />
             </a>
           </Box>

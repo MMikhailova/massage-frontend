@@ -109,10 +109,17 @@ export default function Banner({ booking }) {
         >
           <CardMedia
             component="img"
-            height="100%"
+            sx={{
+              width: { xs: "100%", md: "100%" }, // 100% width on mobile and large screens
+              height: { xs: "100%", md: "100%" }, // Auto height for mobile, full height on large screens
+              objectFit: "cover", // Ensure the image covers the available space without stretching
+            }}
+            width="1280" // Explicit width for high-DPI screens
+            height="880" // Explicit height for high-DPI screens
             image="../assets/ayurvedic-yoga.webp"
             alt="therapeutic yoga"
           />
+          
           {booking.yoga && (
             <Hero
               url={booking.yoga ? booking.yoga : ""}
@@ -191,7 +198,7 @@ export default function Banner({ booking }) {
             image="../assets/back-massage-large.webp"
             alt="Vibrant wellbeing coaching"
             sx={{
-              width: {  md: "100%" }, // 100% width on mobile and large screens
+              width: { md: "100%" }, // 100% width on mobile and large screens
               height: { md: "100%" }, // Auto height for mobile, full height on large screens
               objectFit: "cover", // Ensure the image covers the available space without stretching
             }}
