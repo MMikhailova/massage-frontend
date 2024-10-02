@@ -61,7 +61,7 @@ const TreatmentItem = ({booking}) => {
     ./assets/handback-320w.webp 320w,
     ./assets/handback-480w.webp 480w,
     ./assets/handback-668w.webp 668w,
-    ./assets/handback-668w.webp 1280w,
+    ./assets/handback-1280w.webp 1280w,
   `}
             sizes="(max-width: 600px) 320px, (max-width: 960px) 480px, (max-width: 1280px) 680px, 1280px"
           />
