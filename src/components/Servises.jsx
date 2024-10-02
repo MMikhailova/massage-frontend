@@ -61,8 +61,9 @@ const TreatmentItem = ({booking}) => {
     ./assets/handback-320w.webp 320w,
     ./assets/handback-480w.webp 480w,
     ./assets/handback-668w.webp 668w,
+    ./assets/handback-668w.webp 1280w,
   `}
-            sizes="(max-width: 600px) 320px, (max-width: 960px) 480px, (max-width: 1280px) 668px"
+            sizes="(max-width: 600px) 320px, (max-width: 960px) 480px, (max-width: 1280px) 680px, 1280px"
           />
           <CardContent>
             <Typography variant="h4" component="h3">
@@ -191,9 +192,9 @@ const TreatmentItem = ({booking}) => {
           <CardMedia
             component="img"
             sx={{
-              width: { xs:"auto",sm: "50%" },
+              width: { xs: "auto", sm: "50%" },
               height: {
-                xs:"auto"
+                xs: "auto",
               },
               objectFit: "cover",
             }}
@@ -207,7 +208,6 @@ const TreatmentItem = ({booking}) => {
   `}
             sizes="(max-width: 600px) 320px, (max-width: 960px) 480px"
           />
-         
           <CardContent sx={{ m: "auto", width: { sm: "50%" } }}>
             <Typography variant="h4" component="h3">
               VIBRANT HEALTH COACHING
