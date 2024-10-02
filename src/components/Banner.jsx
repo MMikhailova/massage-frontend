@@ -85,7 +85,7 @@ export default function Banner({ booking }) {
         display: "flex",
         justifyContent: "center",
         height: { xs: "75vh", md: "70vh" },
-        mb: { xs: 0, md:2 },
+        mb: { xs: 0, md: 2 },
       }}
     >
       <Grid
@@ -131,7 +131,7 @@ export default function Banner({ booking }) {
             xs: "flex",
             md: "flex",
           },
-          height: { xs: "90%", md: "100%" },
+          height: { xs: "auto", md: "100%" }, // Responsive height
           position: "relative",
         }}
       >
@@ -139,12 +139,22 @@ export default function Banner({ booking }) {
           component="div"
           onMouseMoveCapture={() => setIsCoachingShown(true)}
           onMouseOutCapture={() => setIsCoachingShown(!isCoachingShown)}
+          sx={{
+            width: "100%",
+            height: "100%",
+          }}
         >
           <CardMedia
             component="img"
-            height="100%"
             image="../assets/massage-therapist.webp"
             alt="Ayurvedic massage"
+            sx={{
+              width: { xs: "100%", md: "100%" }, 
+              height: { xs: "auto", md: "100%" }, 
+              objectFit: "cover",
+            }}
+            width="1280" // Explicit width for high-DPI screens
+            height="880" // Explicit height for high-DPI screens
           />
           <Hero
             url={booking.coaching ? booking.coaching : ""}
@@ -153,6 +163,7 @@ export default function Banner({ booking }) {
           />
         </CardActionArea>
       </Grid>
+
       <Grid
         item
         md={4}
