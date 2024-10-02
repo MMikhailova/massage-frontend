@@ -186,10 +186,15 @@ export default function Banner({ booking }) {
         >
           <CardMedia
             component="img"
-            width="100%"
-            height="100%"
+            width="1280" // Explicit width for high-DPI screens
+            height="880"
             image="../assets/back-massage-large.webp"
             alt="Vibrant wellbeing coaching"
+            sx={{
+              width: {  md: "100%" }, // 100% width on mobile and large screens
+              height: { md: "100%" }, // Auto height for mobile, full height on large screens
+              objectFit: "cover", // Ensure the image covers the available space without stretching
+            }}
           />
           <Hero
             url={booking.massage ? booking.massage : ""}

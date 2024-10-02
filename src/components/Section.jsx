@@ -1,7 +1,7 @@
-import { Box, Typography } from '@mui/material'
-import React from 'react'
+import React from "react";
+import { Box, Typography } from "@mui/material";
 
-const Section = ({title}) => {
+const Section = ({ title }) => {
   return (
     <Box
       sx={{
@@ -12,24 +12,23 @@ const Section = ({title}) => {
       }}
     >
       {title && (
-        <Typography
-          variant="h2"
-        >
+        <Typography variant="h2" align="center">
           {title}
         </Typography>
       )}
-      <img
+      <Box
+        component="img"
         src="../assets/wave.png"
         alt="wave"
-        style={{
+        sx={{
           objectFit: "cover",
-          width: { xs: "12px", md: "250px" },
-          margin:"auto",
-         height: "10vh",
+          width: { xs: "100px", md: "250px" }, // Adjust size for small and medium screens
+          margin: "auto",
+          height: "10vh",
         }}
       />
     </Box>
   );
-}
+};
 
-export default Section
+export default Section;
