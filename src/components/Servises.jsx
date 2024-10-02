@@ -116,13 +116,19 @@ const TreatmentItem = ({booking}) => {
           <CardMedia
             component="img"
             sx={{
-              height: "auto", // Allows responsive scaling
+              height: "auto",
               objectFit: "cover",
             }}
             image={"./assets/terapeutic_yoga.webp"}
-            alt="therapeutic yoga"
+            alt="back massage"
             width="668" // Explicit width
             height="440" // Explicit height
+            srcSet={`
+    ./assets/terapeutic_yoga-320w.webp 320w,
+    ./assets/terapeutic_yoga-480w.webp 480w,
+    ./assets/terapeutic_yoga-668w.webp 668w,
+  `}
+            sizes="(max-width: 600px) 320px, (max-width: 960px) 480px, (max-width: 1280px) 668px"
           />
           <CardContent>
             <Typography variant="h4" component="h3">
@@ -181,18 +187,27 @@ const TreatmentItem = ({booking}) => {
             width: "100%",
           }}
         >
+          {" "}
           <CardMedia
             component="img"
             sx={{
-              width: { sm: "50%" },
+              width: { xs:"auto",sm: "50%" },
               height: {
-                sm: "auto",
+                xs:"auto"
               },
               objectFit: "cover",
             }}
             image={"./assets/embrace.webp"}
-            alt="back massage"
+            alt="Coach - Nataly Werthaim"
+            width="480" // Explicit width
+            height="720" // Explicit height
+            srcSet={`
+    ./assets/embrace-320w.webp 320w,
+    ./assets/embrace-480w.webp 480w
+  `}
+            sizes="(max-width: 600px) 320px, (max-width: 960px) 480px"
           />
+         
           <CardContent sx={{ m: "auto", width: { sm: "50%" } }}>
             <Typography variant="h4" component="h3">
               VIBRANT HEALTH COACHING

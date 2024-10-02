@@ -58,12 +58,12 @@ const Home = ({booking}) => {
         >
           <Typography variant="subtitle1" component="h3">
             At beVibrant, I welcome clients in{" "}
-            <Box component="span" fontWeight="bold" color="#678180">
+            <Box component="span" fontWeight="bold">
               English, French, Greek, Russian, and Hebrew
             </Box>
             , offering a holistic approach to health and wellness, which
             combines the benefits of{" "}
-            <Box component="span" fontWeight="bold" color="#678180">
+            <Box component="span" fontWeight="bold">
               Massage, Yoga, Ayurveda, and Health coaching
             </Box>{" "}
             to promote physical, mental, and emotional well-being. By addressing
@@ -78,7 +78,7 @@ const Home = ({booking}) => {
           >
             BeVibrant provides personalized services tailored to your specific
             goals and conditions. Whether you want{" "}
-            <Box component="span" fontWeight="bold" color="#678180">
+            <Box component="span" fontWeight="bold">
               to reduce stress, relieve pain, improve flexibility or receive
               health advice,
             </Box>{" "}
@@ -93,10 +93,11 @@ const Home = ({booking}) => {
             variant="h5"
             component="h4"
             color="#94B49F"
-          >
-            The welcoming and positive ambiance of beVibrant will make you feel
-            at ease and promotes a sense of well-being, making it an enjoyable
-            and rejuvenating experience.
+            fontWeight="bold"
+          
+            > The welcoming and positive ambiance of beVibrant will make you
+            feel at ease and promotes a sense of well-being, making it an
+            enjoyable and rejuvenating experience.
           </Typography>
         </Box>
         <Section title={"Well-being services"} />
