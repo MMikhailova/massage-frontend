@@ -112,10 +112,14 @@ const Footer = ({ setContactInfo }) => {
           target="_blank"
           rel="noreferrer"
           href={contact.whatsupUrl ? contact.whatsupUrl : ""}
+          aria-label="Reach out to me in Whatsup"
         >
           <WhatsAppIcon color="action" sx={{ color: "white" }} />
         </a>
-        <a href="https://youtube.com/@holistictherapist_natalya?si=B1zVu14Uc06k_yCS">
+        <a
+          href="https://youtube.com/@holistictherapist_natalya?si=B1zVu14Uc06k_yCS"
+          aria-label="Follow us on Youtube"
+        >
           <YouTubeIcon color="action" sx={{ color: "white" }} />
         </a>
       </Stack>
@@ -129,6 +133,7 @@ const Footer = ({ setContactInfo }) => {
             textDecorationColor: "#FFFFFF",
           }}
           href="https://www.mmwebsites.be"
+          aria-label="Website developed by MMWebsites"
         >
           MMWebsites
         </Link>

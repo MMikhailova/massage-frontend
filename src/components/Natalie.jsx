@@ -75,7 +75,7 @@ const MyComponent = () => {
           variant="outlined"
           href="/About"
         >
-          READ MORE
+         Learn more about Natalya
         </Button>
       </Box>
     </Box>

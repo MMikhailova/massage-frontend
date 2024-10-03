@@ -79,7 +79,7 @@ function DrawerAppBar(props) {
           sx={{
             objectFit: "fill",
             width: { xs: "120px", md: "180px" }, // Explicit width for different screen sizes
-            height: "auto", // Maintain aspect ratio
+            height: "200px", // Maintain aspect ratio
             maxHeight: "15vh", // Limit height to stay within container
           }}
         />

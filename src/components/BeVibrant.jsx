@@ -1,6 +1,6 @@
-import { Typography,Link, Breadcrumbs, Stack } from "@mui/material";
+import { Typography, Link, Breadcrumbs, Stack } from "@mui/material";
 
-import React from 'react'
+import React from "react";
 
 const BeVibrant = () => {
   return (
@@ -52,14 +52,32 @@ const BeVibrant = () => {
             mt: 2,
           }}
         >
-          <Link href="/Yoga" color="#678180" variant="h5" underline="hover">
+          <Link
+            href="/Yoga"
+            color="#8B9D95"
+            fontWeight="bold"
+            variant="h5"
+            underline="hover"
+          >
             Yoga
           </Link>
 
-          <Link href="/Massage" color="#678180" variant="h5" underline="hover">
+          <Link
+            href="/Massage"
+            color="#8B9D95"
+            fontWeight="bold"
+            variant="h5"
+            underline="hover"
+          >
             Massage
           </Link>
-          <Link href="/Coaching" color="#678180" variant="h5" underline="hover">
+          <Link
+            href="/Coaching"
+            color="#8B9D95"
+            fontWeight="bold"
+            variant="h5"
+            underline="hover"
+          >
             Health Coaching
           </Link>
         </Breadcrumbs>
@@ -84,6 +102,6 @@ const BeVibrant = () => {
       </Stack>
     </>
   );
-}
+};
 
-export default BeVibrant
+export default BeVibrant;
