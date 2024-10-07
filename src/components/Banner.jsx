@@ -119,7 +119,7 @@ export default function Banner({ booking }) {
             image="../assets/ayurvedic-yoga.webp"
             alt="therapeutic yoga"
           />
-          
+
           {booking.yoga && (
             <Hero
               url={booking.yoga ? booking.yoga : ""}
@@ -154,14 +154,16 @@ export default function Banner({ booking }) {
           <CardMedia
             component="img"
             sx={{
-              width: { xs: "100%", md: "100%" }, // 100% width on mobile and large screens
-              height: { xs: "100%", md: "100%" }, // Auto height for mobile, full height on large screens
-              objectFit: "cover", // Ensure the image covers the available space without stretching
+              width: { xs: "100%", md: "100%" },
+              height: { xs: "100%", md: "100%" },
+              objectFit: "cover",
             }}
-            width="1280" // Explicit width for high-DPI screens
-            height="880" // Explicit height for high-DPI screens
-            image="../assets/massage-therapist.webp"
-            alt="Ayurvedic massage"
+            srcSet="/assets/massage-therapist-400w.webp 400w, /assets/massage-therapist-800w.webp 800w, /assets/massage-therapist-1000w.webp 1000w"
+            sizes="(max-width: 600px) 400px, (max-width: 960px) 800px, 1000px"
+            src="/assets/massage-therapist-1000w.webp"
+            width="1000"
+            height="1500"
+            alt="Ayurvedic massage therapist"
           />
           <Hero
             url={booking.coaching ? booking.coaching : ""}
