@@ -7,7 +7,11 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Massage from './pages/Massage';
 import Yoga from './pages/Yoga';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getBooking } from './api/viewModels/getBooking';
 
@@ -27,6 +31,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home booking={booking} />} />
+      
           <Route
             path="/massage"
             element={<Massage page={"massage"} url={booking.massage} />}

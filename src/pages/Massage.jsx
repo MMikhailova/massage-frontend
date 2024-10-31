@@ -17,27 +17,6 @@ const positionBtn = {
   position: "absolute",
 };
 const Massage = ({ page, url }) => {
-  //  const [openPopup, setOpenPopup] = useState(false);
-  // const [hasPopupBeenShown, setHasPopupBeenShown] = useState(false);
-
-  //  const handlePopupOpen = () => {
-  //    setOpenPopup(true);
-  //    setHasPopupBeenShown(true);
-  //  };
-
-  //  const handlePopupClose = () => {
-  //    setOpenPopup(false);
-  //  };
-
-  //  useEffect(() => {
-  //    window.scrollTo({ top: 0, behavior: "instant" });
-  //    const popupTimeout = setTimeout(() => {
-  //      if (!hasPopupBeenShown) {
-  //        handlePopupOpen();
-  //      }
-  //    }, 3000);
-  //    return () => clearTimeout(popupTimeout); // Cleanup on unmount
-  //  }, [hasPopupBeenShown]);
 
   return (
     <>
@@ -98,38 +77,14 @@ const Massage = ({ page, url }) => {
           >
             MASSAGE
           </Typography>
-          {/* <Dialog open={openPopup} onClose={handlePopupClose}>
-            <DialogTitle>Special Offer!</DialogTitle>
-            <DialogContent>
-              <img
-                src="../assets/handback.webp"
-                alt="Advertisement"
-                style={{ maxWidth: "100%", height: "auto" }}
-              />
-              <DialogContentText>
-                Discover our exclusive massage offers. Book now for a relaxing
-                and rejuvenating experience.
-              </DialogContentText>
-            </DialogContent>
-
-            <DialogActions>
-              <Button onClick={handlePopupClose} color="primary">
-                Close
-              </Button>
-              <Button href=
-              "www.google.com" color="primary">
-                Book Now
-              </Button>
-            </DialogActions>
-          </Dialog> */}
+        
         </Box>
 
         <Typography
           mx="auto"
           sx={{ width: { xs: "100%", md: "65%" }, p: { xs: 2, md: 0 } }}
           variant="subtitle1"
-          // color="#DF7861"
-          // fontStyle="italic"
+    
           textAlign="justify"
         >
           My journey as a massage therapist began in 2005 in India, where I had

@@ -73,7 +73,7 @@ const MyComponent = () => {
           size="medium"
           sx={{ mt: 2, color: "#FFFF", borderColor: "#FFFF" }}
           variant="outlined"
-          href="/About"
+          href="/about"
         >
          Learn more about Natalya
         </Button>
