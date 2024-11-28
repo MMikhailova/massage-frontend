@@ -77,14 +77,12 @@ const Massage = ({ page, url }) => {
           >
             MASSAGE
           </Typography>
-        
         </Box>
 
         <Typography
           mx="auto"
           sx={{ width: { xs: "100%", md: "65%" }, p: { xs: 2, md: 0 } }}
           variant="subtitle1"
-    
           textAlign="justify"
         >
           My journey as a massage therapist began in 2005 in India, where I had
@@ -108,9 +106,10 @@ const Massage = ({ page, url }) => {
         <Typography
           mx="auto"
           mt="1.5em"
+          mb="1.5em"
           sx={{ width: { xs: "100%", md: "65%" }, p: { xs: 2, md: 0 } }}
           variant="h6"
-          color="#DF7861"
+          color="#678180"
           fontStyle="italic"
           textAlign="center"
         >
