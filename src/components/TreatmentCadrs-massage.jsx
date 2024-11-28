@@ -55,7 +55,7 @@ export default function TreatmentTabs({ data }) {
   // Render treatment cards
   const renderTreatmentCards = (treatments) => {
     return treatments.map((treatment) => (
-      <Box key={treatment.attributes.createdAt} sx={{ my: 10 }}>
+      <Box key={treatment.attributes.createdAt} sx={{ my:{xs:5,md:10} }}>
         <Grid
           container
           m="auto"
