@@ -101,15 +101,16 @@ export default function TreatmentTabs({ data }) {
       <Box
         sx={{
           width: { xs: "100%", md: "80%" },
+
           // textAlign: "center",
         }}
       >
         <Tabs
+          
           value={value}
           onChange={handleChange}
           aria-label="Treatment tabs"
-          variant={isMobile ? "scrollable" : "standard"} // Scrollable on mobile
-          centered={!isMobile} // Centered tabs only on larger screens
+          centered // Centered tabs only on larger screens
           sx={{
             overflowX: isMobile ? "auto" : "unset", // Allow scrolling on mobile
             "& .MuiTabs-indicator": {
