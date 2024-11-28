@@ -4,6 +4,8 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { Typography } from "@mui/material";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -30,6 +32,8 @@ function a11yProps(index) {
 
 export default function TreatmentTabs({ data }) {
   const [value, setValue] = React.useState(0);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // Check if the screen size is small
 
   // Group treatments by "section"
   const treatmentsBySection = {
@@ -94,32 +98,38 @@ export default function TreatmentTabs({ data }) {
 
   return (
     <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
-      <Box sx={{ width: { xs: "100%", md: "80%" } }}>
-        <Box sx={{ textAlign: "center" }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="Treatment tabs"
-            sx={{
-              "& .MuiTabs-indicator": {
-                backgroundColor: "#DE7861", // Custom color for the indicator
+      <Box
+        sx={{
+          width: { xs: "100%", md: "80%" },
+          // textAlign: "center",
+        }}
+      >
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="Treatment tabs"
+          variant={isMobile ? "scrollable" : "standard"} // Scrollable on mobile
+          centered={!isMobile} // Centered tabs only on larger screens
+          sx={{
+            overflowX: isMobile ? "auto" : "unset", // Allow scrolling on mobile
+            "& .MuiTabs-indicator": {
+              backgroundColor: "#DE7861", // Custom color for the indicator
+            },
+            "& .MuiTab-root": {
+              fontSize: { xs: "1rem", md: "1.5rem" }, // Responsive font size
+              fontWeight: "bold", // Bold text
+              color: "#678180", // Default text color
+              minWidth: "auto", // Prevent fixed minimum width
+              "&.Mui-selected": {
+                color: "#DE7861", // Active tab text color
               },
-              "& .MuiTab-root": {
-                fontSize: "1.5rem", // Equivalent to H4
-                fontWeight: "bold", // Bold text
-                color: "#678180", // Default text color
-                "&.Mui-selected": {
-                  color: "#DE7861", // Active tab text color
-                },
-              },
-            }}
-            centered
-          >
-            <Tab label="Facials" {...a11yProps(0)} />
-            <Tab label="Body Massage" {...a11yProps(1)} />
-            <Tab label="Specials" {...a11yProps(2)} />
-          </Tabs>
-        </Box>
+            },
+          }}
+        >
+          <Tab label="Facials" {...a11yProps(0)} />
+          <Tab label="Body Massage" {...a11yProps(1)} />
+          <Tab label="Specials" {...a11yProps(2)} />
+        </Tabs>
         <CustomTabPanel value={value} index={0}>
           {renderTreatmentCards(treatmentsBySection.Facials)}
         </CustomTabPanel>

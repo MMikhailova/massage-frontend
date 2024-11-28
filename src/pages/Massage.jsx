@@ -85,23 +85,15 @@ const Massage = ({ page, url }) => {
           variant="subtitle1"
           textAlign="justify"
         >
-          My journey as a massage therapist began in 2005 in India, where I had
-          the incredible opportunity to live in an Ashram for one year and
-          practice meditation. During my time there, fate led me to meet the
-          esteemed Master Kusum Modak, the visionary creator of the Ayurvedic
-          Yoga massage technique. It was through experiencing this
-          transformative massage first-hand that I was profoundly moved and
-          inspired.
-          <br /> Since that momentous encounter, I have been unwavering in my
-          dedication and passion in studying and developing my knowledge in this
-          healing technique. I have immersed myself in continuous learning,
-          exploring various modalities and techniques to deepen my expertise and
-          provide the most effective and transformative experience to my
-          clients.
-          <br /> My commitment to sharing this profound healing experience with
-          others has become my life's purpose. I consider it a privilege to pass
-          on the benefits of this ancient wisdom and therapeutic touch to those
-          seeking relaxation, rejuvenation, and healing.
+          My journey as a massage therapist began in 2005 in India, where I
+          lived in an Ashram, practiced meditation, and discovered the
+          transformative Ayurvedic Yoga massage from Master Kusum Modak. This
+          life-changing experience ignited my passion for studying and mastering
+          this healing art. Since then, I’ve dedicated myself to continuous
+          learning, refining my techniques to provide the most effective and
+          rejuvenating experiences. Sharing this ancient wisdom and therapeutic
+          touch is my purpose, helping others find relaxation, healing, and
+          harmony.
         </Typography>
         <Typography
           mx="auto"
