@@ -11,16 +11,14 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import Menu from "@mui/material/Menu";
 import Button from "@mui/material/Button";
-import { MenuItem } from "@mui/material";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-
 
 // Critical links that should be included in the raw HTML
 const navItemsLg = [
   { label: "Home", path: "/" },
-  { label: "Treatments", path: "/treatments" },
+  { label: "Massage", path: "/massage" },
+  { label: "Yoga", path: "/yoga" },
+  { label: "Health Coaching", path: "/coaching" },
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
 ];
@@ -34,26 +32,11 @@ const navItemsSm = [
   { label: "Contact", path: "/contact" },
 ];
 
-const menuItems = [
-  { label: "Massage", path: "/massage" },
-  { label: "Yoga", path: "/yoga" },
-  { label: "Health Coaching", path: "/coaching" },
-];
-
 function DrawerAppBar(props) {
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
-  };
-
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const drawer = (
@@ -78,9 +61,9 @@ function DrawerAppBar(props) {
           alt="beVibrant logo featuring an orange sun with a beige wave in Ayurvedic style"
           sx={{
             objectFit: "fill",
-            width: { xs: "120px", md: "180px" }, // Explicit width for different screen sizes
-            height: "200px", // Maintain aspect ratio
-            maxHeight: "15vh", // Limit height to stay within container
+            width: { xs: "120px", md: "180px" },
+            height: "200px",
+            maxHeight: "15vh",
           }}
         />
       </Box>
@@ -90,7 +73,7 @@ function DrawerAppBar(props) {
           <ListItem key={item.label} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <a
-                href={item.path} // Fallback for raw HTML
+                href={item.path}
                 style={{
                   textDecoration: "none",
                   color: "inherit",
@@ -131,9 +114,9 @@ function DrawerAppBar(props) {
                 alt="beVibrant logo featuring an orange sun with a beige wave in Ayurvedic style"
                 sx={{
                   objectFit: "fill",
-                  width: { xs: "120px", md: "180px" }, // Explicit width for different screen sizes
-                  height: "200px", // Maintain aspect ratio
-                  maxHeight: "15vh", // Limit height to stay within container
+                  width: { xs: "120px", md: "180px" },
+                  height: "200px",
+                  maxHeight: "15vh",
                 }}
               />
             </a>
@@ -148,55 +131,14 @@ function DrawerAppBar(props) {
           >
             {navItemsLg.map((item) => (
               <Button key={item.label} sx={{ color: "#fff", px: 2 }}>
-                {item.label === "Treatments" ? (
-                  <>
-                    <span>{item.label}</span>
-                    <KeyboardArrowDownIcon onClick={handleOpenUserMenu} />
-                  </>
-                ) : (
-                  // Use both <a> and <Link> for fallback
-                  <a
-                    href={item.path} // Fallback for SEO and non-JS crawlers
-                    style={{ textDecoration: "none", color: "inherit" }}
-                  >
-                    {item.label}
-                  </a>
-                )}
+                <a
+                  href={item.path}
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  {item.label}
+                </a>
               </Button>
             ))}
-          </Box>
-          <Box sx={{ flexGrow: 0 }}>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {menuItems.map((item) => (
-                <MenuItem key={item.label}>
-                  <a
-                    href={item.path} // Fallback for non-JS clients
-                    style={{
-                      textDecoration: "none",
-                      color: "inherit",
-                      width: "100%",
-                    }}
-                  >
-                    {item.label}
-                  </a>
-                </MenuItem>
-              ))}
-            </Menu>
           </Box>
         </Toolbar>
       </AppBar>
