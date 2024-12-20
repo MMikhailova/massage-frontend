@@ -35,7 +35,7 @@ function DrawerAppBar(props) {
     <Box
       onClick={handleDrawerToggle}
       sx={{
-        textAlign: "center",
+        textAlign: "center"
       }}
     >
       <Box
@@ -44,7 +44,7 @@ function DrawerAppBar(props) {
           alignItems: "center",
           justifyContent: "center",
           backgroundColor: "#8B9E95",
-          height: "15vh"
+          height: "15vh",
         }}
       >
         <Box
@@ -93,7 +93,8 @@ function DrawerAppBar(props) {
             display: "flex",
             justifyContent: { xs: "space-between", sm: "start" },
             alignItems: "center",
-            mx: { xs: "24px", sm: 5 },
+            mr: { xs: "24px", sm: 5 },
+            ml: { sm: 5 },
           }}
         >
           <Box
@@ -111,7 +112,7 @@ function DrawerAppBar(props) {
               alt="beVibrant logo"
               sx={{
                 objectFit: "fill",
-                width: { xs: "120px", md: "180px" },
+                width: { xs: "180px", md: "180px" },
                 height: "200px",
                 maxHeight: "15vh",
               }}
@@ -132,7 +133,7 @@ function DrawerAppBar(props) {
             sx={{
               display: { xs: "none", sm: "flex" },
               justifyContent: "end",
-              width: "100%"
+              width: "100%",
             }}
           >
             {navItemsLg.map((item) => (
