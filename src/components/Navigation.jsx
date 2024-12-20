@@ -44,7 +44,7 @@ function DrawerAppBar(props) {
           alignItems: "center",
           justifyContent: "center",
           backgroundColor: "#8B9E95",
-          height: "15vh",
+          height: "15vh"
         }}
       >
         <Box
@@ -93,7 +93,7 @@ function DrawerAppBar(props) {
             display: "flex",
             justifyContent: { xs: "space-between", sm: "start" },
             alignItems: "center",
-            mx: { xs: "24px", sm: "0" },
+            mx: { xs: "24px", sm: 5 },
           }}
         >
           <Box
@@ -132,7 +132,7 @@ function DrawerAppBar(props) {
             sx={{
               display: { xs: "none", sm: "flex" },
               justifyContent: "end",
-              width: "100%",
+              width: "100%"
             }}
           >
             {navItemsLg.map((item) => (
