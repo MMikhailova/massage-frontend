@@ -13,7 +13,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 
-// Critical links that should be included in the raw HTML
 const navItemsLg = [
   { label: "Home", path: "/" },
   { label: "Massage", path: "/massage" },
@@ -23,14 +22,7 @@ const navItemsLg = [
   { label: "Contact", path: "/contact" },
 ];
 
-const navItemsSm = [
-  { label: "Home", path: "/" },
-  { label: "Massage", path: "/massage" },
-  { label: "Yoga", path: "/yoga" },
-  { label: "Health Coaching", path: "/coaching" },
-  { label: "About", path: "/about" },
-  { label: "Contact", path: "/contact" },
-];
+const navItemsSm = navItemsLg;
 
 function DrawerAppBar(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -58,7 +50,7 @@ function DrawerAppBar(props) {
         <Box
           component="img"
           src="../assets/logo.svg"
-          alt="beVibrant logo featuring an orange sun with a beige wave in Ayurvedic style"
+          alt="beVibrant logo"
           sx={{
             objectFit: "fill",
             width: { xs: "120px", md: "180px" },
@@ -96,32 +88,46 @@ function DrawerAppBar(props) {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar component="nav" sx={{ backgroundColor: "#8B9E95" }}>
-        <Toolbar sx={{ mx: "6rem" }}>
+        <Toolbar
+          sx={{
+            display: "flex",
+            justifyContent: { xs: "space-between", sm: "start" },
+            alignItems: "center",
+            mx: { xs: "24px", sm: "0" },
+          }}
+        >
+          <Box
+            component="a"
+            href="/"
+            sx={{
+              display: "flex",
+              // flexGrow: { xs: 1, sm: 0 },
+              justifyContent: { xs: "center", sm: "start" },
+            }}
+          >
+            <Box
+              component="img"
+              src="../assets/logo.svg"
+              alt="beVibrant logo"
+              sx={{
+                objectFit: "fill",
+                width: { xs: "120px", md: "180px" },
+                height: "200px",
+                maxHeight: "15vh",
+              }}
+            />
+          </Box>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{
+              display: { xs: "block", sm: "none" },
+            }}
           >
             <MenuIcon />
           </IconButton>
-          <Box>
-            <a href="/" style={{ display: "flex" }}>
-              <Box
-                component="img"
-                src="../assets/logo.svg"
-                alt="beVibrant logo featuring an orange sun with a beige wave in Ayurvedic style"
-                sx={{
-                  objectFit: "fill",
-                  width: { xs: "120px", md: "180px" },
-                  height: "200px",
-                  maxHeight: "15vh",
-                }}
-              />
-            </a>
-          </Box>
-
           <Box
             sx={{
               display: { xs: "none", sm: "flex" },
