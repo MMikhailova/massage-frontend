@@ -82,7 +82,7 @@ const BeVibrant = () => {
           </Link>
         </Breadcrumbs>
         <Typography sx={{ display: { xs: "flex", md: "none" } }}>
-          Ixelles, Brussels
+          Saint-Gilles, Brussels
         </Typography>
         <Typography
           sx={{

@@ -44,7 +44,7 @@ const [contactInfo, setContactInfo] = useState([]);
               textAlign: "center",
               flexDirection: "column",
               m: "auto",
-              py: { xs: "10%", md: 0 },
+              p: { xs: "10%", md: 0 },
               height: "100%",
             }}
           >

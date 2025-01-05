@@ -74,7 +74,7 @@ export default function Banner({ booking }) {
       sx={{
         display: "flex",
         justifyContent: "center",
-        height: { xs: "80vh", md: "70vh" }, // Flexible height on mobile, fixed on larger screens
+        height: { xs: "80vhF", md: "70vh" }, // Flexible height on mobile, fixed on larger screens
         mb: { xs: 4, md: 2 }, // Additional margin-bottom only on mobile
         pb: { xs: 4, md: 0 }, // Padding to ensure no overlap on mobile
       }}
