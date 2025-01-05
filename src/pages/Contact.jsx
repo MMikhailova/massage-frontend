@@ -1,4 +1,4 @@
-import { Grid, Typography,Link,Box } from '@mui/material'
+import { Grid, Typography,Box } from '@mui/material'
 import React from 'react'
 import DrawerAppBar from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -48,32 +48,16 @@ const [contactInfo, setContactInfo] = useState([]);
               height: "100%",
             }}
           >
-            <Typography variant="subtitle1" component="h1">
-              <span style={{ color: "#678180", fontWeight: "bold" }}>
-                BeVibrant
-              </span>{" "}
-              is located in the heart of Brussels' European Quarter, its space
-              thoughtfully designed to embrace you with a relaxed ambiance,
-              infused with good cheer and an abundance of positive energy.{" "}
-              <span style={{ color: "#678180", fontWeight: "bold" }}>
-                BeVibrant
-              </span>{" "}
-              shares its quarters with
-              <Link
-                sx={{
-                  ml: 0.2,
-                  color: "#000000",
-                  textDecorationLine: "underline",
-                  textDecorationColor: "#000000",
-                }}
-                href="https://app.kiute.com/esthetique-hellene/home"
-              >
-                Eleni Avgenaki
-              </Link>
-              , an expert of holistic care. Together, they create a haven of
-              tranquility for your moments of respite, whether it be after a
-              long day's work or on a leisurely weekend.
+            <Typography variant="subtitle1" component="h1" textAlign="justify">
+              BeVibrant is located at Place Julien Dillens, just a short walk
+              from the bustling Parvis de Saint-Gilles, the area is renowned for
+              its eclectic mix of boutiques, cozy cafés, and Art Nouveau
+              architecture. Our salon is easily accessible by public transport,
+              with nearby tram and metro stops. Head up to the 4th floor, where
+              a warm, welcoming atmosphere and a stunning view of this dynamic
+              district await you.
             </Typography>
+
             <Box
               sx={{
                 my: "2rem",
@@ -87,10 +71,22 @@ const [contactInfo, setContactInfo] = useState([]);
                 borderRadius: "25px",
               }}
             >
-              <Typography variant="body1" component="h3">
-                Rue du Trône 173, 1050 Bruxelles
-              </Typography>
               <Typography variant="subtitle1" component="h3">
+                Address:{" "}
+              </Typography>
+              <Typography
+                variant="body1"
+                component="h3"
+                sx={{ mb: 1 }} 
+              >
+                Pl. Julien Dillens 1, 4ᵉ étage <br />
+                1060 Saint-Gilles, Brussels
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                component="h3"
+                sx={{ mt: 1}} 
+              >
                 Working Hours:{" "}
               </Typography>
               <Typography variant="subtitle1" component="h3">

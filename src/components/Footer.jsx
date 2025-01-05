@@ -84,7 +84,7 @@ const Footer = ({ setContactInfo }) => {
           {contact.phone ? contact.phone : "+ 32488863960"}
         </Link>
         <Typography variant="body1">
-          Rue du Trône 173, 1050 Bruxelles
+          Pl. Julien Dillens 1, 4ᵉ étage, 1060 Saint-Gilles
         </Typography>
       </Stack>
       <Stack spacing={2} direction="row" justifyContent="center">
