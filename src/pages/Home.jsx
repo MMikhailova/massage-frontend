@@ -17,10 +17,12 @@ const Home = ({booking}) => {
   return (
     <>
       <Helmet>
-        <title>Massage and Yoga in Brussels, Ixelles | beVibrant</title>
+        <title>
+          Massage and Yoga in Brussels, 1060 Saint-Gilles | beVibrant
+        </title>
         <meta
           name="description"
-          content="At beVibrant in Brussels, Ixelles, Natalya Werthaim offers holistic wellness services in English, French, Greek, Russian, and Hebrew, combining Massage, Yoga, Ayurveda, and Health Coaching to promote physical, mental, and emotional well-being. Personalized plans address stress, pain, and flexibility."
+          content="At beVibrant in Brussels, 1060 Saint-Gilles, Natalya Werthaim offers holistic wellness services in English, French, Greek, Russian, and Hebrew, combining Massage, Yoga, Ayurveda, and Health Coaching to promote physical, mental, and emotional well-being. Personalized plans address stress, pain, and flexibility."
         />
         <link rel="canonical" href="https://bevibrant.be/"></link>
       </Helmet>
@@ -88,10 +90,11 @@ const Home = ({booking}) => {
             component="h4"
             color="#94B49F"
             fontWeight="bold"
-          
-            > The welcoming and positive ambiance of beVibrant will make you
-            feel at ease and promotes a sense of well-being, making it an
-            enjoyable and rejuvenating experience.
+          >
+            {" "}
+            The welcoming and positive ambiance of beVibrant will make you feel
+            at ease and promotes a sense of well-being, making it an enjoyable
+            and rejuvenating experience.
           </Typography>
         </Box>
         <Section title={"Well-being services"} />

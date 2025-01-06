@@ -13,8 +13,8 @@ const [contactInfo, setContactInfo] = useState([]);
       <>
         <Helmet>
           <title>
-            Contact beVibrant - Holistic Wellness and Massage Therapy in
-            Brussels
+            Contact beVibrant - Holistic Wellness and Massage Therapy in 1060
+            Saint-Gilles, Brussels
           </title>
           <meta
             name="description"
@@ -74,19 +74,11 @@ const [contactInfo, setContactInfo] = useState([]);
               <Typography variant="subtitle1" component="h3">
                 Address:{" "}
               </Typography>
-              <Typography
-                variant="body1"
-                component="h3"
-                sx={{ mb: 1 }} 
-              >
+              <Typography variant="body1" component="h3" sx={{ mb: 1 }}>
                 Pl. Julien Dillens 1, 4ᵉ étage <br />
                 1060 Saint-Gilles, Brussels
               </Typography>
-              <Typography
-                variant="subtitle1"
-                component="h3"
-                sx={{ mt: 1}} 
-              >
+              <Typography variant="subtitle1" component="h3" sx={{ mt: 1 }}>
                 Working Hours:{" "}
               </Typography>
               <Typography variant="subtitle1" component="h3">

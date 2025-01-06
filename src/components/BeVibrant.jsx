@@ -30,6 +30,7 @@ const BeVibrant = () => {
             width: "100%",
             textShadow: " 5px 0px 8px #94B49F",
             transform: {
+              xs: "translate(0%,-50%)",
               md: "translate(0%,30%)",
             },
           }}

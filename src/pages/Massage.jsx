@@ -24,7 +24,7 @@ const Massage = ({ page, url }) => {
         <title>Ayurvedic massage in Ixelles, Brussels | beVibrant</title>
         <meta
           name="description"
-          content="Ayurvedic massages in Brussels. Offering relaxation massage with healing sounds, Indian head massage, and Chair 'Lunch boost' back & shoulders massage at beVibrant."
+          content="Ayurvedic massages in 1060 Saint-Gilles, Brussels. Offering relaxation massage with healing sounds, Indian head massage, and Chair 'Lunch boost' back & shoulders massage at beVibrant."
         />
         <link rel="canonical" href="https://bevibrant.be/massage"></link>
       </Helmet>

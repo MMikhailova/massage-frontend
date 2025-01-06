@@ -19,7 +19,7 @@ const Yoga = ({ page, url }) => {
   return (
     <>
       <Helmet>
-        <title>Individual Yoga session in Ixelles, Brussels | beVibrant</title>
+        <title>Individual Yoga session in 1060 Saint-Gilles | beVibrant</title>
         <meta
           name="description"
           content="Experience personalized one-on-one yoga therapy sessions tailored to your unique health needs. Improve physical and mental well-being through custom postures, breathing exercises, and therapeutic techniques designed to address anxiety, chronic pain, stress, and more."
