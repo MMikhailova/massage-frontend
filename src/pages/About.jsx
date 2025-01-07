@@ -96,7 +96,7 @@ height:"100%",
           component="h4"
           color="#DF7861"
           fontWeight="bold"
-          fontStyle= "italic"
+          fontStyle="italic"
           py="3rem"
         >
           Welcome to BeVibrant - Your Path to Holistic Healing and
@@ -136,12 +136,12 @@ height:"100%",
         >
           <Grid xs={12} md={5} textAlign="center" item>
             <img
-              src="../assets/natalya-werthaim-photo.webp"
+              src="../assets/Nataly_Werthaim_bevibrant.webp"
               alt="natalya werthaim"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </Grid>
-          <Grid xs={12} md={5} item>
+          <Grid xs={12} md={5} sx={{display:"flex",flexDirection:"column",gap:'16px'}} item >
             <Typography variant="subtitle1">
               Originally from Ukraine, I grew up in Tel Aviv, Israel, and have
               spent most of my life living in seven different countries. I
