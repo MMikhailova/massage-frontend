@@ -8,6 +8,47 @@
     });
 </script>
   <head>
+    <script>
+
+// Define dataLayer and the gtag function.
+
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){dataLayer.push(arguments);}
+
+
+// Set default consent for specific regions according to your requirements
+
+gtag('consent', 'default', {
+
+  'ad_storage': 'denied',
+
+  'ad_user_data': 'denied',
+
+  'ad_personalization': 'denied',
+
+  'analytics_storage': 'denied',
+
+ 'regions':['BE', 'FR', 'DE', 'NL']
+
+});
+
+// Set default consent for all other regions according to your requirements
+
+gtag('consent', 'default', {
+
+  'ad_storage': 'denied',
+
+  'ad_user_data': 'denied',
+
+  'ad_personalization': 'denied',
+
+  'analytics_storage': 'denied'
+
+});
+
+ 
+</script>
     <!-- Start cookieyes banner --> 
      <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/aa04df6e84a89fd539afbb2b/script.js"></script> <!-- End cookieyes banner -->
     <title>Ayurvedic Massage and Yoga in Brussels</title>
