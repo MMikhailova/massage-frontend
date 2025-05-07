@@ -94,7 +94,7 @@ const [contactInfo, setContactInfo] = useState([]);
             xs={12}
             md={4}
             width="100%"
-            height="100%"
+            height="100vh"
             sx={{
               display: "flex",
               alignItems: "center",
@@ -106,7 +106,7 @@ const [contactInfo, setContactInfo] = useState([]);
               alt="natalya"
               style={{
                 height: "auto",
-                width: "100%",
+                width: "90%",
 
                 objectFit: "cover",
               }}
