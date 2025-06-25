@@ -69,9 +69,10 @@ export default function Banner({ booking }) {
     <Grid
       container
       maxWidth="xlg"
-      position="relative"
+      // position="relative"
       spacing={{ xs: 0, md: 3 }}
       sx={{
+        position:{md:"relative"},
         display: "flex",
         justifyContent: "center",
         height: { xs: "80vhF", md: "70vh" }, // Flexible height on mobile, fixed on larger screens
@@ -125,10 +126,10 @@ export default function Banner({ booking }) {
         >
           <CardMedia
             component="img"
-            srcSet="/assets/massage-therapist-400w.webp 400w, /assets/massage-therapist-800w.webp 800w, /assets/massage-therapist-1000w.webp 1000w"
+            srcSet="/assets/European_massage-champion-400w.png 400w, /assets/European_massage-champion-800w.png 800w, /assets/European_massage-champion-1000w.png 1000w"
             sizes="(max-width: 600px) 400px, (max-width: 960px) 800px, 1000px"
-            src="/assets/massage-therapist-1000w.webp"
-            alt="Ayurvedic massage therapist"
+            src="/assets/European_massage-champion-1000w.png"
+            alt="European_massage-champion"
             sx={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
           {booking.massage && (

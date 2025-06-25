@@ -42,14 +42,14 @@ const Home = ({booking}) => {
         <DrawerAppBar />
         <Banner booking={booking} />
 
-        <Section />
+        {/* <Section /> */}
         <Box
           align="justify"
           sx={{
             width: { xs: "90vw", md: "65vw" },
             margin: "auto",
             py: { md: 4 },
-            mt: { md: 2 },
+            mt: { xs:0,md: 15 }
           }}
         >
           <Typography variant="subtitle1" component="h3">
