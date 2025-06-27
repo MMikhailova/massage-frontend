@@ -49,7 +49,7 @@ const Home = ({booking}) => {
             width: { xs: "90vw", md: "65vw" },
             margin: "auto",
             py: { md: 4 },
-            mt: { xs:0,md: 15 }
+            mt: { xs: 0, md: 15 },
           }}
         >
           <Typography variant="subtitle1" component="h3">
@@ -57,8 +57,11 @@ const Home = ({booking}) => {
             <Box component="span" fontWeight="bold">
               English, French, Greek, Russian, and Hebrew
             </Box>
-            , offering a holistic approach to health and wellness, which
-            combines the benefits of{" "}
+            , offering a holistic approach to{" "}
+            <Box component="span" fontWeight="bold">
+              health and wellness,
+            </Box>{" "}
+            which combines the benefits of{" "}
             <Box component="span" fontWeight="bold">
               Massage, Yoga, Ayurveda, and Health coaching
             </Box>{" "}

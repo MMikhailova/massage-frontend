@@ -96,8 +96,16 @@ const BeVibrant = () => {
         sx={{ mt: { xs: 2, md: 0 }, mb: { xs: 2, md: 4 } }}
         color="#DF7861"
       >
-        <InfoItem rating text="Top Rated Therapist" />
-        <InfoItem icon={<EmojiEventsIcon />} text="Europe Massage Champion" />
+        <InfoItem
+          rating
+          text="Top Rated Therapist"
+          link="https://www.treatwell.be/fr/salon/bevibrant-1/"
+        />
+        <InfoItem
+          icon={<EmojiEventsIcon />}
+          text="Europe Massage Champion"
+          link="https://www.newmassageassociation.com/winners/"
+        />
         <InfoItem icon={<GroupsIcon />} text="Belgian National Massage Team" />
       </Stack>
     </Stack>
