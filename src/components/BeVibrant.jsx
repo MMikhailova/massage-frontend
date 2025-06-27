@@ -4,29 +4,49 @@ import GradeIcon from "@mui/icons-material/Grade";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import GroupsIcon from "@mui/icons-material/Groups";
 
-// Reusable InfoItem with bold text and optional rating
-const InfoItem = ({ icon, text, rating }) => (
-  <Stack direction="column" alignItems="center" spacing={1}>
-    {rating ? (
-      <Stack direction="row" spacing={0.3}>
-        {[...Array(5)].map((_, idx) => (
-          <GradeIcon key={idx} fontSize="small" sx={{ color: "#DF7861" }} />
-        ))}
-      </Stack>
-    ) : (
-      React.cloneElement(icon, { sx: { color: "#DF7861", fontSize: 30 } })
-    )}
-    <Link
-      href="#"
-      underline="hover"
-      sx={{ color: "#DF7861", textAlign: "center" }}
-    >
-      <Typography variant="body2" fontWeight="bold">
+// Reusable InfoItem with optional rating and link
+const InfoItem = ({ icon, text, rating, link }) => {
+  const content = (
+    <Stack direction="column" alignItems="center" spacing={1}>
+      {rating ? (
+        <Stack direction="row" spacing={0.3}>
+          {[...Array(5)].map((_, idx) => (
+            <GradeIcon key={idx} fontSize="small" sx={{ color: "#DF7861" }} />
+          ))}
+        </Stack>
+      ) : (
+        React.cloneElement(icon, { sx: { color: "#DF7861", fontSize: 30 } })
+      )}
+      <Typography
+        variant="body2"
+        fontWeight="bold"
+        sx={{ color: "#DF7861", textAlign: "center" }}
+      >
         {text}
       </Typography>
+    </Stack>
+  );
+
+  return link ? (
+    <Link
+      href={link}
+      underline="hover"
+      sx={{
+        textDecoration: "none",
+        "&:hover": {
+          textDecoration: "underline",
+          textDecorationColor: "#DF7861",
+        },
+      }}
+      target="_blank"
+      rel="noopener"
+    >
+      {content}
     </Link>
-  </Stack>
-);
+  ) : (
+    content
+  );
+};
 
 const BeVibrant = () => {
   return (
