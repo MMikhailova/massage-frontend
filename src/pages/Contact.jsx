@@ -72,7 +72,7 @@ const [contactInfo, setContactInfo] = useState([]);
               }}
             >
               <Typography variant="subtitle1" component="h3">
-                Address:{" "}
+                Address :{" "}
               </Typography>
               <Typography variant="body1" component="h3" sx={{ mb: 1 }}>
                 Pl. Julien Dillens 1, 4ᵉ étage <br />
