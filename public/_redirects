@@ -1,6 +1,9 @@
-# Redirect uppercase URLs to lowercase
-/Massage     /massage     301
-/Yoga        /yoga        301
-/Coaching    /coaching    301
-/About       /about       301
-/Contact     /contact     301
+# Netlify React SPA fallback
+/*    /index.html   200
+
+# Specific redirects (case-insensitive)
+(?i)/Massage     /massage     301!
+(?i)/Yoga        /yoga        301!
+(?i)/Coaching    /coaching    301!
+(?i)/About       /about       301!
+(?i)/Contact     /contact     301!
