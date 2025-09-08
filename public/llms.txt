@@ -1,0 +1,20 @@
+# llms.txt — Key URLs for bevibrant.be
+# Last updated: 2025‑09‑08
+
+# Homepage
+https://bevibrant.be/
+
+# About / Therapist Profile
+https://bevibrant.be/about
+
+
+# Individual Services
+https://bevibrant.be/massage
+https://bevibrant.be/yoga
+https://bevibrant.be/coaching
+
+# Contact Page
+https://bevibrant.be/contact
+
+# Sitemap
+https://bevibrant.be/sitemap.xml
