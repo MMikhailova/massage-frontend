@@ -1,1 +1,6 @@
-/*  /index.html  200
+# Redirect uppercase URLs to lowercase
+/Massage     /massage     301
+/Yoga        /yoga        301
+/Coaching    /coaching    301
+/About       /about       301
+/Contact     /contact     301
