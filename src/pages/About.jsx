@@ -1,11 +1,24 @@
+
+
+
 import React, { useEffect } from "react";
-import { Container, Grid, Box, Typography } from "@mui/material";
+import {
+  Container,
+  Grid,
+  Box,
+  Typography,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import DrawerAppBar from "../components/Navigation";
 import Footer from "../components/Footer";
 import ImagesCarousel from "../components/Carousel";
 import { Helmet } from "react-helmet-async";
 
 const About = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
@@ -27,14 +40,8 @@ const About = () => {
           content="Natalya Werthaim, a certified Ayurvedic Massage Therapist, Therapeutic Yoga & Health Coach, and Reiki practitioner, welcomes clients in English, French, Greek, Russian, and Hebrew at beVibrant, Brussels, offering holistic well-being services."
         />
         <link rel="canonical" href="https://bevibrant.be/about" />
-        <meta
-          property="og:title"
-          content="Natalya Werthaim - Ayurvedic Massage Brussels"
-        />
-        <meta
-          property="og:description"
-          content="Explore holistic wellness with Natalya Werthaim at beVibrant: Ayurvedic massage, yoga, reiki, and more in Brussels."
-        />
+        <meta property="og:title" content="Natalya Werthaim - Ayurvedic Massage Brussels" />
+        <meta property="og:description" content="Explore holistic wellness with Natalya Werthaim at beVibrant: Ayurvedic massage, yoga, reiki, and more in Brussels." />
         <meta property="og:url" content="https://bevibrant.be/about" />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
@@ -53,7 +60,6 @@ const About = () => {
           pb: 15,
         }}
       >
-        {/* Hero Images */}
         <Grid
           container
           display={{ xs: "none", md: "flex" }}
@@ -87,38 +93,40 @@ const About = () => {
           ))}
         </Grid>
 
-        {/* Headings */}
         <Typography
-          display={{ xs: "block", md: "none" }}
-          align="center"
-          variant="h5"
-          component="h1"
-          color="#DF7861"
-          fontWeight="bold"
-          my="2rem"
-        >
-          Welcome to BeVibrant – Your Path to Holistic Healing and
-          Transformation
-        </Typography>
-
-        <Typography
-          display={{ xs: "none", md: "block" }}
+          display={{ xs: "flex", md: "block" }}
           pt="3rem"
           variant="h2"
           component="h1"
+          sx={{
+            fontSize: {
+              xs: "2rem",
+              md: "2.5rem",
+            },
+            fontWeight: 600,
+            fontStyle: "italic",
+            color: "#DF7861",
+          }}
         >
           Welcome to BeVibrant
         </Typography>
 
         <Typography
-          display={{ xs: "none", md: "block" }}
+          display={{ xs: "flex", md: "block" }}
           align="center"
           pb="3rem"
           variant="h4"
           component="h2"
-          color="#94B49F"
+          sx={{
+            fontSize: {
+              xs: "1.6rem",
+              md: "1.8rem",
+            },
+            fontWeight: 600,
+            color: "#94B49F",
+          }}
         >
-          Your Path to Holistic Healing and Transformation
+          Your Path to {isMobile && <br />} Holistic Healing and Transformation
         </Typography>
 
         {/* About Section */}
@@ -352,5 +360,6 @@ const About = () => {
     </>
   );
 };
+
 
 export default About;
