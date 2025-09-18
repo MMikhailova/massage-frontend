@@ -1,20 +1,21 @@
-import { Container,Grid,Box, Typography } from "@mui/material";
 import React, { useEffect } from "react";
+import { Container, Grid, Box, Typography } from "@mui/material";
 import DrawerAppBar from "../components/Navigation";
 import Footer from "../components/Footer";
 import ImagesCarousel from "../components/Carousel";
-import {Helmet} from 'react-helmet-async'
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
+
   const mediaStyle = {
     width: "100%",
-height:"100%",
-  objectFit:"cover"
-  
+    height: "100%",
+    objectFit: "cover",
   };
+
   return (
     <>
       <Helmet>
@@ -23,285 +24,331 @@ height:"100%",
         </title>
         <meta
           name="description"
-          content="Natalya Werthaim, a certified Ayurvedic Massage Therapist, Therapeutic Yoga & Health Coach, and Reiki practitioner, welcomes clients in English, French, Greek, Russian, and Hebrew at beVibrant, Brussels, offering holistic well-being services"
+          content="Natalya Werthaim, a certified Ayurvedic Massage Therapist, Therapeutic Yoga & Health Coach, and Reiki practitioner, welcomes clients in English, French, Greek, Russian, and Hebrew at beVibrant, Brussels, offering holistic well-being services."
         />
-        <link rel="canonical" href="https://bevibrant.be/about"></link>
+        <link rel="canonical" href="https://bevibrant.be/about" />
+        <meta
+          property="og:title"
+          content="Natalya Werthaim - Ayurvedic Massage Brussels"
+        />
+        <meta
+          property="og:description"
+          content="Explore holistic wellness with Natalya Werthaim at beVibrant: Ayurvedic massage, yoga, reiki, and more in Brussels."
+        />
+        <meta property="og:url" content="https://bevibrant.be/about" />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
       </Helmet>
+
+      <DrawerAppBar />
+
       <Container
-        maxWidth="xlg"
+        maxWidth="xl"
+        component="main"
         sx={{
           display: "flex",
           flexDirection: "column",
-          textAlign: "center",
-          height: "fit-content",
           alignItems: "center",
+          textAlign: "center",
           pb: 15,
         }}
       >
-        <DrawerAppBar />
+        {/* Hero Images */}
         <Grid
           container
-          sx={{ display: { xs: "none", md: "flex" } }}
+          display={{ xs: "none", md: "flex" }}
           justifyContent="center"
-          spacing={{ xs: 0, md: 1 }}
+          spacing={1}
+          component="section"
+          aria-label="Yoga image gallery"
         >
-          <Grid
-            item
-            md={4}
-            xs={12}
-            sx={{
-              display: {
-                xs: "none",
-                md: "flex",
-              },
-              height: "45vh",
-            }}
-          >
-            <img
-              src="../assets/yoga-pose.jpg"
-              alt="yoga pose"
-              style={{ width: "100%", height: "100%", objectFit: "fill" }}
-            />
-          </Grid>
-          <Grid item md={4} xs={12} height="45vh">
-            <img
-              src="../assets/yoga-position.jpg"
-              alt="yoga seating position"
-              style={mediaStyle}
-            />
-          </Grid>
-          <Grid
-            item
-            md={4}
-            xs={12}
-            sx={{
-              display: {
-                xs: "none",
-                md: "flex",
-              },
-              height: "45vh",
-            }}
-          >
-            <img
-              src="../assets/yoga-open-air.jpg"
-              alt="yoga at open air"
-              style={{ height: "100%", width: "100%", objectFit: "cover" }}
-            />
-          </Grid>
+          {[
+            {
+              src: "../assets/yoga-pose.jpg",
+              alt: "Yoga pose with balance posture",
+            },
+            {
+              src: "../assets/yoga-position.jpg",
+              alt: "Seated yoga meditation posture",
+            },
+            {
+              src: "../assets/yoga-open-air.jpg",
+              alt: "Yoga practice in open air nature",
+            },
+          ].map((img, i) => (
+            <Grid item md={4} height="45vh" key={i}>
+              <img
+                src={img.src}
+                alt={img.alt}
+                style={mediaStyle}
+                loading="lazy"
+              />
+            </Grid>
+          ))}
         </Grid>
+
+        {/* Headings */}
         <Typography
           display={{ xs: "block", md: "none" }}
           align="center"
           variant="h5"
-          component="h4"
+          component="h1"
           color="#DF7861"
-          fontWeight="bold"
           fontStyle="italic"
           py="3rem"
         >
-          Welcome to BeVibrant - Your Path to Holistic Healing and
+          Welcome to BeVibrant – Your Path to Holistic Healing and
           Transformation
         </Typography>
+
         <Typography
           display={{ xs: "none", md: "block" }}
           pt="3rem"
           variant="h2"
           component="h1"
         >
-          {" "}
           Welcome to BeVibrant
         </Typography>
+
         <Typography
           display={{ xs: "none", md: "block" }}
           align="center"
           pb="3rem"
-          variant="h5"
-          component="h4"
+          variant="h4"
+          component="h2"
           color="#94B49F"
-          fontWeight="bold"
         >
           Your Path to Holistic Healing and Transformation
         </Typography>
+
+        {/* About Section */}
         <Grid
           container
+          component="section"
+          aria-labelledby="about-natalya"
           sx={{
             justifyContent: "center",
-            m: "auto",
             width: { xs: "95%", md: "80%" },
-            height: "fit-content",
-            pb: 15,
+            gap: 2,
           }}
           textAlign="justify"
-          gap={2}
         >
-          <Grid xs={12} md={5} textAlign="center" item>
-            <img
-              src="../assets/Nataly_Werthaim_bevibrant.webp"
-              alt="natalya werthaim"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
+          <Typography
+            variant="h3"
+            component="h2"
+            id="about-natalya"
+            sx={{ display: "none" }}
+          >
+            About Natalya Werthaim
+          </Typography>
+
+          <Grid
+            item
+            xs={12}
+            md={5}
+            textAlign="center"
+            sx={{
+              display: "flex",
+              alignItems: "stretch",
+            }}
+          >
+            <Box sx={{ width: "100%", height: "100%" }}>
+              <img
+                src="../assets/Nataly_Werthaim_bevibrant.webp"
+                alt="Natalya Werthaim portrait, Ayurvedic therapist in Brussels"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+                loading="lazy"
+              />
+            </Box>
           </Grid>
-          <Grid xs={12} md={5} sx={{display:"flex",flexDirection:"column",gap:'16px'}} item >
+
+          <Grid
+            item
+            xs={12}
+            md={5}
+            sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+          >
             <Typography variant="subtitle1">
-              Originally from Ukraine, I grew up in Tel Aviv, Israel, and have
-              spent most of my life living in seven different countries. I
-              eventually settled in Brussels, Belgium, where I’ve been sharing
-              the holistic wisdom and knowledge gained during my travels with
-              dedicated students and clients since 2010. They come to me not
-              only for physical healing and relaxation but for a complete
-              <Box component="span" fontStyle="Italic">
+              Originally from Ukraine and raised in Tel Aviv, I’ve lived in
+              seven countries before settling in Brussels, where I’ve been
+              sharing holistic wisdom with clients and students since 2010. My
+              work goes beyond massage – it is a complete
+              <Box component="span" fontStyle="italic">
                 {" "}
-                holistic experience
-              </Box>{" "}
-              that supports emotional healing, restores balance, and helps them
-              rediscover their life’s path. My clients span all ages, united by
-              a common goal: to live a vibrant and meaningful life.
+                holistic experience that supports emotional healing, restores
+                balance, and helps people rediscover their life’s path.
+              </Box>
             </Typography>
+
             <Typography variant="subtitle1">
-              I am fluent in{" "}
-              <Box component="span" fontStyle="Italic">
+              In 2025, I proudly became an official
+              <Box component="span" fontStyle="italic">
+                {" "}
+                European Massage Champion 🏆
+              </Box>
+              . I’m also a member of the
+              <Box component="span" fontStyle="italic">
+                {" "}
+                Belgian National Massage Team representing Ayurveda,
+              </Box>{" "}
+              and in 2024 I was awarded by
+              <Box component="span" fontStyle="italic">
+                {" "}
+                Treatwell Top Rated Therapist in Belgium.
+              </Box>
+            </Typography>
+
+            <Typography variant="subtitle1">
+              My journey began in 2005, when I left a successful career in
+              Prague to live in an ashram in India as a monk, where I studied
+              <Box component="span" fontStyle="italic">
+                {" "}
+                Ayurveda, yoga, meditation, and bodywork.
+              </Box>{" "}
+              This path transformed my life and became my mission:
+              <Box component="span" fontStyle="italic">
+                {" "}
+                bringing the depth of ancient practices into modern, accessible
+                healing.
+              </Box>
+            </Typography>
+
+            <Typography variant="subtitle1">
+              Fluent in
+              <Box component="span" fontStyle="italic">
                 {" "}
                 English, French, Greek, Russian, and Hebrew,
               </Box>{" "}
-              warmly welcoming clients from diverse backgrounds. With a blend of
-              empathy, deep spiritual wisdom, and an understanding of my
-              clients’ needs, I ensure an inclusive and seamless experience for
-              anyone seeking holistic well-being.
-            </Typography>
-            <Typography variant="subtitle1">
-              I am deeply passionate about my craft and am always evolving. My
-              commitment to growth has led me to compete in{" "}
-              <Box component="span" fontStyle="Italic">
+              I warmly welcome clients from diverse backgrounds into a safe,
+              inclusive
+              <Box component="span" fontStyle="italic">
                 {" "}
-                European massage championships,
-              </Box>{" "}
-              where I proudly placed 13th in Europe. Additionally, I am honoured
-              to be a member of the{" "}
-              <Box component="span" fontStyle="Italic">
-                {" "}
-                Belgian National Massage Team representing Ayurveda.
-              </Box>{" "}
-              In 2024 I was awarded as the Top rated therapist in Belgium. This
-              dedication to excellence drives me to continually refine my skills
-              and offer the best possible service to my clients.
+                space of growth, relaxation, and transformation.
+              </Box>
             </Typography>
           </Grid>
-          <Grid xs={12} md={10} item>
+
+          <Grid item xs={12} md={5}>
             <Typography variant="subtitle1">
-              My journey towards holistic healing began in 2005, when I made the
-              life-changing decision to leave my successful career as an event
-              and party organizer in Prague. Seeking a deeper connection with
-              myself and a more meaningful life, I embarked on a path of
-              self-discovery that led me to India. There, I spent a year living
-              as a monk in an ashram (meditation center) in Pune. It was during
-              this time that I deepened my spiritual practice, studied various
-              bodywork disciplines, and learned from world-renowned spiritual
-              masters.
-            </Typography>
-            <Typography variant="subtitle1">
-              <Typography variant="subtitle1">
-                Through my immersion in the ancient wisdom of{" "}
-                <Box component="span" fontStyle="Italic">
-                  {" "}
-                  Ayurveda, yoga, meditation, and holistic healing,
-                </Box>{" "}
-                I experienced profound personal growth and inner healing,
-                ultimately finding peace and happiness. It was during this
-                transformative journey that my mission became clear: to share
-                the depth and beauty of these practices with the Western world
-                in a way that aligns with modern lives.
-              </Typography>
-            </Typography>
-          </Grid>
-          <Grid xs={12} md={5} item>
-            <Typography variant="subtitle1">
-              With this vision in mind, I created the brand{" "}
-              <Box component="span" fontStyle="Italic">
+              With this vision in mind, I created the brand
+              <Box component="span" fontStyle="italic">
                 {" "}
                 Be Vibrant,
               </Box>{" "}
               combining traditional healing techniques with modern practices. I
-              integrate different{" "}
-              <Box component="span" fontStyle="Italic">
+              integrate different
+              <Box component="span" fontStyle="italic">
                 {" "}
                 Ayurvedic massage techniques, Yoga discipline, Reiki, Pranayama
                 (breathwork), Sound healing, somatic tools, active meditations
                 for emotional release
               </Box>{" "}
-              to offer a comprehensive approach to holistic wellness. This
-              unique blend helps clients bridge the gap between physical,
-              mental, and emotional well-being.
+              to offer a comprehensive approach to holistic wellness.
             </Typography>
+
             <Typography variant="subtitle1">
-              At{" "}
-              <Box component="span" fontStyle="Italic">
+              At
+              <Box component="span" fontStyle="italic">
                 {" "}
                 Be Vibrant,
               </Box>{" "}
               I offer a safe, nurturing space where you can reconnect with
               yourself on a profound level, allowing healing and growth to truly
               happen. After deeply relaxing and healing you physically and
-              mentally, my goal through well-being coaching is to empower you to
-              embrace personal transformation, set life goals, and find deeper
-              meaning in life. The warm oils, powders, and massage tools I use
-              are carefully selected to promote grounding, balance, and
-              rejuvenation, fostering a strong body-mind connection. Whether
-              you're seeking relaxation, healing from emotional trauma, or a
-              deeper connection with yourself, I am here to guide and support
-              you every step of the way.
+              mentally,{" "}
+              <Box component="span" fontStyle="italic">
+                {" "}
+                my goal through well-being coaching is to empower you to embrace
+                personal transformation, set life goals, and find deeper meaning
+                in life.{" "}
+              </Box>{" "}
+              The warm oils, powders, and massage tools I use are carefully
+              selected to promote grounding, balance, and rejuvenation,
+              fostering a strong body-mind connection.
+              <Box component="span" fontStyle="italic">
+                {" "}
+                Whether you're seeking relaxation, healing from emotional
+                trauma, or a deeper connection with yourself, I am here to guide
+                and support you every step of the way.
+              </Box>
             </Typography>
           </Grid>
-          <Grid xs={12} md={5} item>
+
+          <Grid item xs={12} md={5}>
             <img
               src="../assets/bevibrant_top_rated_massage_therapist.webp"
-              alt="natalya werthaim"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              alt="Natalya Werthaim receiving top-rated therapist award"
+              style={mediaStyle}
+              loading="lazy"
             />
           </Grid>
 
-          <Grid xs={12} md={10} textAlign="center" item>
+          <Grid item xs={12} md={10} textAlign="center" py={4}>
             <Typography
               align="justify"
-              sx={{ xs: 0, md: 2 }}
               variant="h5"
               color="#DF7861"
               fontStyle="italic"
+              sx={{
+                fontSize: {
+                  xs: "1rem", // smaller on mobile (~16px)
+                  sm: "1.1rem", // small tablets
+                  md: "1.25rem", // default h5 size on desktop
+                },
+              }}
             >
-              “Be Vibrant is not only a wellness brand; it is a movement
-              dedicated to personal growth, deep healing, and spiritual
-              awakening. If you're looking to transform your life, restore
-              balance, and reconnect with your true self, Be Vibrant offers a
-              complete wellness experience. From different Ayurvedic massage,
-              Yoga, Reiki to transformative Breathwork sessions , I provide a
-              range of healing practices to help you on your journey toward a
-              vibrant and meaningful life.”
+              “Be Vibrant stands for more than just well-being — it’s an
+              invitation to rediscover your inner strength and reconnect with
+              what truly matters. Through carefully curated healing practices
+              like Ayurvedic massage, Yoga, Reiki, and Breathwork, I create a
+              supportive space where deep transformation can unfold naturally.
+              Whether you’re seeking clarity, renewal, or a deeper mind-body
+              connection, you’re warmly welcome on this journey.”
             </Typography>
+
             <Typography
               align="right"
               variant="h5"
               color="#DF7861"
               fontStyle="italic"
+              sx={{
+                fontSize: {
+                  xs: "1rem",
+                  sm: "1.1rem",
+                  md: "1.25rem",
+                },
+                mt: 2,
+              }}
             >
-              With Love Natalya Werthaim
+              With love, Natalya Werthaim
             </Typography>
           </Grid>
         </Grid>
+
+        {/* Carousel Section */}
         <Box
+          component="section"
+          aria-label="Retreat images and testimonials"
           sx={{
-            width: "99vw",
-            height: { xs: "auto", md: "fit-content" },
+            width: "100%",
+            backgroundColor: "#8B9E95",
+            py: 4,
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             justifyContent: "space-evenly",
-            backgroundColor: "#8B9E95",
-            py: 2,
           }}
         >
           <ImagesCarousel />
         </Box>
       </Container>
+
       <Footer />
     </>
-  );}
+  );
+};
 
 export default About;
