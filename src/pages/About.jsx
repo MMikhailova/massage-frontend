@@ -94,8 +94,8 @@ const About = () => {
           variant="h5"
           component="h1"
           color="#DF7861"
-          fontStyle="italic"
-          py="3rem"
+          fontWeight="bold"
+          my="2rem"
         >
           Welcome to BeVibrant – Your Path to Holistic Healing and
           Transformation
@@ -177,7 +177,7 @@ const About = () => {
               seven countries before settling in Brussels, where I’ve been
               sharing holistic wisdom with clients and students since 2010. My
               work goes beyond massage – it is a complete
-              <Box component="span" fontStyle="italic">
+              <Box component="span" fontWeight={500}>
                 {" "}
                 holistic experience that supports emotional healing, restores
                 balance, and helps people rediscover their life’s path.
@@ -186,17 +186,17 @@ const About = () => {
 
             <Typography variant="subtitle1">
               In 2025, I proudly became an official
-              <Box component="span" fontStyle="italic">
+              <Box component="span" fontWeight={500}>
                 {" "}
                 European Massage Champion 🏆
               </Box>
               . I’m also a member of the
-              <Box component="span" fontStyle="italic">
+              <Box component="span" fontWeight={500}>
                 {" "}
                 Belgian National Massage Team representing Ayurveda,
               </Box>{" "}
               and in 2024 I was awarded by
-              <Box component="span" fontStyle="italic">
+              <Box component="span" fontWeight={500}>
                 {" "}
                 Treatwell Top Rated Therapist in Belgium.
               </Box>
@@ -205,12 +205,12 @@ const About = () => {
             <Typography variant="subtitle1">
               My journey began in 2005, when I left a successful career in
               Prague to live in an ashram in India as a monk, where I studied
-              <Box component="span" fontStyle="italic">
+              <Box component="span" fontWeight={500}>
                 {" "}
                 Ayurveda, yoga, meditation, and bodywork.
               </Box>{" "}
               This path transformed my life and became my mission:
-              <Box component="span" fontStyle="italic">
+              <Box component="span" fontWeight={500}>
                 {" "}
                 bringing the depth of ancient practices into modern, accessible
                 healing.
@@ -219,13 +219,13 @@ const About = () => {
 
             <Typography variant="subtitle1">
               Fluent in
-              <Box component="span" fontStyle="italic">
+              <Box component="span" fontWeight={500}>
                 {" "}
                 English, French, Greek, Russian, and Hebrew,
               </Box>{" "}
               I warmly welcome clients from diverse backgrounds into a safe,
               inclusive
-              <Box component="span" fontStyle="italic">
+              <Box component="span" fontWeight={500}>
                 {" "}
                 space of growth, relaxation, and transformation.
               </Box>
@@ -235,13 +235,13 @@ const About = () => {
           <Grid item xs={12} md={5}>
             <Typography variant="subtitle1">
               With this vision in mind, I created the brand
-              <Box component="span" fontStyle="italic">
+              <Box component="span" fontWeight={500}>
                 {" "}
                 Be Vibrant,
               </Box>{" "}
               combining traditional healing techniques with modern practices. I
               integrate different
-              <Box component="span" fontStyle="italic">
+              <Box component="span" fontWeight={500}>
                 {" "}
                 Ayurvedic massage techniques, Yoga discipline, Reiki, Pranayama
                 (breathwork), Sound healing, somatic tools, active meditations
@@ -252,24 +252,24 @@ const About = () => {
 
             <Typography variant="subtitle1">
               At
-              <Box component="span" fontStyle="italic">
+              <Box component="span" fontWeight={500}>
                 {" "}
                 Be Vibrant,
               </Box>{" "}
               I offer a safe, nurturing space where you can reconnect with
               yourself on a profound level, allowing healing and growth to truly
               happen. After deeply relaxing and healing you physically and
-              mentally,{" "}
-              <Box component="span" fontStyle="italic">
+              mentally,
+              <Box component="span" fontWeight={500}>
                 {" "}
                 my goal through well-being coaching is to empower you to embrace
                 personal transformation, set life goals, and find deeper meaning
                 in life.{" "}
-              </Box>{" "}
+              </Box>
               The warm oils, powders, and massage tools I use are carefully
               selected to promote grounding, balance, and rejuvenation,
               fostering a strong body-mind connection.
-              <Box component="span" fontStyle="italic">
+              <Box component="span" fontWeight={500}>
                 {" "}
                 Whether you're seeking relaxation, healing from emotional
                 trauma, or a deeper connection with yourself, I am here to guide
@@ -292,12 +292,13 @@ const About = () => {
               align="justify"
               variant="h5"
               color="#DF7861"
+              fontWeight="bold"
               fontStyle="italic"
               sx={{
                 fontSize: {
-                  xs: "1rem", // smaller on mobile (~16px)
-                  sm: "1.1rem", // small tablets
-                  md: "1.25rem", // default h5 size on desktop
+                  xs: "1rem",
+                  sm: "1.1rem",
+                  md: "1.25rem",
                 },
               }}
             >
@@ -315,6 +316,7 @@ const About = () => {
               variant="h5"
               color="#DF7861"
               fontStyle="italic"
+              fontWeight="bold"
               sx={{
                 fontSize: {
                   xs: "1rem",
