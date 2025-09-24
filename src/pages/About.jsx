@@ -40,8 +40,14 @@ const About = () => {
           content="Natalya Werthaim, a certified Ayurvedic Massage Therapist, Therapeutic Yoga & Health Coach, and Reiki practitioner, welcomes clients in English, French, Greek, Russian, and Hebrew at beVibrant, Brussels, offering holistic well-being services."
         />
         <link rel="canonical" href="https://bevibrant.be/about" />
-        <meta property="og:title" content="Natalya Werthaim - Ayurvedic Massage Brussels" />
-        <meta property="og:description" content="Explore holistic wellness with Natalya Werthaim at beVibrant: Ayurvedic massage, yoga, reiki, and more in Brussels." />
+        <meta
+          property="og:title"
+          content="Natalya Werthaim - Ayurvedic Massage Brussels"
+        />
+        <meta
+          property="og:description"
+          content="Explore holistic wellness with Natalya Werthaim at beVibrant: Ayurvedic massage, yoga, reiki, and more in Brussels."
+        />
         <meta property="og:url" content="https://bevibrant.be/about" />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
@@ -193,21 +199,24 @@ const About = () => {
             </Typography>
 
             <Typography variant="subtitle1">
-              In 2025, I proudly became an official
+              In 2025, I proudly became an official{" "}
               <Box component="span" fontWeight={500}>
                 {" "}
-                European Massage Champion 🏆
-              </Box>
-              . I’m also a member of the
-              <Box component="span" fontWeight={500}>
-                {" "}
-                Belgian National Massage Team representing Ayurveda,
+                European Massage Champion 🏆.
               </Box>{" "}
-              and in 2024 I was awarded by
+              As a member of the
               <Box component="span" fontWeight={500}>
                 {" "}
-                Treatwell Top Rated Therapist in Belgium.
-              </Box>
+                Belgian National Massage Team representing Ayurveda and a
+                Treatwell Top Rated Therapist in Belgium ,{" "}
+              </Box>{" "}
+              I am now expanding my journey by studying{" "}
+              <Box component="span" fontWeight={500}>
+                {" "}
+                Somatic Experiencing®️{" "}
+              </Box>{" "}
+              to bring deeper support in trauma healing and body-mind
+              integration.
             </Typography>
 
             <Typography variant="subtitle1">
