@@ -126,9 +126,9 @@ export default function Banner({ booking }) {
         >
           <CardMedia
             component="img"
-            srcSet="/assets/European_massage-champion-400w.png 400w, /assets/European_massage-champion-800w.png 800w, /assets/European_massage-champion-1000w.png 1000w"
+            srcSet="/assets/European_massage-champion-400w.webp 400w, /assets/European_massage-champion-800w.webp 800w, /assets/European_massage-champion-1000w.webp 1000w"
             sizes="(max-width: 600px) 400px, (max-width: 960px) 800px, 1000px"
-            src="/assets/European_massage-champion-1000w.png"
+            src="/assets/European_massage-champion-1000w.webp"
             alt="European_massage-champion"
             sx={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
