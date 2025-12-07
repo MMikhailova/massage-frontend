@@ -14,6 +14,8 @@ import {
 } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getBooking } from './api/viewModels/getBooking';
+import GiftCard from './pages/GiftCard';
+
 
 function App() {
    const [booking, setBooking] = useState([]);
@@ -31,7 +33,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home booking={booking} />} />
-      
+          <Route path="/gift-card" element={<GiftCard />} />
           <Route
             path="/massage"
             element={<Massage page={"massage"} url={booking.massage} />}
