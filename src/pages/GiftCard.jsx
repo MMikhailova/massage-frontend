@@ -19,7 +19,7 @@ const GiftCard = () => {
         </title>
         <meta
           name="description"
-          content="Offer deep relaxation with beVibrant massage gift cards. Buy an electronic PDF gift card online or pick up a physical printed card in the salon in Saint-Gilles, Brussels."
+          content="Purchase a massage gift card from beVibrant. Buy an electronic PDF gift card online or pick up a printed card at our salon in Saint-Gilles, Brussels."
         />
         <link rel="canonical" href="https://bevibrant.be/gift-card" />
       </Helmet>
@@ -38,7 +38,7 @@ const GiftCard = () => {
           pb: { xs: 6, md: 8 },
         }}
       >
-        {/* PAGE INTRO / HERO */}
+        {/* PAGE INTRO */}
         <Grid
           container
           item
@@ -52,9 +52,9 @@ const GiftCard = () => {
         >
           <Grid item xs={12} md={8}>
             <Typography
-              variant="h3"
+              variant="h2"
               component="h1"
-              sx={{ fontWeight: 600, mb: 2 }}
+              sx={{ fontWeight: 600, mb: 2, color: "#678180" }}
             >
               Gift Deep Relaxation
             </Typography>
@@ -63,17 +63,17 @@ const GiftCard = () => {
               component="h2"
               sx={{ fontWeight: 400, mb: 2 }}
             >
-              Massage by a European Champion
+              Massage Gift Cards by beVibrant
             </Typography>
             <Typography variant="body1">
-              Choose between an **online PDF gift card**, sent instantly, or a
-              **beautiful printed card** available in the beVibrant salon in
-              Saint-Gilles, Brussels.
+              You can purchase a gift card online and receive an **electronic
+              PDF** to send or print — or choose a **pre-printed gift card**
+              available at our salon.
             </Typography>
           </Grid>
         </Grid>
 
-        {/* SECTION 1 – ELECTRONIC GIFT CARD (PDF) */}
+        {/* SECTION 1 – ELECTRONIC GIFT CARD */}
         <Grid
           container
           item
@@ -85,7 +85,6 @@ const GiftCard = () => {
             rowGap: 4,
           }}
         >
-          {/* Text */}
           <Grid
             item
             xs={12}
@@ -95,30 +94,24 @@ const GiftCard = () => {
               display: "flex",
               flexDirection: "column",
               gap: 2,
-              mb: { xs: 4, md: 0 },
             }}
           >
-            <Typography
-              variant="h5"
-              component="h2"
-              sx={{ fontWeight: 600, mb: 1 }}
-            >
-              Online Massage Gift Card (PDF)
+            <Typography variant="h5" component="h2" sx={{ fontWeight: 600 }}>
+              Electronic Gift Card (PDF)
             </Typography>
 
             <Typography variant="body1">
-              Purchase an electronic gift card online and receive it instantly
-              as a **PDF file**. You can forward it by email or print it at home
-              – a perfect last-minute gift for someone who deserves deep
-              relaxation.
+              Purchase the gift card online and receive a **PDF version
+              instantly**. You can email it to the recipient or print it at
+              home.
             </Typography>
 
             <Typography variant="subtitle1" sx={{ fontWeight: 500 }}>
               Available options:
             </Typography>
             <Typography variant="body1">
-              • 60-minute Deep Tissue Massage – €95
-              <br />• 90-minute Deep Tissue Massage – €135
+              • 60-minute Deep Tissue Massage – €95 <br />• 90-minute Deep
+              Tissue Massage – €135
             </Typography>
 
             <Box sx={{ mt: 2 }}>
@@ -135,16 +128,14 @@ const GiftCard = () => {
                   px: 4,
                   py: 1.2,
                   fontWeight: 600,
-                  "&:hover": {
-                    backgroundColor: "#7BA18A",
-                  },
+                  "&:hover": { backgroundColor: "#7BA18A" },
                 }}
               >
-                Buy a Gift Card Online
+                Buy Electronic Gift Card
               </Button>
             </Box>
 
-            {/* Terms & Conditions */}
+            {/* Terms */}
             <Box
               sx={{
                 mt: 3,
@@ -155,47 +146,33 @@ const GiftCard = () => {
               }}
             >
               <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1.5 }}>
-                Terms &amp; Conditions (Electronic Card)
+                Terms &amp; Conditions
               </Typography>
               <Typography variant="body2" sx={{ mb: 1 }}>
-                • Valid for 6 months from the date of purchase.
+                • Valid for 6 months from date of purchase.
               </Typography>
               <Typography variant="body2" sx={{ mb: 1 }}>
-                • Can be used for one 60-minute (€95) or 90-minute (€135) Deep
-                Tissue Massage.
+                • Valid for a 60- or 90-minute Deep Tissue Massage.
               </Typography>
               <Typography variant="body2" sx={{ mb: 1 }}>
-                • Recipient receives an electronic PDF gift card.
+                • PDF gift card delivered instantly after purchase.
               </Typography>
               <Typography variant="body2" sx={{ mb: 1 }}>
-                •  <a
-                  href="https://widget.treatwell.be/salon/bevibrant-1/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "#93B49E", textDecoration: "none" }}
-                >
-                   Booking Online
-                </a>{" "}
-                at any available time.
+                • Booking available via www.bevibrant.be.
               </Typography>
               <Typography variant="body2" sx={{ mb: 1 }}>
-                • Appointments can be rescheduled or cancelled up to 24 hours in
-                advance.
+                • Cancellations allowed up to 24h before the appointment.
               </Typography>
               <Typography variant="body2" sx={{ mb: 1 }}>
-                • If cancelled less than 24 hours before the session, the card
-                is considered redeemed.
-              </Typography>
-              <Typography variant="body2" sx={{ mb: 1 }}>
-                • Non-refundable, cannot be exchanged for cash.
+                • Late cancellations render the card redeemed.
               </Typography>
               <Typography variant="body2">
-                • One gift card is valid for one treatment only.
+                • Non-refundable, cannot be exchanged for cash.
               </Typography>
             </Box>
           </Grid>
 
-          {/* Electronic Card Image (screenshot) */}
+          {/* Electronic Gift Card Image */}
           <Grid
             item
             xs={12}
@@ -203,17 +180,16 @@ const GiftCard = () => {
             sx={{
               display: "flex",
               justifyContent: "center",
-              mb: { xs: 2, md: 0 },
             }}
           >
             <Box
               component="img"
               src="../assets/gift-card-bevibrant.webp"
-              alt="Electronic massage gift card (PDF) – beVibrant"
+              alt="Electronic massage gift card (PDF)"
               sx={{
                 width: "100%",
                 maxWidth: 520,
-                height: "auto", // preserves 1813x1495 ratio
+                height: "auto",
                 borderRadius: "24px",
                 objectFit: "contain",
                 boxShadow: "0 12px 30px rgba(0,0,0,0.15)",
@@ -222,7 +198,7 @@ const GiftCard = () => {
           </Grid>
         </Grid>
 
-        {/* SECTION 2 – PHYSICAL PRINTED GIFT CARD */}
+        {/* SECTION 2 – PHYSICAL PRINTED CARD */}
         <Grid
           container
           item
@@ -241,17 +217,12 @@ const GiftCard = () => {
             item
             xs={12}
             md={5}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              mb: { xs: 2, md: 0 },
-            }}
+            sx={{ display: "flex", justifyContent: "center" }}
           >
             <Box
               component="img"
-              // 🔁 Replace with a photo of your printed gift card / voucher
-              src="../assets/gift-voucher-bevibrant.webp"
-              alt="Physical printed massage gift card – beVibrant salon"
+              src="../assets/gift-voucher-bevibrant.webp" // update your file path
+              alt="Printed massage gift card"
               sx={{
                 width: "100%",
                 maxWidth: 520,
@@ -263,7 +234,7 @@ const GiftCard = () => {
             />
           </Grid>
 
-          {/* Text for physical card */}
+          {/* Text */}
           <Grid
             item
             xs={12}
@@ -275,23 +246,18 @@ const GiftCard = () => {
               gap: 2,
             }}
           >
-            <Typography
-              variant="h5"
-              component="h2"
-              sx={{ fontWeight: 600, mb: 1 }}
-            >
-              Physical Printed Gift Card
+            <Typography variant="h5" component="h2" sx={{ fontWeight: 600 }}>
+              Printed Gift Card (Available in Salon)
             </Typography>
 
             <Typography variant="body1">
-              For a more tangible, ceremonial experience, you can purchase a
-              **printed gift card** directly at the beVibrant salon. Beautifully
-              presented, it is ideal for birthdays, anniversaries, and special
-              occasions where you want to hand over a gift in person.
+              If you prefer a physical gift, you can pick up a **pre-printed
+              gift card** at the beVibrant salon. Beautifully presented and
+              perfect for gifting in person.
             </Typography>
 
             <Typography variant="body1">
-              You can pick it up during our opening hours at:
+              Available during our opening hours:
             </Typography>
 
             <Box
@@ -309,20 +275,18 @@ const GiftCard = () => {
                 beVibrant Salon
               </Typography>
               <Typography variant="body2">
-                Pl. Julien Dillens 1, 4ᵉ étage
-                <br />
+                Pl. Julien Dillens 1, 4ᵉ étage <br />
                 1060 Saint-Gilles, Brussels
               </Typography>
               <Typography variant="body2" sx={{ mt: 1 }}>
-                Monday – Friday: 10:00 – 19:00
-                <br />
+                Tuesday – Friday: 10:00 – 19:00 <br />
                 Saturday: 10:00 – 18:00
               </Typography>
             </Box>
 
             <Typography variant="body2" sx={{ mt: 2, fontStyle: "italic" }}>
-              Please note: Physical cards are sold exclusively in the salon and
-              cannot be purchased online.
+              Printed cards are available only in the salon and cannot be
+              purchased online.
             </Typography>
           </Grid>
         </Grid>

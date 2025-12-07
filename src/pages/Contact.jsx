@@ -82,7 +82,7 @@ const [contactInfo, setContactInfo] = useState([]);
                 Working Hours:{" "}
               </Typography>
               <Typography variant="subtitle1" component="h3">
-                Monday - Friday 10:00 - 19:00
+                Tuesday - Friday 10:00 - 19:00
               </Typography>
               <Typography variant="subtitle1" component="h3">
                 Saturday 10:00 - 18:00
