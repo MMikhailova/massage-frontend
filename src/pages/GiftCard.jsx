@@ -152,13 +152,23 @@ const GiftCard = () => {
                 • Valid for 6 months from date of purchase.
               </Typography>
               <Typography variant="body2" sx={{ mb: 1 }}>
-                • Valid for a 60- or 90-minute Deep Tissue Massage.
+                • Valid for a 60- or 90-minute{" "}
+                <strong>Deep Tissue Massage</strong>.
               </Typography>
               <Typography variant="body2" sx={{ mb: 1 }}>
                 • PDF gift card delivered instantly after purchase.
               </Typography>
               <Typography variant="body2" sx={{ mb: 1 }}>
-                • Booking available via www.bevibrant.be.
+                •{" "}
+                <a
+                  href="https://www.treatwell.be/salon/bevibrant-1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#1976d2", textDecoration: "none" }}
+                >
+                  BOOK ONLINE
+                </a>{" "}
+                or by +32 488 86 39 60.
               </Typography>
               <Typography variant="body2" sx={{ mb: 1 }}>
                 • Cancellations allowed up to 24h before the appointment.
