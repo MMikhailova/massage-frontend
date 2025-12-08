@@ -19,7 +19,7 @@ const GiftCard = () => {
         </title>
         <meta
           name="description"
-          content="Purchase a massage gift card from beVibrant. Buy an electronic PDF gift card online or pick up a printed card at our salon in Saint-Gilles, Brussels."
+          content="Purchase a massage gift card from beVibrant Brussels. Buy an electronic PDF gift card online or pick up a printed card at our salon in Saint-Gilles, Brussels."
         />
         <link rel="canonical" href="https://bevibrant.be/gift-card" />
       </Helmet>
@@ -56,14 +56,14 @@ const GiftCard = () => {
               component="h1"
               sx={{ fontWeight: 600, mb: 2, color: "#678180" }}
             >
-              Gift Deep Relaxation
+              Gift of Deep Relief
             </Typography>
             <Typography
               variant="h5"
               component="h2"
               sx={{ fontWeight: 400, mb: 2 }}
             >
-              Massage Gift Cards by beVibrant
+              Iconic Deep Tissue Massage by Europe Champion Nataly Werthaim
             </Typography>
             <Typography variant="body1">
               You can purchase a gift card online and receive an **electronic
