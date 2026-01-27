@@ -13,12 +13,12 @@ const [contactInfo, setContactInfo] = useState([]);
       <>
         <Helmet>
           <title>
-            Contact beVibrant - Holistic Wellness and Massage Therapy in 1060
-            Saint-Gilles, Brussels
+            Contact beVibrant Wellness Studio - Massage & Somatic Therapy in
+            1060 Saint-Gilles, Brussels
           </title>
           <meta
             name="description"
-            content="Get in touch with beVibrant for personalized Ayurvedic massage, yoga therapy, and health coaching services in Brussels. Reach out to Natalya Werthaim for holistic well-being support in English, French, Greek, Russian, and Hebrew."
+            content="Contact beVibrant in Brussels to book Ayurvedic massage or somatic therapy with Natalya Werthaim. Personalized care in English, French, Russian, Greek & Hebrew."
           />
           <link rel="canonical" href="https://bevibrant.be/contact"></link>
         </Helmet>

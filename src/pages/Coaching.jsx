@@ -20,11 +20,12 @@ const Coaching = ({ page, url }) => {
     <>
       <Helmet>
         <title>
-          Holistic Health and Wellness Coaching in Brussels | beVibrant
+          Stress & Anxiety Relief with Body-Based Therapy in Brussels |
+          beVibrant
         </title>
         <meta
           name="description"
-          content="At beVibrant, we offer holistic health coaching that integrates nutrition, physical activity, stress management, and emotional well-being. Join Natalya on a personalized journey to balance and vitality, with expert guidance tailored to your unique goals. "
+          content="Feeling overwhelmed in Brussels? Somatic coaching offers nervous system regulation, stress and anxiety relief at beVibrant"
         />
         <link rel="canonical" href="https://bevibrant.be/coaching"></link>
       </Helmet>
@@ -61,7 +62,7 @@ const Coaching = ({ page, url }) => {
               height: "auto",
               opacity: "90%",
             }}
-            src="../assets/coaching.webp"
+            src="../assets/Natalya_in_oysho_ashram.png"
             alt="1"
             loading="Coaching"
           />
@@ -87,12 +88,13 @@ const Coaching = ({ page, url }) => {
           color="#DF7861"
           fontStyle="italic"
         >
-          Imagine having a dedicated partner on your wellness journey, someone
-          who truly listens, understands, and supports you every step of the
-          way. That's exactly what my personalized health coaching is all about.
-          I'll work closely with you to uncover your unique needs and
-          aspirations, and together, we'll create a road map towards a
-          healthier, happier you.
+          Feeling overwhelmed, anxious, emotionally stuck or burned out? At
+          beVibrant in Brussels, I offer somatic coaching and trauma-informed
+          support to help you regulate your nervous system, relieve chronic
+          stress, and recover from burnout. This gentle, body-based approach
+          supports emotional regulation, reconnects you with your inner calm,
+          and helps you feel more grounded, resilient, and at ease in daily
+          life.
         </Typography>
         <Treatment page={page} />
       </Box>

@@ -152,11 +152,12 @@ const Home = ({ booking }) => {
     <>
       <Helmet>
         <title>
-          Massage and Yoga in Brussels, 1060 Saint-Gilles | beVibrant
+          Massage & Somatic Therapy in Brussels | beVibrant Wellness Studio
         </title>
         <meta
           name="description"
-          content="At beVibrant in Brussels, 1060 Saint-Gilles, Natalya Werthaim offers holistic wellness services in English, French, Greek, Russian, and Hebrew, combining Massage, Yoga, Ayurveda, and Health Coaching to promote physical, mental, and emotional well-being. Personalized plans address stress, pain, and flexibility."
+          content="Massage & holistic therapy in Brussels (1060 Saint-Gilles). beVibrant by Natalya Werthaim offers massage,Ayurveda & somatic care and yoga, in EN, FR, RU & more.
+."
         />
         <link rel="canonical" href="https://bevibrant.be/"></link>
       </Helmet>

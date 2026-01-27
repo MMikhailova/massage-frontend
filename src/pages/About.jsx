@@ -33,11 +33,12 @@ const About = () => {
     <>
       <Helmet>
         <title>
-          Natalya Werthaim - Ayurvedic Massage Therapist at beVibrant, Brussels
+          Nataly Werthaim – European Massage Champion & Holistic Therapist in
+          Brussels | beVibrant
         </title>
         <meta
           name="description"
-          content="Natalya Werthaim, a certified Ayurvedic Massage Therapist, Therapeutic Yoga & Health Coach, and Reiki practitioner, welcomes clients in English, French, Greek, Russian, and Hebrew at beVibrant, Brussels, offering holistic well-being services."
+          content="Certified Ayurvedic massage therapist and somatic coach in Brussels. Natalya Werthaim offers holistic care in English, French, Greek, Russian & Hebrew at beVibrant."
         />
         <link rel="canonical" href="https://bevibrant.be/about" />
         <meta
@@ -46,7 +47,7 @@ const About = () => {
         />
         <meta
           property="og:description"
-          content="Explore holistic wellness with Natalya Werthaim at beVibrant: Ayurvedic massage, yoga, reiki, and more in Brussels."
+          content="Explore holistic wellness with Natalya Werthaim at beVibrant: Ayurvedic massage, Health coaching and more in Brussels."
         />
         <meta property="og:url" content="https://bevibrant.be/about" />
         <meta property="og:type" content="website" />
