@@ -62,7 +62,7 @@ const Coaching = ({ page, url }) => {
               height: "auto",
               opacity: "90%",
             }}
-            src="../assets/Natalya_in_oysho_ashram.png"
+            src="../assets/coaching.webp"
             alt="1"
             loading="Coaching"
           />
