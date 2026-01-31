@@ -75,28 +75,7 @@ const GiftCardPopup = ({ open, onClose }) => {
           beVibrant salon.
         </Typography>
 
-        <Box
-          sx={{
-            mt: 1,
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          {/* Optional preview image – replace with your real file */}
-          {/* <Box
-            component="img"
-            src="../assets/gift_card_screenshot.webp"
-            alt="beVibrant massage gift card"
-            sx={{
-              width: "100%",
-              maxWidth: 320,
-              height: "auto",
-              borderRadius: "18px",
-              objectFit: "contain",
-              boxShadow: "0 10px 25px rgba(0,0,0,0.15)",
-            }}
-          /> */}
-        </Box>
+        
       </DialogContent>
 
       <DialogActions
@@ -157,7 +136,6 @@ const Home = ({ booking }) => {
         <meta
           name="description"
           content="Massage & health coaching in Brussels (1060 Saint-Gilles). beVibrant by Natalya Werthaim offers somatic therapy and Ayurvedic massage for stress relief and nervous system reset."
-
         />
         <link rel="canonical" href="https://bevibrant.be/"></link>
       </Helmet>
@@ -172,6 +150,7 @@ const Home = ({ booking }) => {
         maxWidth="xl"
         sx={{
           display: "flex",
+          margin: "auto",
           flexDirection: "column",
           backgroundColor: "#FCF8E8",
           textAlign: "center",
@@ -241,11 +220,11 @@ const Home = ({ booking }) => {
           </Typography>
         </Box>
 
-        <Section title={"Well-being services"} />
+        <Section title={"Well-being services"} mt={2} />
         <TreatmentItem booking={booking} />
-        <Section title={"Clients testimonials"} />
+        <Section title={"Clients testimonials"} m={2} />
         <TestimonialCarousel />
-        <Section title={"About Natalya Werthaim"} />
+        <Section title={"About Natalya Werthaim"} m={2} />
         <MyComponent />
       </Container>
       <Footer />
