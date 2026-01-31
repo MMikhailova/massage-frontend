@@ -92,7 +92,8 @@ const Coaching = ({ page, url }) => {
           beVibrant in Brussels, I offer somatic coaching and trauma-informed
           support to help you regulate your nervous system, relieve chronic
           stress, and recover from burnout. Before we begin coaching, I invite
-          you to <strong>a free 15-minute assessment to understand your needs.</strong>
+          you to{" "}
+          <strong>a free 15-minute assessment to understand your needs.</strong>
           .
         </Typography>
         <Box
@@ -102,7 +103,12 @@ const Coaching = ({ page, url }) => {
             mt: 4,
           }}
         >
-          <Button size="large" target="_blank" href="/" variant="contained">
+          <Button
+            size="large"
+            target="_blank"
+            href="https://widget.treatwell.be/en/place/bevibrant-1/"
+            variant="contained"
+          >
             Book your coaching session
           </Button>
         </Box>
