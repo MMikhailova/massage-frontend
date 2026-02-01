@@ -4,6 +4,7 @@ import DrawerAppBar from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Helmet } from 'react-helmet-async'
 import { useEffect } from "react";
+import { useTheme, useMediaQuery } from "@mui/material";
 
 // const positionBtn = {
 //   top: "50%",
@@ -15,6 +16,8 @@ const Coaching = ({ page, url }) => {
     useEffect(() => {
       window.scrollTo({ top: 0, behavior: "instant" });
     }, []);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <>
       <Helmet>
@@ -88,13 +91,15 @@ const Coaching = ({ page, url }) => {
           color="#DF7861"
           fontStyle="italic"
         >
-          Feeling overwhelmed, anxious, emotionally stuck or burned out? At
-          beVibrant in Brussels, I offer somatic coaching and trauma-informed
-          support to help you regulate your nervous system, relieve chronic
-          stress, and recover from burnout. Before we begin coaching, I invite
-          you to{" "}
-          <strong>a free 15-minute assessment to understand your needs.</strong>
-          .
+          I offer somatic coaching for people experiencing burnout, chronic
+          stress, anxiety, trauma, or disconnection from their body. Through a
+          trauma-informed, body–mind approach, I support deep healing and
+          nervous system regulation to restore balance, safety, and vitality.
+          Using breathwork, guided meditation, mindful movement, and somatic
+          techniques, I help you release stored tension, build emotional
+          resilience, and reconnect with your body. Each session is personalized
+          and begins with <strong>a free 15-minute assessment </strong> to
+          understand your needs. .
         </Typography>
         <Box
           sx={{
@@ -105,11 +110,17 @@ const Coaching = ({ page, url }) => {
         >
           <Button
             size="large"
-            target="_blank"
-            href="https://widget.treatwell.be/en/place/bevibrant-1/"
             variant="contained"
+            href={
+              isMobile
+                ? "tel:+324XXXXXXXX" // ← your phone number
+                : "https://widget.treatwell.be/en/place/bevibrant-1/"
+            }
+            target={isMobile ? "_self" : "_blank"}
           >
-            Book your coaching session
+            {isMobile
+              ? "Call to book your FREE session"
+              : "Book your FREE session"}
           </Button>
         </Box>
         <Treatment page={page} />
