@@ -6,18 +6,13 @@ import { Helmet } from 'react-helmet-async'
 import { useEffect } from "react";
 import { useTheme, useMediaQuery } from "@mui/material";
 
-// const positionBtn = {
-//   top: "50%",
-//   left: "50%",
-//   transform: "translate(-50%, -50%)",
-//   position: "absolute",
-// };
 const Coaching = ({ page, url }) => {
     useEffect(() => {
       window.scrollTo({ top: 0, behavior: "instant" });
     }, []);
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+const theme = useTheme();
+const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <>
       <Helmet>
@@ -98,29 +93,56 @@ const Coaching = ({ page, url }) => {
           Using breathwork, guided meditation, mindful movement, and somatic
           techniques, I help you release stored tension, build emotional
           resilience, and reconnect with your body. Each session is personalized
-          and begins with <strong>a free 15-minute assessment </strong> to
-          understand your needs. .
+          and begins with <strong>a FREE 15-minute assessment </strong> to
+          understand your needs.
         </Typography>
+
         <Box
           sx={{
             display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
             justifyContent: "center",
             mt: 4,
+            gap: 2,
+            width: "fit-content",
+            mx: "auto",
+            textAlign: "center",
           }}
         >
+          {isMobile ? (
+            <Button
+              size="large"
+              variant="outlined"
+              href="tel:+32488863960"
+              sx={{
+                px: 3, // horizontal padding inside button
+                py: 1.5, // vertical padding
+                mx: 2, // margin left/right (prevents edge-to-edge)
+                maxWidth: "90%", // safety for very small screens
+                whiteSpace: "normal", // allows text to wrap nicely
+                textAlign: "center",
+              }}
+            >
+              Call to book your FREE 15-minute assessment
+            </Button>
+          ) : (
+            <Typography>
+              <strong>
+                Call me to book your FREE 15-minute assessment
+                <br />
+                +32 488 86 39 60
+              </strong>
+            </Typography>
+          )}
+
           <Button
             size="large"
             variant="contained"
-            href={
-              isMobile
-                ? "tel:+324XXXXXXXX" // ← your phone number
-                : "https://widget.treatwell.be/en/place/bevibrant-1/"
-            }
-            target={isMobile ? "_self" : "_blank"}
+            href="https://widget.treatwell.be/en/place/bevibrant-1/"
+            target="_blank"
           >
-            {isMobile
-              ? "Call to book your FREE session"
-              : "Book your FREE session"}
+            Book your session online
           </Button>
         </Box>
         <Treatment page={page} />
