@@ -2,15 +2,8 @@ import Section from "../components/Section";
 import {
   Box,
   Container,
-  Typography,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Button,
-  IconButton,
+  Typography
 } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
 import Banner from "../components/Banner";
 import DrawerAppBar from "../components/Navigation";
 import TreatmentItem from "../components/Servises";
@@ -18,110 +11,110 @@ import TestimonialCarousel from "../components/Testimonials";
 import MyComponent from "../components/Natalie";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet-async";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-/** 🔔 Gift Card Promo Popup */
-const GiftCardPopup = ({ open, onClose }) => {
-  return (
-    <Dialog
-      open={open}
-      onClose={onClose}
-      maxWidth="sm"
-      fullWidth
-      PaperProps={{
-        sx: {
-          borderRadius: "24px",
-          backgroundColor: "#FCF8E8",
-          boxShadow: "0 18px 40px rgba(0,0,0,0.25)",
-        },
-      }}
-    >
-      <DialogTitle
-        sx={{
-          fontWeight: 600,
-          pr: 5,
-          pb: 1,
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        Gift Deep Relaxation 🎁
-        <IconButton
-          aria-label="close"
-          onClick={onClose}
-          sx={{
-            marginLeft: "auto",
-          }}
-        >
-          <CloseIcon />
-        </IconButton>
-      </DialogTitle>
+// /** 🔔 Gift Card Promo Popup */
+// const GiftCardPopup = ({ open, onClose }) => {
+//   return (
+//     <Dialog
+//       open={open}
+//       onClose={onClose}
+//       maxWidth="sm"
+//       fullWidth
+//       PaperProps={{
+//         sx: {
+//           borderRadius: "24px",
+//           backgroundColor: "#FCF8E8",
+//           boxShadow: "0 18px 40px rgba(0,0,0,0.25)",
+//         },
+//       }}
+//     >
+//       <DialogTitle
+//         sx={{
+//           fontWeight: 600,
+//           pr: 5,
+//           pb: 1,
+//           display: "flex",
+//           alignItems: "center",
+//         }}
+//       >
+//         Gift Deep Relaxation 🎁
+//         <IconButton
+//           aria-label="close"
+//           onClick={onClose}
+//           sx={{
+//             marginLeft: "auto",
+//           }}
+//         >
+//           <CloseIcon />
+//         </IconButton>
+//       </DialogTitle>
 
-      <DialogContent
-        sx={{
-          pt: 1,
-        }}
-      >
-        <Typography variant="body1" sx={{ mb: 2 }}>
-          Offer your loved ones a massage by a European Champion.
-        </Typography>
+//       <DialogContent
+//         sx={{
+//           pt: 1,
+//         }}
+//       >
+//         <Typography variant="body1" sx={{ mb: 2 }}>
+//           Offer your loved ones a massage by a European Champion.
+//         </Typography>
 
-        <Typography variant="body2" sx={{ mb: 1 }}>
-          • Buy an electronic <strong>PDF gift card</strong> online to send or
-          print.
-        </Typography>
-        <Typography variant="body2" sx={{ mb: 2 }}>
-          • Get a <strong>pre-printed gift card</strong> directly at the
-          beVibrant salon.
-        </Typography>
+//         <Typography variant="body2" sx={{ mb: 1 }}>
+//           • Buy an electronic <strong>PDF gift card</strong> online to send or
+//           print.
+//         </Typography>
+//         <Typography variant="body2" sx={{ mb: 2 }}>
+//           • Get a <strong>pre-printed gift card</strong> directly at the
+//           beVibrant salon.
+//         </Typography>
 
         
-      </DialogContent>
+//       </DialogContent>
 
-      <DialogActions
-        sx={{
-          px: 3,
-          pb: 3,
-          pt: 1,
-          display: "flex",
-          justifyContent: "space-between",
-          gap: 2,
-        }}
-      >
-        {" "}
-        <Button
-          variant="contained"
-          href="/gift-card" // or use the direct GoHighLevel link if you prefer
-          sx={{
-            backgroundColor: "#93B49E",
-            color: "#fff",
-            borderRadius: "999px",
-            px: 3,
-            py: 1,
-            textTransform: "none",
-            fontWeight: 600,
-            "&:hover": {
-              backgroundColor: "#7BA18A",
-            },
-          }}
-        >
-          View Gift Cards
-        </Button>
-        <Button
-          onClick={onClose}
-          sx={{
-            textTransform: "none",
-          }}
-        >
-          Maybe later
-        </Button>
-      </DialogActions>
-    </Dialog>
-  );
-};
+//       <DialogActions
+//         sx={{
+//           px: 3,
+//           pb: 3,
+//           pt: 1,
+//           display: "flex",
+//           justifyContent: "space-between",
+//           gap: 2,
+//         }}
+//       >
+//         {" "}
+//         <Button
+//           variant="contained"
+//           href="/gift-card" // or use the direct GoHighLevel link if you prefer
+//           sx={{
+//             backgroundColor: "#93B49E",
+//             color: "#fff",
+//             borderRadius: "999px",
+//             px: 3,
+//             py: 1,
+//             textTransform: "none",
+//             fontWeight: 600,
+//             "&:hover": {
+//               backgroundColor: "#7BA18A",
+//             },
+//           }}
+//         >
+//           View Gift Cards
+//         </Button>
+//         <Button
+//           onClick={onClose}
+//           sx={{
+//             textTransform: "none",
+//           }}
+//         >
+//           Maybe later
+//         </Button>
+//       </DialogActions>
+//     </Dialog>
+//   );
+// };
 
 const Home = ({ booking }) => {
-  const [isGiftPopupOpen, setIsGiftPopupOpen] = useState(true);
+  // const [isGiftPopupOpen, setIsGiftPopupOpen] = useState(true);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -141,10 +134,10 @@ const Home = ({ booking }) => {
       </Helmet>
 
       {/* 🔔 Gift Card Popup */}
-      <GiftCardPopup
+      {/* <GiftCardPopup
         open={isGiftPopupOpen}
         onClose={() => setIsGiftPopupOpen(false)}
-      />
+      /> */}
 
       <Container
         maxWidth="xl"

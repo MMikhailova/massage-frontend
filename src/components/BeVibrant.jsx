@@ -80,14 +80,14 @@ const BeVibrant = () => {
           mt: 2,
         }}
       >
-        <Link href="/Yoga" color="#8B9D95" fontWeight="bold" variant="h5">
-          Yoga
+        <Link href="/Coaching" color="#8B9D95" fontWeight="bold" variant="h5">
+          Health Coaching
         </Link>
         <Link href="/Massage" color="#8B9D95" fontWeight="bold" variant="h5">
           Massage
         </Link>
-        <Link href="/Coaching" color="#8B9D95" fontWeight="bold" variant="h5">
-          Health Coaching
+        <Link href="/Yoga" color="#8B9D95" fontWeight="bold" variant="h5">
+          Yoga
         </Link>
       </Breadcrumbs>
 
