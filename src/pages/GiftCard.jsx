@@ -6,9 +6,10 @@ import { Helmet } from "react-helmet-async";
 
 const GiftCard = () => {
   const [contactInfo, setContactInfo] = useState([]);
-
-  const checkoutUrl =
-    "https://link.fastpaydirect.com/gift-card/6935a9046006f87fc30fd5bb";
+const checkoutUrl60 = "https://buy.stripe.com/6oU4gzeCL2D21Nj6OMb3q01";
+const checkoutUrl90 = "https://buy.stripe.com/5kQaEXcuD3H61Nj5KIb3q02";
+  // const checkoutUrl =
+  //   "https://link.fastpaydirect.com/gift-card/6935a9046006f87fc30fd5bb";
 
   return (
     <>
@@ -66,9 +67,9 @@ const GiftCard = () => {
               Iconic Deep Tissue Massage by Europe Champion Nataly Werthaim
             </Typography>
             <Typography variant="body1">
-              You can purchase a gift card online and receive an **electronic
-              PDF** to send or print — or choose a **pre-printed gift card**
-              available at our salon.
+              Give the gift of relaxation. Buy a gift card online and download a
+              printable PDF instantly to send or print. You can also choose a
+              beautiful pre-printed gift card, available at our salon.
             </Typography>
           </Grid>
         </Grid>
@@ -101,7 +102,7 @@ const GiftCard = () => {
             </Typography>
 
             <Typography variant="body1">
-              Purchase the gift card online and receive a **PDF version
+              Purchase the gift card online and download a **PDF version
               instantly**. You can email it to the recipient or print it at
               home.
             </Typography>
@@ -109,16 +110,16 @@ const GiftCard = () => {
             <Typography variant="subtitle1" sx={{ fontWeight: 500 }}>
               Available options:
             </Typography>
-            <Typography variant="body1">
-              • 60-minute Deep Tissue Massage – €95 <br />• 90-minute Deep
-              Tissue Massage – €135
+
+            <Typography variant="body1" sx={{ fontWeight: 700 }}>
+              60-minute Deep Tissue Massage – €95
             </Typography>
 
-            <Box sx={{ mt: 2 }}>
+            <Box sx={{ mt: 1, mb: 2 }}>
               <Button
                 variant="contained"
                 size="large"
-                href={checkoutUrl}
+                href={checkoutUrl60}
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
@@ -131,7 +132,32 @@ const GiftCard = () => {
                   "&:hover": { backgroundColor: "#7BA18A" },
                 }}
               >
-                Buy Electronic Gift Card
+                Buy 60-min Gift Card
+              </Button>
+            </Box>
+
+            <Typography variant="body1" sx={{ fontWeight: 700 }}>
+              90-minute Deep Tissue Massage – €135
+            </Typography>
+
+            <Box sx={{ mt: 1 }}>
+              <Button
+                variant="contained"
+                size="large"
+                href={checkoutUrl90}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  backgroundColor: "#93B49E",
+                  color: "#fff",
+                  borderRadius: "999px",
+                  px: 4,
+                  py: 1.2,
+                  fontWeight: 600,
+                  "&:hover": { backgroundColor: "#7BA18A" },
+                }}
+              >
+                Buy 90-min Gift Card
               </Button>
             </Box>
 
@@ -194,7 +220,7 @@ const GiftCard = () => {
           >
             <Box
               component="img"
-              src="../assets/gift-card-bevibrant.webp"
+              src="../assets/gift-card-massage-saint-gilles.webp"
               alt="Electronic massage gift card (PDF)"
               sx={{
                 width: "100%",
@@ -257,7 +283,7 @@ const GiftCard = () => {
             }}
           >
             <Typography variant="h5" component="h2" sx={{ fontWeight: 600 }}>
-              Printed Gift Card (Available in Salon)
+              Printed Gift Card (Available at BeVibrant salon)
             </Typography>
 
             <Typography variant="body1">

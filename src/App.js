@@ -1,5 +1,4 @@
 
-
 import './App.css';
 import About from './pages/About';
 import Coaching from './pages/Coaching';
@@ -7,6 +6,7 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Massage from './pages/Massage';
 import Yoga from './pages/Yoga';
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,7 +14,10 @@ import {
 } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getBooking } from './api/viewModels/getBooking';
-// import GiftCard from './pages/GiftCard';
+import GiftCard from './pages/GiftCard';
+import ThankYou60 from './pages/ThankYou60';
+import ThankYou90 from './pages/ThankYou90';
+
 
 
 function App() {
@@ -33,7 +36,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home booking={booking} />} />
-          {/* <Route path="/gift-card" element={<GiftCard />} /> */}
+          <Route path="/gift-card" element={<GiftCard />} />
+          <Route path="/gift-card-thank-you-60" element={<ThankYou60 />} />
+          <Route path="/gift-card-thank-you-90" element={<ThankYou90 />} />
           <Route
             path="/massage"
             element={<Massage page={"massage"} url={booking.massage} />}
