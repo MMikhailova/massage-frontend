@@ -6,8 +6,8 @@ import { Helmet } from "react-helmet-async";
 
 const GiftCard = () => {
   const [contactInfo, setContactInfo] = useState([]);
-const checkoutUrl60 = "https://buy.stripe.com/6oU4gzeCL2D21Nj6OMb3q01";
-const checkoutUrl90 = "https://buy.stripe.com/5kQaEXcuD3H61Nj5KIb3q02";
+const checkoutUrl60 = "https://buy.stripe.com/5kQaEXcuD3H61Nj5KIb3q02";
+const checkoutUrl90 = "https://buy.stripe.com/6oU4gzeCL2D21Nj6OMb3q01";
   // const checkoutUrl =
   //   "https://link.fastpaydirect.com/gift-card/6935a9046006f87fc30fd5bb";
 
