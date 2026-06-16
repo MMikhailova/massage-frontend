@@ -16,8 +16,8 @@ import Button from "@mui/material/Button";
 const navItemsLg = [
   { label: "Home", path: "/" },
   { label: "Massage", path: "/massage" },
-  { label: "Yoga", path: "/yoga" },
-  { label: "Health Coaching", path: "/coaching" },
+  { label: "Somatic Health Coaching", path: "/coaching" },
+  // { label: "Yoga", path: "/yoga" },
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
 ];

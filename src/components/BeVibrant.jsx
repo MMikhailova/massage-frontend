@@ -81,14 +81,12 @@ const BeVibrant = () => {
         }}
       >
         <Link href="/Coaching" color="#8B9D95" fontWeight="bold" variant="h5">
-          Health Coaching
+          Somatic Coaching
         </Link>
-        <Link href="/Massage" color="#8B9D95" fontWeight="bold" variant="h5">
+        <Link href="Massage" color="#8B9D95" fontWeight="bold" variant="h5">
           Massage
         </Link>
-        <Link href="/Yoga" color="#8B9D95" fontWeight="bold" variant="h5">
-          Yoga
-        </Link>
+        
       </Breadcrumbs>
 
       <Typography sx={{ display: { xs: "flex", md: "none" } }}>
@@ -124,7 +122,7 @@ const BeVibrant = () => {
         <InfoItem
           icon={<EmojiEventsIcon />}
           text="Europe Massage Champion"
-          link="https://www.newmassageassociation.com/winners/"
+          link="https://www.newmassageassociation.com/profiles/natalya-werthaim/"
         />
         <InfoItem icon={<GroupsIcon />} text="Belgian National Massage Team" />
       </Stack>

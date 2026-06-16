@@ -85,17 +85,22 @@ const Massage = ({ page, url }) => {
           mx="auto"
           sx={{ width: { xs: "100%", md: "65%" }, p: { xs: 2, md: 0 } }}
           variant="subtitle1"
+          component="h3"
           textAlign="justify"
         >
-          My journey as a massage therapist began in 2005 in India, where I
-          lived in an Ashram, practiced meditation, and discovered the
-          transformative Ayurvedic Yoga massage from Master Kusum Modak. This
-          life-changing experience ignited my passion for studying and mastering
-          this healing art. Since then, I’ve dedicated myself to continuous
-          learning, refining my techniques to provide the most effective and
-          rejuvenating experiences. Sharing this ancient wisdom and therapeutic
-          touch is my purpose, helping others find relaxation, healing, and
-          harmony.
+          My journey as a massage therapist began in 2005 in India, where{" "}
+          <strong>
+            I lived in an Ashram, practiced meditation, and discovered the
+            transformative Ayurvedic Yoga massage from Master Kusum Modak.
+          </strong>{" "}
+          This life-changing experience ignited my passion for studying and
+          mastering this healing art. Since then, I’ve dedicated myself to
+          continuous learning, refining my techniques to provide the most
+          effective and rejuvenating experiences.{" "}
+          <strong>
+            Sharing this ancient wisdom and therapeutic touch is my purpose,
+            helping others find relaxation, healing, and harmony.
+          </strong>
         </Typography>
         <Typography
           mx="auto"

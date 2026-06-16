@@ -82,9 +82,8 @@ const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
           textAlign="center"
           mx="auto"
           sx={{ width: { xs: "100%", md: "75%" }, p: { xs: 2, md: 0 } }}
-          variant="h6"
-          color="#DF7861"
-          fontStyle="italic"
+          variant="subtitle1"
+          component="h3"
         >
           I offer somatic coaching for people experiencing burnout, chronic
           stress, anxiety, trauma, or disconnection from their body. Through a

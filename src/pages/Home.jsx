@@ -172,39 +172,31 @@ const Home = ({ booking }) => {
           }}
         >
           <Typography variant="subtitle1" component="h3">
-            At beVibrant, I welcome clients in{" "}
-            <Box component="span" fontWeight="bold">
-              English, French, Greek, Russian, and Hebrew
-            </Box>
-            , offering a holistic approach to{" "}
-            <Box component="span" fontWeight="bold">
-              health and wellness,
-            </Box>{" "}
-            which combines the benefits of{" "}
-            <Box component="span" fontWeight="bold">
-              Massage, Yoga, Ayurveda, and Health coaching
-            </Box>{" "}
-            to promote physical, mental, and emotional well-being. By addressing
-            the whole person, rather than just one aspect of their health,
-            beVibrant delivers a sense of energy, liveliness, and vitality.
+            At beVibrant in Brussels, I offer{" "}
+            <strong>
+              somatic coaching, trauma-informed support, and Ayurvedic massage
+            </strong>{" "}
+            to help you release stress, regulate your nervous system, and
+            reconnect with your body. My work combines{" "}
+            <strong>
+              body awareness, therapeutic touch, massage, Ayurveda,
+              yoga-inspired practices, and health coaching to support people who
+              feel overwhelmed, anxious, emotionally stuck, tense, or burned
+              out.
+            </strong>{" "}
+            Each session is adapted to your needs and offers a safe, gentle
+            space to slow down, listen to your body, and restore a sense of
+            inner balance. I welcome clients in{" "}
+            <strong>English, French, Greek, Russian, and Hebrew,</strong>{" "}
+            creating a warm and caring environment where you can feel supported,
+            safe, and at ease.
           </Typography>
           <Typography
             mt={2}
             variant="subtitle1"
             component="h3"
             sx={{ display: { xs: "none", md: "block" } }}
-          >
-            BeVibrant provides personalized services tailored to your specific
-            goals and conditions. Whether you want{" "}
-            <Box component="span" fontWeight="bold">
-              to reduce stress, relieve pain, improve flexibility or receive
-              health advice,
-            </Box>{" "}
-            beVibrant can create a customized plan to meet your individual
-            needs. Natalya Werthaim, an experienced and qualified professional
-            who is passionate and dedicated to her practice, ensures that her
-            clients receive safe, effective, and high-quality services.
-          </Typography>
+          ></Typography>
           <Typography
             align="center"
             m={2}
@@ -213,9 +205,9 @@ const Home = ({ booking }) => {
             color="#94B49F"
             fontWeight="bold"
           >
-            The welcoming and positive ambiance of beVibrant will make you feel
-            at ease and promotes a sense of well-being, making it an enjoyable
-            and rejuvenating experience.
+            Whether you are looking for deep relaxation, physical release,
+            emotional grounding, or support during a stressful period of life, I
+            offer a holistic and personalized approach.
           </Typography>
         </Box>
 

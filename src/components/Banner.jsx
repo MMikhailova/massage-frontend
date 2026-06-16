@@ -72,7 +72,7 @@ export default function Banner({ booking }) {
       // position="relative"
       spacing={{ xs: 0, md: 3 }}
       sx={{
-        position:{md:"relative"},
+        position: { md: "relative" },
         display: "flex",
         justifyContent: "center",
         height: { xs: "80vhF", md: "70vh" }, // Flexible height on mobile, fixed on larger screens
@@ -80,7 +80,7 @@ export default function Banner({ booking }) {
         pb: { xs: 4, md: 0 }, // Padding to ensure no overlap on mobile
       }}
     >
-      {/* Yoga Section */}
+      {/* Massage Section */}
       <Grid
         item
         md={4}
@@ -98,17 +98,21 @@ export default function Banner({ booking }) {
         >
           <CardMedia
             component="img"
-            image="../assets/ayurvedic-yoga.webp"
+            image="../assets/ayurvedic_massage_bevibrant.jpg"
             alt="Therapeutic yoga"
             sx={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
           {booking.yoga && (
-            <Hero url={booking.yoga} section="Yoga" display={isYogaShown} />
+            <Hero
+              url={booking.yoga}
+              section="Ayurvedic Massage"
+              display={isYogaShown}
+            />
           )}
         </CardActionArea>
       </Grid>
 
-      {/* Massage Section */}
+      {/* General Section */}
       <Grid
         item
         md={4}
@@ -135,7 +139,7 @@ export default function Banner({ booking }) {
           {booking.massage && (
             <Hero
               url={booking.massage}
-              section="Massage"
+              // section="Natalya Werthaim"
               display={isMassageShown}
             />
           )}
@@ -167,7 +171,7 @@ export default function Banner({ booking }) {
           {booking.coaching && (
             <Hero
               url={booking.coaching}
-              section="Health Coaching"
+              section="Somatic Coaching"
               display={isCoachingShown}
             />
           )}
