@@ -85,15 +85,21 @@ const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
           variant="subtitle1"
           component="h3"
         >
-          I offer somatic coaching for people experiencing burnout, chronic
-          stress, anxiety, trauma, or disconnection from their body. Through a
-          trauma-informed, body–mind approach, I support deep healing and
-          nervous system regulation to restore balance, safety, and vitality.
-          Using breathwork, guided meditation, mindful movement, and somatic
-          techniques, I help you release stored tension, build emotional
-          resilience, and reconnect with your body. Each session is personalized
-          and begins with <strong>a FREE 15-minute assessment </strong> to
-          understand your needs.
+          Somatic coaching is a body-based, trauma-informed approach that
+          supports nervous system regulation, emotional resilience, and stress
+          release. It can be especially helpful for people experiencing burnout,
+          anxiety, overwhelm, chronic tension, or a sense of disconnection from
+          the body. Through personalized sessions, I support clients with breath
+          awareness, mindful movement, bodily sensations tracking and other
+          somatic techniques that help create more balance, safety, and grounded
+          presence ,guided by your needs and your own pace. This work helps you
+          notice the patterns that keep showing up, so you can gain clarity,
+          understand what you need, and move forward with more confidence and
+          ease. Somatic coaching may be a valuable next step toward greater
+          clarity, self-awareness, and inner understanding. Each session is
+          personalized and begins with{" "}
+          <strong>a FREE 15-minute assessment </strong> to understand your
+          needs.
         </Typography>
 
         <Box

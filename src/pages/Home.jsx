@@ -8,7 +8,7 @@ import {
   DialogContent,
   DialogTitle,
   IconButton,
-  Typography
+  Typography,
 } from "@mui/material";
 import Banner from "../components/Banner";
 import DrawerAppBar from "../components/Navigation";
@@ -69,12 +69,11 @@ const GiftCardPopup = ({ open, onClose }) => {
           • Buy an electronic <strong>PDF gift card</strong> online to send or
           print.
         </Typography>
+
         <Typography variant="body2" sx={{ mb: 2 }}>
           • Get a <strong>pre-printed gift card</strong> directly at the
           beVibrant salon.
         </Typography>
-
-        
       </DialogContent>
 
       <DialogActions
@@ -87,10 +86,9 @@ const GiftCardPopup = ({ open, onClose }) => {
           gap: 2,
         }}
       >
-        {" "}
         <Button
           variant="contained"
-          href="/gift-card" // or use the direct GoHighLevel link if you prefer
+          href="/gift-card"
           sx={{
             backgroundColor: "#93B49E",
             color: "#fff",
@@ -106,6 +104,7 @@ const GiftCardPopup = ({ open, onClose }) => {
         >
           View Gift Cards
         </Button>
+
         <Button
           onClick={onClose}
           sx={{
@@ -136,7 +135,7 @@ const Home = ({ booking }) => {
           name="description"
           content="Massage & health coaching in Brussels (1060 Saint-Gilles). beVibrant by Natalya Werthaim offers somatic therapy and Ayurvedic massage for stress relief and nervous system reset."
         />
-        <link rel="canonical" href="https://bevibrant.be/"></link>
+        <link rel="canonical" href="https://bevibrant.be/" />
       </Helmet>
 
       {/* 🔔 Gift Card Popup */}
@@ -163,61 +162,149 @@ const Home = ({ booking }) => {
         <Banner booking={booking} />
 
         <Box
-          align="justify"
+          component="section"
+          aria-label="Ayurvedic therapeutic massage and somatic bodywork in Saint-Gilles, Brussels"
           sx={{
-            width: { xs: "90vw", md: "65vw" },
-            margin: "auto",
-            py: { md: 4 },
-            mt: { xs: 0, md: 15 },
+            width: { xs: "90vw", sm: "85vw", md: "70vw", lg: "65vw" },
+            maxWidth: "980px",
+            mx: "auto",
+            py: { xs: 4, sm: 5, md: 4 },
+            mt: { xs: 3, sm: 5, md: 15 },
+            textAlign: { xs: "left", md: "center" },
           }}
         >
-          <Typography variant="subtitle1" component="h3">
-            At beVibrant in Brussels, I offer{" "}
-            <strong>
-              somatic coaching, trauma-informed support, and Ayurvedic massage
-            </strong>{" "}
-            to help you release stress, regulate your nervous system, and
-            reconnect with your body. My work combines{" "}
-            <strong>
-              body awareness, therapeutic touch, massage, Ayurveda,
-              yoga-inspired practices, and health coaching to support people who
-              feel overwhelmed, anxious, emotionally stuck, tense, or burned
-              out.
-            </strong>{" "}
-            Each session is adapted to your needs and offers a safe, gentle
-            space to slow down, listen to your body, and restore a sense of
-            inner balance. I welcome clients in{" "}
-            <strong>English, French, Greek, Russian, and Hebrew,</strong>{" "}
-            creating a warm and caring environment where you can feel supported,
-            safe, and at ease.
-          </Typography>
           <Typography
-            mt={2}
-            variant="subtitle1"
-            component="h3"
-            sx={{ display: { xs: "none", md: "block" } }}
-          ></Typography>
-          <Typography
-            align="center"
-            m={2}
-            variant="h5"
-            component="h4"
-            color="#94B49F"
-            fontWeight="bold"
+            id="home-intro-title"
+            variant="h2"
+            component="h1"
+            sx={{
+              display: { xs: "none", md: "block" },
+              fontSize: {
+                md: "2rem",
+                lg: "2rem",
+              },
+              lineHeight: 1.18,
+              fontWeight: 700,
+              color: "#3D3D3D",
+              mb: { md: 3 },
+            }}
           >
-            Whether you are looking for deep relaxation, physical release,
-            emotional grounding, or support during a stressful period of life, I
-            offer a holistic and personalized approach.
+            Ayurvedic Therapeutic Massage & Somatic Bodywork <br /> in
+            Saint-Gilles, Brussels
           </Typography>
+
+          <Typography
+            variant="subtitle1"
+            component="p"
+            sx={{
+              fontSize: { xs: "1rem", sm: "1.05rem", md: "1.15rem" },
+              lineHeight: { xs: 1.75, md: 1.85 },
+              color: "#4F4F4F",
+              maxWidth: "880px",
+              mx: "auto",
+              mb: 2,
+            }}
+          >
+            At beVibrant in Brussels, I offer award-winning therapeutic massage,
+            Ayurvedic treatments, somatic coaching, and somatic bodywork to help
+            you relax, release chronic tension, reduce stress, regulate your
+            nervous system, and reconnect with your body.
+          </Typography>
+
+          <Typography
+            variant="body1"
+            component="p"
+            sx={{
+              fontSize: { xs: "0.98rem", sm: "1rem", md: "1.08rem" },
+              lineHeight: { xs: 1.75, md: 1.85 },
+              color: "#5F5F5F",
+              maxWidth: "880px",
+              mx: "auto",
+              mb: 2,
+            }}
+          >
+            My approach combines advanced massage techniques, Ayurvedic
+            principles, trauma-informed care, body awareness, yoga, breathwork,
+            and somatic practices to support clients dealing with stress,
+            burnout, overwhelm, and emotional fatigue.
+          </Typography>
+
+          <Typography
+            variant="body1"
+            component="p"
+            sx={{
+              fontSize: { xs: "0.98rem", sm: "1rem", md: "1.08rem" },
+              lineHeight: { xs: 1.75, md: 1.85 },
+              color: "#5F5F5F",
+              maxWidth: "880px",
+              mx: "auto",
+              mb: { xs: 3, md: 4 },
+            }}
+          >
+            I welcome clients in{" "}
+            <Box component="strong" sx={{ color: "#3D3D3D", fontWeight: 700 }}>
+              English, French, Greek, Russian, and Hebrew
+            </Box>
+            , creating a warm and caring environment where you can feel safe,
+            supported, and at ease.
+          </Typography>
+
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: {
+                xs: "1fr",
+                sm: "repeat(3, 1fr)",
+              },
+              gap: { xs: 1.5, sm: 2 },
+              maxWidth: "900px",
+              mx: "auto",
+              mb: { xs: 3, md: 4 },
+            }}
+          >
+            {[
+              "Relax deeply",
+              "Release chronic tension",
+              "Reconnect with your body",
+            ].map((item) => (
+              <Box
+                key={item}
+                sx={{
+                  backgroundColor: "#fff",
+                  borderRadius: "18px",
+                  px: { xs: 2, md: 2.5 },
+                  py: { xs: 1.8, md: 2.2 },
+                  boxShadow: "0 8px 22px rgba(0,0,0,0.06)",
+                  border: "1px solid rgba(148, 180, 159, 0.25)",
+                  textAlign: "center",
+                }}
+              >
+                <Typography
+                  variant="body1"
+                  component="p"
+                  sx={{
+                    color: "#94B49F",
+                    fontWeight: 700,
+                    fontSize: { xs: "0.98rem", md: "1.05rem" },
+                  }}
+                >
+                  {item}
+                </Typography>
+              </Box>
+            ))}
+          </Box>
         </Box>
 
         <Section title={"Well-being services"} mt={2} />
         <TreatmentItem booking={booking} />
+
         <Section title={"Clients testimonials"} m={2} />
         <TestimonialCarousel />
+
         <Section title={"About Natalya Werthaim"} m={2} />
         <MyComponent />
       </Container>
+
       <Footer />
     </>
   );
