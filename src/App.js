@@ -15,8 +15,8 @@ import {
 import { useEffect, useState } from "react";
 import { getBooking } from './api/viewModels/getBooking';
 import GiftCard from './pages/GiftCard';
-import ThankYou60 from './pages/ThankYou60';
-import ThankYou90 from './pages/ThankYou90';
+import ThankYou from './pages/ThankYou';
+
 
 
 
@@ -37,8 +37,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home booking={booking} />} />
           <Route path="/gift-card" element={<GiftCard />} />
-          <Route path="/gift-card-thank-you-60" element={<ThankYou60 />} />
-          <Route path="/gift-card-thank-you-90" element={<ThankYou90 />} />
+          <Route path="/gift-card-thank-you" element={<ThankYou />} />
+         
           <Route
             path="/massage"
             element={<Massage page={"massage"} url={booking.massage} />}
